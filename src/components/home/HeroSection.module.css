@@ -1,0 +1,23 @@
+.mobileHeroBg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+
+  height: calc(var(--hero-blue-h, 700px) + 20px);
+
+  background: linear-gradient(180deg, #0a2db6 0%, #1647cc 55%, #2f7de5 100%);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  z-index: 0;
+}
+
+.joinUp {
+  margin-top: calc(-1 * var(--join-offset, 10px));
+}
+
+@media (min-width: 768px) {
+  .mobileHeroBg {
+    display: none;
+  }
+}

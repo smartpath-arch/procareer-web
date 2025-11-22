@@ -1,0 +1,44 @@
+name: Deploy FE Dev
+
+on:
+  push:
+    branches: ["dev"]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Add known hosts
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -p ${{ secrets.DEV_PORT }} ${{ secrets.DEV_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Deploy to Development Server
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.DEV_HOST }}
+          username: ${{ secrets.DEV_USER }}
+          port: ${{ secrets.DEV_PORT }}
+          key: ${{ secrets.DEV_SSH_KEY }}
+          debug: true
+          script: |
+            set -x
+            echo "Checking if script exists..."
+            ls -la ~/scripts/deploy-dev.sh || echo "Script not found!"
+            echo "Running deployment script..."
+            bash ~/scripts/deploy-dev.sh
+
+      - name: Check Deployment Status
+        if: success()
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.DEV_HOST }}
+          username: ${{ secrets.DEV_USER }}
+          port: ${{ secrets.DEV_PORT }}
+          key: ${{ secrets.DEV_SSH_KEY }}
+          script: |
+            pm2 list | grep smartpath-fe-dev
+            curl -I http://localhost:3000 || exit 1
