@@ -17,7 +17,7 @@ export default function BenefitSection() {
   ];
 
   return (
-    <section className="w-full bg-gradient-to-r from-[#F2BD0F] to-[#F2D683] py-8 md:py-10">
+    <section className="w-full bg-[#F2F4F8] py-8 md:py-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-8 md:pl-12 lg:pl-16">
           <div className="md:w-1/3 text-center md:text-left">

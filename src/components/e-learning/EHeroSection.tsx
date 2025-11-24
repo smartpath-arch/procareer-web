@@ -31,17 +31,20 @@ export default function EHeroSection() {
                     Kamu Cepat Dapat Kerja
                   </span>
                 </h1>
-                <div className="hidden md:block mt-4 md:mt-7 w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[450px] xl:max-w-[480px] h-[3px] rounded md:h-[4px] bg-[#FEA600]" />
+                <div
+                  className="hidden md:block mt-4 md:mt-7 w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[450px] xl:max-w-[480px] h-[3px] rounded md:h-[4px]"
+                  style={{ background: "#AFC6FF" }}
+                />
               </div>
 
               {/* Mobile image */}
               <div className="md:hidden flex justify-center order-1">
                 <Image
-                  src="/assets/bootcamp-webinar/bootcamp.png"
+                  src="/assets/e-learning/elearningskillspace.png"
                   alt="Bootcamp Webinar"
                   width={400}
                   height={300}
-                  className="h-auto w-full max-w-[320px] object-contain"
+                  className="h-auto w-full max-w-[300px] object-contain"
                   priority
                 />
               </div>
@@ -53,16 +56,16 @@ export default function EHeroSection() {
                   style={{ marginRight: "clamp(0px, 6vw, 140px)" }}
                 >
                   <Image
-                    src="/assets/bootcamp-webinar/bootcamp.png"
+                    src="/assets/e-learning/elearningskillspace.png"
                     alt="Bootcamp Webinar"
                     width={850}
                     height={600}
-                    className="absolute 
+                    className="absolute
                       md:bottom-[-60px] md:right-0
                       lg:bottom-[-21px] lg:right-0
-                      h-auto w-full max-w-[450px] 
-                      lg:h-[600px] lg:w-[750px] 
-                      xl:h-[650px] xl:w-[850px] 
+                      h-auto w-full max-w-[450px]
+                      lg:h-[600px] lg:w-[750px]
+                      xl:h-[650px] xl:w-[850px]
                       lg:max-w-none object-contain"
                     priority
                   />

@@ -35,7 +35,14 @@ export default function Footer() {
     },
   ] as const;
   return (
-    <footer className="bg-white border-t border-gray-200" role="contentinfo">
+    <footer
+      className="border-t border-gray-200"
+      style={{
+        background:
+          "linear-gradient(to right, #FFFFFF 0%, #F5F5F5 50%, #FFFFFF 90%, #FAFAFA 100%)",
+      }}
+      role="contentinfo"
+    >
       {/* Mobile Layout */}
       <div className="lg:hidden px-6 pt-3 pb-10">
         {" "}
@@ -196,12 +203,12 @@ export default function Footer() {
                 aria-label="SmartPath Home"
               >
                 <Image
-                  src="/assets/home/footer/logofooter.png"
+                  src="/assets/common/navbar/logoheaderskillspace.svg"
                   alt="SmartPath"
-                  width={380}
-                  height={111}
-                  className="h-auto w-[380px] object-contain"
-                  style={{ aspectRatio: "380 / 111" }}
+                  width={300}
+                  height={100}
+                  className="h-auto w-[300px] object-contain"
+                  style={{ aspectRatio: "300 / 100" }}
                 />
               </Link>
               <p className="text-gray-600 text-base leading-relaxed -mt-2">

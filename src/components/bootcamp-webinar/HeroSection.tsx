@@ -44,13 +44,13 @@ export default function EHeroSection() {
                     di Top Company
                   </span>
                 </h1>
-                <div className="hidden md:block mt-4 md:mt-7 w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[450px] xl:max-w-[480px] h-[3px] rounded md:h-[4px] bg-[#FEA600]" />
+                <div className="hidden md:block mt-4 md:mt-7 w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[450px] xl:max-w-[480px] h-[3px] rounded md:h-[4px] bg-[#AFC6FF]" />
               </div>
 
               {/* Mobile image */}
               <div className="md:hidden flex justify-center order-1">
                 <Image
-                  src="/assets/bootcamp-webinar/bootcamp.png"
+                  src="/assets/bootcamp-webinar/hero-bootcamp.svg"
                   alt="Bootcamp Webinar"
                   width={400}
                   height={300}
@@ -66,7 +66,7 @@ export default function EHeroSection() {
                   style={{ marginRight: "clamp(0px, 6vw, 140px)" }}
                 >
                   <Image
-                    src="/assets/bootcamp-webinar/bootcamp.png"
+                    src="/assets/bootcamp-webinar/hero-bootcamp.svg"
                     alt="Bootcamp Webinar"
                     width={850}
                     height={600}

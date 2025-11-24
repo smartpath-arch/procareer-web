@@ -156,7 +156,7 @@ export default function EBenefitSection() {
                         key={benefitIndex}
                         className="flex items-start gap-4 md:gap-5 group"
                       >
-                        <div className="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-[#F2BD0F] via-[#F2C94C] to-[#F2A20F] rounded-full flex items-center justify-center shadow-lg group-hover:scale-125 group-hover:rotate-12 transition-all duration-300">
+                        <div className="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-sky-500 to-slate-400 rounded-full flex items-center justify-center shadow-lg group-hover:scale-125 group-hover:rotate-12 transition-all duration-300">
                           <svg
                             className="w-5 h-5 md:w-6 md:h-6 text-white"
                             fill="none"

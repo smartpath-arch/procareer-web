@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: { default: "SmartPath", template: "%s • SmartPath" },
+  title: { default: "SkillSpace", template: "%s • SkillSpace" },
   description: "Rebuild & Optimization",
 };
 
