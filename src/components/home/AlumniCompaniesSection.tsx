@@ -74,10 +74,10 @@ export default function AlumniCompaniesSection() {
         </div>
       </div>
 
-      <div className="bg-gradient-to-r from-[#D4A017] via-[#F7C948] to-[#FDE68A]">
+      <div className="bg-[#F2F4F8] border border-[#E5E7EB]/50">
         <div className="md:hidden px-5 py-8">
           <h3 className="text-[28px] text-center font-extrabold text-gray-900 mb-6">
-            Why Choose Smartpath?
+            Why Skill Space?
           </h3>
           <ul className="space-y-4">
             {benefits.map((b) => (
@@ -96,12 +96,12 @@ export default function AlumniCompaniesSection() {
         <div className="hidden md:block">
           <div className="max-w-7xl mx-auto px-6 py-12">
             <div className="flex items-center gap-16">
-              <div className="flex-shrink-0">
+              <div className="flex-1 flex justify-center">
                 <h3 className="text-5xl font-extrabold text-gray-900 whitespace-nowrap">
-                  Why Choose Smartpath?
+                  Why Skill Space?
                 </h3>
               </div>
-              <ul className="space-y-4 flex-1">
+              <ul className="flex-1 space-y-4 pr-20">
                 {benefits.map((b) => (
                   <li key={b} className="flex items-center gap-4">
                     <span className="inline-flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-transparent ring-[3px] ring-gray-900">

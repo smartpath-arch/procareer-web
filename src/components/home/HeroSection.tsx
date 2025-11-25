@@ -10,7 +10,7 @@ export default function HeroSection() {
 
   // Array gambar hero untuk carousel (Mobile only) (need fix)
   const heroImages = [
-    "/assets/home/hero-section/herosection1.png",
+    "/assets/home/hero-section/herosection2.png",
     "/assets/home/hero-section/heroe-learning.png",
     "/assets/home/hero-section/herobootcampdanwebinar.png",
     "/assets/home/hero-section/heroforcorporate.png",
@@ -96,7 +96,7 @@ export default function HeroSection() {
             <div className="flex items-start justify-between gap-3">
               <div className="flex-shrink-0 w-[65%] sm:w-[58%] md:w-[48%] pt-6">
                 <Image
-                  src="/assets/mobile/home/mobilec.png"
+                  src="/assets/mobile/home/mobilec2.png"
                   alt="Bantu Kamu Cepat Berkarir di Bidang Data & AI"
                   width={300}
                   height={200}
@@ -108,7 +108,7 @@ export default function HeroSection() {
 
               <div className="flex-shrink-0 w-[52%] -mt-1 -mb-4 overflow-hidden -mr-4">
                 <Image
-                  src="/assets/mobile/home/mobilea.png"
+                  src="/assets/mobile/home/mobilea2.png"
                   alt="SmartPath Professional"
                   width={300}
                   height={550}
@@ -122,7 +122,7 @@ export default function HeroSection() {
         <div className="relative px-4 pt-6 pb-6">
           <div className="overflow-hidden rounded-3xl bg-white">
             <Image
-              src="/assets/mobile/home/mobileb.png"
+              src="/assets/mobile/home/mobileb2.png"
               alt="Statistik SmartPath - 310k+ Pengguna, 1000+ Materi, 100+ Instansi"
               width={450}
               height={380}
@@ -142,7 +142,7 @@ export default function HeroSection() {
             }`}
           >
             <Image
-              src="/assets/home/hero-section/herosection1.png"
+              src="/assets/home/hero-section/herosection2.png"
               alt="Bantu Kamu Cepat Berkarir di Bidang Data & AI"
               width={1600}
               height={900}
@@ -159,7 +159,7 @@ export default function HeroSection() {
         >
           <div className="overflow-hidden rounded-2xl shadow-2xl">
             <Image
-              src="/assets/home/herostatistik.png"
+              src="/assets/home/herostatistik1.png"
               alt="Statistik SmartPath"
               width={1600}
               height={600}

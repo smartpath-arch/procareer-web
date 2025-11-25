@@ -178,7 +178,7 @@ const MobileCarousel: React.FC = () => {
       label: "Program Kita",
       title: "E-Learning",
       description: "Pelajari Ratusan Skill Bersertifikat kapanpun dimanapun",
-      imageSrc: "/assets/mobile/home/program-section/e-learningmobile.png",
+      imageSrc: "/assets/mobile/home/program-section/e-learningmobile2.png",
       buttonText: "Lihat E-Learning",
       path: "/e-learning",
     },
@@ -189,7 +189,7 @@ const MobileCarousel: React.FC = () => {
       description:
         "Intensive Live Class Bareng Experts hingga disalurkan kerja",
       imageSrc:
-        "/assets/mobile/home/program-section/bootcamp-webinarmobile.png",
+        "/assets/mobile/home/program-section/bootcamp-webinarmobile2.png",
       buttonText: "Lihat Bootcamp",
       path: "/bootcamp-webinar",
     },
@@ -199,7 +199,7 @@ const MobileCarousel: React.FC = () => {
       title: "For Corporate",
       description:
         "Esiensikan Operasionalmu dan Tingkatkan Omset Perusahaanmu dengan Talent Berkualitas",
-      imageSrc: "/assets/mobile/home/program-section/forcorporatemobile.png",
+      imageSrc: "/assets/mobile/home/program-section/forcorporatemobile2.png",
       buttonText: "Lihat Corporate",
       path: "/for-corporate",
     },
@@ -209,7 +209,7 @@ const MobileCarousel: React.FC = () => {
       title: "Event",
       description:
         "Ikuti event dan program menarik lainnya untuk upgrade diri kamu",
-      imageSrc: "/assets/mobile/home/program-section/eventmobile.png",
+      imageSrc: "/assets/mobile/home/program-section/eventmobile2.png",
       buttonText: "Lihat Event",
       path: "/event",
     },
@@ -385,7 +385,7 @@ const MobileCarousel: React.FC = () => {
             onClick={() => goToSlide(i)}
             className={`h-2 rounded-full transition-all duration-500 ease-in-out ${
               i === current
-                ? "bg-yellow-500 w-8 shadow-lg"
+                ? "bg-[#AFC6FF] w-8 shadow-lg"
                 : "bg-gray-300 w-2 hover:bg-gray-400"
             }`}
             title={`Ke slide ${i + 1}: ${s.title}`}
@@ -405,7 +405,7 @@ const LearningPlatformSections: React.FC = () => {
     {
       title: "E-Learning",
       description: "Pelajari Ratusan Skill Bersertifikat kapanpun dimanapun",
-      imageSrc: "/assets/home/program-section/e-learning.png",
+      imageSrc: "/assets/home/program-section/e-learning2.png",
       imageAlt: "E-Learning",
       bgClass: "bg-[#0056A3]",
       path: "/e-learning",
@@ -414,7 +414,7 @@ const LearningPlatformSections: React.FC = () => {
       title: "Bootcamp & Webinar",
       description:
         "Intensive Live Class Bareng Experts hingga disalurkan kerja",
-      imageSrc: "/assets/home/program-section/bootcampdanwebinar.png",
+      imageSrc: "/assets/home/program-section/bootcampdanwebinar2.png",
       imageAlt: "Bootcamp & Webinar",
       reverse: true,
       bgClass: "bg-[#0B69BE]",
@@ -424,7 +424,7 @@ const LearningPlatformSections: React.FC = () => {
       title: "For Corporate",
       description:
         "Esiensikan Operasionalmu dan Tingkatkan Omset Perusahaanmu dengan Talent Berkualitas",
-      imageSrc: "/assets/home/program-section/forcorporate.png",
+      imageSrc: "/assets/home/program-section/forcorporate2.png",
       imageAlt: "For Corporate",
       bgClass: "bg-[#0056A3]",
       center: true,
@@ -438,7 +438,7 @@ const LearningPlatformSections: React.FC = () => {
       title: "Event",
       description:
         "Ikuti event dan program menarik lainnya untuk upgrade diri kamu",
-      imageSrc: "/assets/home/program-section/event.png",
+      imageSrc: "/assets/home/program-section/event2.png",
       imageAlt: "Event",
       reverse: true,
       bgClass: "bg-[#0B69BE]",

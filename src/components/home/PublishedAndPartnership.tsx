@@ -231,7 +231,7 @@ const PublishedAndPartnership: React.FC = () => {
             <h2 className="text-3xl font-semibold text-[#1E5BA8] font-['Poppins']">
               Published By
             </h2>
-            <div className="w-52 h-1 bg-[#FEA600] rounded-full mt-2.5"></div>
+            <div className="w-52 h-1 bg-[#AFC6FF] rounded-full mt-2.5"></div>
           </div>
 
           <div className="relative overflow-hidden">
@@ -255,7 +255,7 @@ const PublishedAndPartnership: React.FC = () => {
             <h2 className="text-3xl font-semibold text-[#1E5BA8] font-['Poppins']">
               Partnership With
             </h2>
-            <div className="w-72 h-1 bg-[#FDB913] rounded-full mt-2.5"></div>
+            <div className="w-72 h-1 bg-[#AFC6FF] rounded-full mt-2.5"></div>
           </div>
           <div className="relative overflow-hidden">
             <div className="carousel-container">
