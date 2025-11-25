@@ -12,11 +12,11 @@ export default function EHeroSection() {
     <section className="relative w-full overflow-hidden">
       <div className="mx-auto max-w-none bg-white mb-2">
         {/* Background gradient + rounded bottom */}
-        <div className="relative min-h-[300px] md:h-[500px] lg:h-[550px] rounded-b-[30px] md:rounded-b-[50px] overflow-visible bg-gradient-to-b from-[#011681] to-[#06ACDE]">
+        <div className="relative min-h-[300px] md:h-[500px] lg:h-[550px] rounded-b-[30px] md:rounded-b-[50px] overflow-hidden bg-gradient-to-b from-[#011681] to-[#06ACDE]">
           {/* Responsive padding */}
           <div className="h-full pb-[3px] px-5 sm:px-6 md:px-8  lg:pl-[80px] lg:pr-[60px]">
             {/* Responsive grid: mobile stack, desktop side-by-side */}
-            <div className="h-full flex flex-col md:grid md:items-center md:grid-cols-1 lg:grid-cols-[0.85fr_auto] gap-0 py-8 md:py-0">
+            <div className="h-full flex flex-col md:grid md:items-center md:grid-cols-1 lg:grid-cols-[0.75fr_auto] gap-0 py-8 md:py-0">
               {/* Left content */}
               <div className="z-10 text-white w-full md:max-w-[900px] lg:max-w-none lg:pr-0 order-2 md:order-1 lg:-mt-12 xl:-mt-20">
                 {/* Mobile heading */}
@@ -50,7 +50,7 @@ export default function EHeroSection() {
               {/* Mobile image */}
               <div className="md:hidden flex justify-center order-1">
                 <Image
-                  src="/assets/bootcamp-webinar/hero-bootcamp.svg"
+                  src="/assets/bootcamp-webinar/hero-bootcamp.png"
                   alt="Bootcamp Webinar"
                   width={400}
                   height={300}
@@ -62,20 +62,21 @@ export default function EHeroSection() {
               {/* Desktop image */}
               <div className="hidden md:block relative w-full lg:w-auto md:order-1">
                 <div
-                  className="relative md:h-[500px] lg:h-[600px] w-full lg:w-[750px] xl:w-[850px]"
-                  style={{ marginRight: "clamp(0px, 6vw, 140px)" }}
+                  className="relative md:h-[500px] lg:h-[550px] xl:h-[550px] w-full lg:w-[750px] xl:w-[850px]"
+                  style={{ marginRight: "clamp(0px, 4vw, 100px)" }}
                 >
                   <Image
-                    src="/assets/bootcamp-webinar/hero-bootcamp.svg"
+                    src="/assets/bootcamp-webinar/hero-bootcamp.png"
                     alt="Bootcamp Webinar"
                     width={850}
                     height={600}
-                    className="absolute 
-                      md:bottom-[-60px] md:right-0
-                      lg:bottom-[-21px] lg:right-0
-                      h-auto w-full max-w-[450px] 
-                      lg:h-[600px] lg:w-[750px] 
-                      xl:h-[650px] xl:w-[850px] 
+                    className="absolute
+                      md:bottom-0 md:right-0
+                      lg:bottom-0 lg:right-0
+                      xl:bottom-0 xl:right-0
+                      h-auto w-full max-w-[450px]
+                      lg:h-[450px] lg:w-[600px]
+                      xl:h-[500px] xl:w-[700px]
                       lg:max-w-none object-contain"
                     priority
                   />
