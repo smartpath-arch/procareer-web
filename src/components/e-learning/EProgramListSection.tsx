@@ -144,7 +144,7 @@ export default function EProgramListSection({
       className={`${plusJakarta.className} w-full bg-white py-6 md:py-12`}
     >
       <div className="mx-auto max-w-[1420px] px-4 sm:px-6 md:px-8 lg:px-[64px]">
-        <h2 className="text-[#0B2540] font-extrabold text-[24px] leading-[32px] sm:text-[30px] sm:leading-[38px] md:text-[36px] md:leading-[44px] text-center mb-4 md:mb-6">
+        <h2 className="text-[#19499a] font-extrabold text-[24px] leading-[32px] sm:text-[30px] sm:leading-[38px] md:text-[36px] md:leading-[44px] text-center mb-4 md:mb-6">
           Belajar Kapan Saja dan Dimana Saja
         </h2>
         <div className="mx-auto max-w-[980px] mb-4 md:mb-8">
@@ -165,7 +165,7 @@ export default function EProgramListSection({
         <div className="lg:hidden mb-4">
           <button
             onClick={() => setShowFilters(!showFilters)}
-            className="w-full flex items-center justify-center gap-2 bg-[#0056A3] text-white font-semibold py-3 rounded-xl transition-all"
+            className="w-full flex items-center justify-center gap-2 bg-[#5c89c7] text-white font-semibold py-3 rounded-xl transition-all"
           >
             <Filter className="h-5 w-5" />
             Filter Kategori
@@ -176,7 +176,7 @@ export default function EProgramListSection({
           <aside
             className={`${showFilters ? "block" : "hidden"} lg:block lg:sticky lg:top-6 lg:self-start`}
           >
-            <div className="rounded-2xl bg-[#0056A3] text-white p-4 md:p-6">
+            <div className="rounded-2xl bg-[#5c89c7] text-white p-4 md:p-6">
               <h3 className="text-[20px] md:text-[24px] leading-[24px] md:leading-[28px] font-extrabold mb-3 md:mb-4">
                 Kategori
               </h3>
@@ -283,9 +283,9 @@ export default function EProgramListSection({
                     <Link
                       href={it.href}
                       className="mt-3 sm:mt-4 inline-flex w-full items-center justify-center gap-2 
-                                 rounded-xl bg-[#D9E6F1] text-[#0056A3] font-semibold 
+                                 rounded-xl bg-[#86beff] text-white font-semibold 
                                  py-2 sm:py-2.5 text-[14px] sm:text-[15px] 
-                                 hover:bg-[#0056A3] hover:text-white transition-all duration-300"
+                                 hover:bg-[#5c89c7] hover:text-white transition-all duration-300"
                     >
                       Selengkapnya{" "}
                       <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5" />

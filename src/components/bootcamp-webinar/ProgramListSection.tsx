@@ -164,10 +164,10 @@ export default function ProgramListSection({
 
   return (
     <section
-      className={`${plusJakarta.className} w-full bg-[#0056A3] py-8 md:py-12`}
+      className={`${plusJakarta.className} w-full bg-[#19499a] py-8 md:py-12`}
     >
       <div className="mx-auto max-w-[1420px] px-4 sm:px-6 md:px-[64px]">
-        <h2 className="text-white font-extrabold text-[28px] leading-8 sm:text-[32px] sm:leading-[40px] md:text-[36px] md:leading-[44px] text-center mb-6 md:mb-8">
+        <h2 className="text-[#fafafa] font-extrabold text-[28px] leading-8 sm:text-[32px] sm:leading-[40px] md:text-[36px] md:leading-[44px] text-center mb-6 md:mb-8">
           Belajar Skill Baru, Siap Kerja Lebih Cepat!
         </h2>
 

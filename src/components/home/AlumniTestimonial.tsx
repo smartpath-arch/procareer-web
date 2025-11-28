@@ -279,7 +279,7 @@ const AlumniTestimonial = ({
           >
             {data.map((testimonial, index) => (
               <div key={index} className="w-full flex-shrink-0 px-2">
-                <div className="relative bg-[#2B5BA6] rounded-3xl p-6 shadow-lg flex flex-col justify-between min-h-[280px]">
+                <div className="relative bg-gradient-to-b from-[#86beff] to-[#5c89c7] rounded-3xl p-6 shadow-lg flex flex-col justify-between min-h-[280px]">
                   <p
                     className={`${poppins.className} text-white ${getTestimonialFontSize(
                       testimonial.testimonial,
@@ -381,7 +381,7 @@ const AlumniTestimonial = ({
                 {pair.map((testimonial, cardIndex) => (
                   <div
                     key={cardIndex}
-                    className="flex-1 relative overflow-hidden shadow-xl bg-[#2B5BA6]"
+                    className="flex-1 relative overflow-hidden shadow-xl bg-gradient-to-b from-[#86beff] to-[#5c89c7]"
                     style={{
                       minHeight: "260px",
                       borderRadius: "24px 0 24px 0",

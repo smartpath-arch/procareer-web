@@ -12,7 +12,7 @@ export default function EHeroSection() {
     <section className="relative w-full overflow-hidden">
       <div className="mx-auto max-w-none bg-white mb-2">
         {/* Background gradient + rounded bottom */}
-        <div className="relative min-h-[300px] md:h-[500px] lg:h-[550px] rounded-b-[30px] md:rounded-b-[50px] overflow-hidden bg-gradient-to-b from-[#011681] to-[#06ACDE]">
+        <div className="relative min-h-[300px] md:h-[500px] lg:h-[550px] rounded-b-[30px] md:rounded-b-[50px] overflow-hidden bg-gradient-to-b from-[#86beff] to-[#5c89c7]">
           {/* Responsive padding */}
           <div className="h-full pb-[3px] px-5 sm:px-6 md:px-8  lg:pl-[80px] lg:pr-[60px]">
             {/* Responsive grid: mobile stack, desktop side-by-side */}
@@ -44,7 +44,10 @@ export default function EHeroSection() {
                     di Top Company
                   </span>
                 </h1>
-                <div className="hidden md:block mt-4 md:mt-7 w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[450px] xl:max-w-[480px] h-[3px] rounded md:h-[4px] bg-[#AFC6FF]" />
+                <div
+                  className="hidden md:block mt-4 md:mt-7 w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[450px] xl:max-w-[480px] h-[3px] rounded md:h-[4px]"
+                  style={{ background: "#19499a" }}
+                />
               </div>
 
               {/* Mobile image */}

@@ -82,7 +82,7 @@ export default function EBenefitSection() {
   return (
     <section className="w-full bg-white py-6 md:py-8 lg:py-12">
       <div className="max-w-7xl lg:max-w-[1400px] xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 relative">
-        <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 md:mb-8 lg:mb-6">
+        <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#19499a] mb-6 md:mb-8 lg:mb-6">
           Benefit
         </h2>
         <Swiper
