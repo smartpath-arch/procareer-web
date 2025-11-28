@@ -61,8 +61,8 @@ export default function EHeroSection() {
                     width={750}
                     height={500}
                     className="absolute
-                      md:bottom-[-50px] md:right-0
-                      lg:bottom-[-30px] lg:right-0
+                      md:bottom-[-50px] md:right-[-20px]
+                      lg:bottom-[-30px] lg:right-[-50px]
                       h-auto w-full max-w-[350px]
                       lg:h-[400px] lg:w-[600px]
                       xl:h-[500px] xl:w-[700px]
