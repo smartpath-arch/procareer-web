@@ -405,9 +405,9 @@ const LearningPlatformSections: React.FC = () => {
     {
       title: "E-Learning",
       description: "Pelajari Ratusan Skill Bersertifikat kapanpun dimanapun",
-      imageSrc: "/assets/home/program-section/e-learning2.png",
+      imageSrc: "/assets/home/program-section/e-learning3.png",
       imageAlt: "E-Learning",
-      bgClass: "bg-[#0056A3]",
+      bgClass: "bg-[#19499A]",
       path: "/e-learning",
     },
     {
@@ -424,9 +424,9 @@ const LearningPlatformSections: React.FC = () => {
       title: "For Corporate",
       description:
         "Esiensikan Operasionalmu dan Tingkatkan Omset Perusahaanmu dengan Talent Berkualitas",
-      imageSrc: "/assets/home/program-section/forcorporate2.png",
+      imageSrc: "/assets/home/program-section/forcorporate3.png",
       imageAlt: "For Corporate",
-      bgClass: "bg-[#0056A3]",
+      bgClass: "bg-[#19499A]",
       center: true,
       gapClass: "gap-4",
       customImageHeight:
