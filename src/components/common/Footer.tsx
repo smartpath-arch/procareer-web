@@ -50,7 +50,7 @@ export default function Footer() {
           <div className="flex justify-center">
             <Link href="/" className="inline-block" aria-label="SmartPath Home">
               <Image
-                src="/assets/home/footer/logofooter.png"
+                src="/assets/common/navbar/logoheaderskillspace.svg"
                 alt="SmartPath"
                 width={550}
                 height={161}

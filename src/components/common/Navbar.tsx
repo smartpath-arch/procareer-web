@@ -39,7 +39,7 @@ export default function Navbar() {
     >
       <div className="mx-auto max-w-7xl px-6 md:px-8 transition-all duration-300">
         {/* Mobile */}
-        <div className="flex items-center justify-between md:hidden">
+        <div className="flex items-center justify-between md:hidden py-2">
           <div className="flex items-center gap-4">
             {isOpen ? (
               <button
@@ -48,9 +48,9 @@ export default function Navbar() {
                 aria-label="Toggle menu"
                 aria-expanded="true"
                 aria-controls="mobile-menu"
-                className="rounded-lg p-1.5 hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 transition-all duration-200"
+                className="rounded-lg p--2 hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 transition-all duration-200"
               >
-                <X size={28} className="text-gray-800" />
+                <X size={30} className="text-[#19499A]" />
               </button>
             ) : (
               <button
@@ -59,15 +59,15 @@ export default function Navbar() {
                 aria-label="Toggle menu"
                 aria-expanded="false"
                 aria-controls="mobile-menu"
-                className="rounded-lg p-1.5 hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 transition-all duration-200"
+                className="rounded-lg p-2 hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 transition-all duration-200"
               >
-                <Menu size={28} className="text-gray-800" />
+                <Menu size={30} className="text-[#19499A]" />
               </button>
             )}
 
             <Link href="/" aria-label="SmartPath Home">
               <Image
-                src="/assets/mobile/home/mobilelogo.svg"
+                src="/assets/common/navbar/logoheaderskillspace.svg"
                 alt="SmartPath Mobile Logo"
                 width={120}
                 height={150}
@@ -87,7 +87,7 @@ export default function Navbar() {
             href="https://smartpath-id.myr.id/portal"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative text-[16px] font-semibold text-white bg-[#19499A] px-6 py-2 rounded-md hover:bg-[#4a72a3] transition-colors duration-300"
+            className="relative text-[17px] font-semibold ext-white bg-[#19499A] px-6 py-2 rounded-md hover:bg-[#4a72a3] transition-colors duration-300"
           >
             Login
           </a>
@@ -153,7 +153,9 @@ export default function Navbar() {
                 >
                   <Link
                     href={item.href}
-                    className="block py-2 px-6 hover:text-blue-700 hover:bg-white/20 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)]"
+                    className="block py-3 px-8 relative hover:text-[#19499A] transition-all duration-300
+                after:absolute after:left-1/2 after:-bottom-1 after:-translate-x-1/2 after:h-[2px] after:w-0 
+                after:bg-[#19499A] hover:after:w-3/4 after:transition-all after:duration-300"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.name}
