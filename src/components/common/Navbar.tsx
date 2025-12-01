@@ -87,7 +87,7 @@ export default function Navbar() {
             href="https://smartpath-id.myr.id/portal"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative text-[16px] font-semibold text-white bg-[#5c89c7] px-6 py-2 rounded-md hover:bg-[#4a72a3] transition-colors duration-300"
+            className="relative text-[16px] font-semibold text-white bg-[#19499A] px-6 py-2 rounded-md hover:bg-[#4a72a3] transition-colors duration-300"
           >
             Login
           </a>
@@ -127,7 +127,7 @@ export default function Navbar() {
               href="https://smartpath-id.myr.id/portal"
               target="_blank"
               rel="noopener noreferrer"
-              className="relative text-[18px] font-semibold text-white bg-[#5c89c7] px-6 py-2 rounded-md hover:bg-[#4a72a3] transition-colors duration-300"
+              className="relative text-[18px] font-semibold text-white bg-[#19499A] px-6 py-2 rounded-md hover:bg-[#4a72a3] transition-colors duration-300"
             >
               Login
             </a>

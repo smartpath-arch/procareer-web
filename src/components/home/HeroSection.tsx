@@ -10,7 +10,7 @@ export default function HeroSection() {
 
   // Array gambar hero untuk carousel (Mobile only) (need fix)
   const heroImages = [
-    "/assets/home/hero-section/herosection2.png",
+    "/assets/home/hero-section/herosection3.png",
     "/assets/home/hero-section/heroe-learning.png",
     "/assets/home/hero-section/herobootcampdanwebinar.png",
     "/assets/home/hero-section/heroforcorporate.png",
@@ -134,7 +134,7 @@ export default function HeroSection() {
       </div>
 
       {/* Desktop */}
-      <div className="hidden md:block relative bg-gradient-to-b from-[#0A1F44] via-[#1E3A8A] to-[#60A5FA] pb-8 rounded-b-[60px]">
+      <div className="hidden md:block relative bg-gradient-to-b from-[#5C89C7] to-[#86BEFF] pb-8 rounded-b-[60px]">
         <div className="mx-auto max-w-[1450px] px-2 pt-4">
           <div
             className={`relative w-full overflow-hidden aspect-video mx-auto transition-opacity ${
@@ -142,7 +142,7 @@ export default function HeroSection() {
             }`}
           >
             <Image
-              src="/assets/home/hero-section/herosection2.png"
+              src="/assets/home/hero-section/herosection3.png"
               alt="Bantu Kamu Cepat Berkarir di Bidang Data & AI"
               width={1600}
               height={900}
@@ -159,7 +159,7 @@ export default function HeroSection() {
         >
           <div className="overflow-hidden rounded-2xl shadow-2xl">
             <Image
-              src="/assets/home/herostatistik1.png"
+              src="/assets/home/herostatistik2.png"
               alt="Statistik SmartPath"
               width={1600}
               height={600}

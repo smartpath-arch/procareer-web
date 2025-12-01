@@ -36,14 +36,14 @@ export default function AlumniCompaniesSection() {
         <div className="relative max-w-7xl mx-auto px-4 md:px-6 pt-6 pb-2 md:pt-10 md:pb-4">
           <div className="pb-1 md:pb-2">
             <h2
-              className="md:hidden text-center font-extrabold text-gray-900 text-[24px] leading-tight px-2"
+              className="md:hidden text-center font-extrabold text-[#19499A] text-[24px] leading-tight px-2"
               style={{ fontFamily: "Plus Jakarta Sans, sans-serif" }}
             >
               Thousands of Our Alumni Land Jobs at
               <br />
               Top Companies
             </h2>
-            <h2 className="hidden md:block text-center font-extrabold text-gray-900 text-2xl sm:text-3xl md:text-[44px] leading-tight">
+            <h2 className="hidden md:block text-center font-extrabold text-[#19499A] text-2xl sm:text-3xl md:text-[44px] leading-tight">
               Thousands of Our Alumni Land Jobs at Top Companies
             </h2>
             {/* underline removed */}
@@ -76,7 +76,7 @@ export default function AlumniCompaniesSection() {
 
       <div className="bg-[#F2F4F8] border border-[#E5E7EB]/50">
         <div className="md:hidden px-5 py-8">
-          <h3 className="text-[28px] text-center font-extrabold text-gray-900 mb-6">
+          <h3 className="text-[28px] text-center font-extrabold text-[#19499A] mb-6">
             Why Skill Space?
           </h3>
           <ul className="space-y-4">
@@ -97,7 +97,7 @@ export default function AlumniCompaniesSection() {
           <div className="max-w-7xl mx-auto px-6 py-12">
             <div className="flex items-center gap-16">
               <div className="flex-1 flex justify-center">
-                <h3 className="text-5xl font-extrabold text-gray-900 whitespace-nowrap">
+                <h3 className="text-5xl font-extrabold text-[#19499A] whitespace-nowrap">
                   Why Skill Space?
                 </h3>
               </div>

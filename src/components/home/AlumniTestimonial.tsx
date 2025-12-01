@@ -381,7 +381,7 @@ const AlumniTestimonial = ({
                 {pair.map((testimonial, cardIndex) => (
                   <div
                     key={cardIndex}
-                    className="flex-1 relative overflow-hidden shadow-xl bg-gradient-to-b from-[#86beff] to-[#5c89c7]"
+                    className="flex-1 relative overflow-hidden shadow-xl bg-gradient-to-b from-[#19499A] to-[#19499A]"
                     style={{
                       minHeight: "260px",
                       borderRadius: "24px 0 24px 0",
