@@ -353,7 +353,7 @@ const AlumniTestimonial = ({
       </section>
 
       {/* Desktop Version */}
-      <section className="hidden md:block px-8 py-8 bg-white">
+      <section className="hidden md:block px-8 py-8 bg-[#F5F7FA]">
         <h2
           className={`${plusJakartaSans.className} text-5xl font-bold text-center mb-8`}
         >

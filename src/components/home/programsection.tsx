@@ -68,7 +68,7 @@ const Section: React.FC<SectionProps> = ({
   imgWrapClass = "basis-72 md:basis-[28rem]",
   textWrapClass = "flex-1",
   center = false,
-  customPadding = "py-3 md:py-2",
+  customPadding = "pt-16 pb-6 md:pt-20 md:pb-8",
   customImageHeight = "w-72 h-72 md:w-[24rem] md:h-[20rem] lg:w-[28rem] lg:h-[23.333rem]",
 }) => {
   const [isVisible, setIsVisible] = React.useState(false);
@@ -120,20 +120,20 @@ const Section: React.FC<SectionProps> = ({
                 : "-translate-x-20 opacity-0"
           }`}
         >
-          <div
-            className={`relative ${customImageHeight} hover:scale-105 transition-transform duration-500`}
-          >
+          <div className="relative hover:scale-105 transition-transform duration-500 inline-block">
             <Image
               src={imageSrc}
               alt={imageAlt}
-              fill
-              sizes="(max-width: 768px) 80vw, (max-width: 1280px) 50vw, 40vw"
-              className="object-bottom object-cover"
+              width={0}
+              height={0}
+              sizes="100vw"
+              className="w-auto h-auto"
             />
           </div>
         </div>
         <div
-          className={`text-white ${textWrapClass} ${
+          className={`${bgClass === "bg-[#FAFAFA]" ? "text-[#19499A]" : "text-white"} 
+          ${textWrapClass} ${
             reverse ? "text-right md:text-right" : "text-left md:text-left"
           } transition-all duration-1000 delay-300 transform ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
@@ -148,16 +148,18 @@ const Section: React.FC<SectionProps> = ({
           <div className={`flex ${reverse ? "justify-end" : "justify-start"}`}>
             <Link href={path}>
               <button
-                className="bg-white text-blue-700 px-8 py-3 rounded-xl font-semibold flex items-center gap-2 transition-all duration-300 text-lg shadow-sm hover:shadow-lg transform hover:scale-105"
+                className={`
+    px-8 py-3 rounded-xl font-semibold flex items-center gap-2 
+    transition-all duration-300 text-lg shadow-sm hover:shadow-lg transform hover:scale-105
+    ${
+      bgClass === "bg-[#FAFAFA]"
+        ? "bg-[#19499A] text-white"
+        : "bg-white text-[#19499A]"
+    }       
+  `}
                 style={{
                   transition:
                     "background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = "#D9E6F1";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = "#ffffff";
                 }}
               >
                 Selengkapnya
@@ -408,16 +410,18 @@ const LearningPlatformSections: React.FC = () => {
       imageSrc: "/assets/home/program-section/e-learning3.png",
       imageAlt: "E-Learning",
       bgClass: "bg-[#19499A]",
+      customPadding: "",
       path: "/e-learning",
     },
     {
       title: "Bootcamp & Webinar",
       description:
         "Intensive Live Class Bareng Experts hingga disalurkan kerja",
-      imageSrc: "/assets/home/program-section/bootcampdanwebinar2.png",
+      imageSrc: "/assets/home/program-section/bootcampdanwebinar3.png",
       imageAlt: "Bootcamp & Webinar",
       reverse: true,
-      bgClass: "bg-[#0B69BE]",
+      bgClass: "bg-[#FAFAFA]",
+      customPadding: "",
       path: "/bootcamp-webinar",
     },
     {
@@ -429,9 +433,8 @@ const LearningPlatformSections: React.FC = () => {
       bgClass: "bg-[#19499A]",
       center: true,
       gapClass: "gap-4",
-      customImageHeight:
-        "w-72 h-72 md:w-[24rem] md:h-[20rem] lg:w-[28rem] lg:h-[23.333rem]",
-      customPadding: "py-1 md:py-0.5",
+      customImageHeight: "",
+      customPadding: "",
       path: "/for-corporate",
     },
     {
@@ -441,9 +444,9 @@ const LearningPlatformSections: React.FC = () => {
       imageSrc: "/assets/home/program-section/event2.png",
       imageAlt: "Event",
       reverse: true,
-      bgClass: "bg-[#0B69BE]",
+      bgClass: "bg-[#FAFAFA]",
       gapClass: "gap-4",
-      customPadding: "py-2 md:py-1",
+      customPadding: "",
       path: "/event",
     },
   ];
