@@ -355,7 +355,7 @@ const MobileCarousel: React.FC = () => {
                   : "translate-y-4 opacity-0"
               }`}
             >
-              <p className="text-blue-600 text-base font-medium mb-2 animate-fade-in">
+              <p className="text-[#19499A] text-base font-medium mb-2 animate-fade-in">
                 {slide.label}
               </p>
               <h2 className="text-3xl font-extrabold text-gray-900 mb-3 animate-slide-up">
@@ -367,7 +367,7 @@ const MobileCarousel: React.FC = () => {
               <Link href={slide.path}>
                 <button
                   className="text-white px-8 py-3.5 rounded-lg font-semibold transition-all duration-300 text-base w-fit transform hover:scale-105 active:scale-95 hover:shadow-lg"
-                  style={{ backgroundColor: "#0056A3" }}
+                  style={{ backgroundColor: "#19499A" }}
                 >
                   {slide.buttonText}
                 </button>
@@ -387,7 +387,7 @@ const MobileCarousel: React.FC = () => {
             onClick={() => goToSlide(i)}
             className={`h-2 rounded-full transition-all duration-500 ease-in-out ${
               i === current
-                ? "bg-[#AFC6FF] w-8 shadow-lg"
+                ? "bg-[#19499A] w-8 shadow-lg"
                 : "bg-gray-300 w-2 hover:bg-gray-400"
             }`}
             title={`Ke slide ${i + 1}: ${s.title}`}

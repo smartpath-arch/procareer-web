@@ -91,38 +91,25 @@ export default function HeroSection() {
 
       {/* Mobile */}
       <div className="md:hidden">
-        <div className="relative bg-gradient-to-b from-[#0B1B35] via-[#1E40AF] to-[#3B82F6] rounded-b-[40px] overflow-hidden">
+        <div className="relative bg-gradient-to-b from-[#5C89C7] to-[#86BEFF] rounded-b-[40px] overflow-hidden">
           <div className="relative z-10 w-full px-6 pt-3 pb-0">
-            <div className="flex items-start justify-between gap-3">
-              <div className="flex-shrink-0 w-[65%] sm:w-[58%] md:w-[48%] pt-6">
-                <Image
-                  src="/assets/mobile/home/mobilec2.png"
-                  alt="Bantu Kamu Cepat Berkarir di Bidang Data & AI"
-                  width={300}
-                  height={200}
-                  sizes="(max-width: 640px) 65vw, (max-width: 768px) 58vw, 48vw"
-                  className="w-full h-auto"
-                  priority
-                />
-              </div>
-
-              <div className="flex-shrink-0 w-[52%] -mt-1 -mb-4 overflow-hidden -mr-4">
-                <Image
-                  src="/assets/mobile/home/mobilea2.png"
-                  alt="SmartPath Professional"
-                  width={300}
-                  height={550}
-                  sizes="52vw"
-                  className="block w-full h-auto"
-                />
-              </div>
+            <div className="w-full pt-3 pb-0">
+              <Image
+                src="/assets/mobile/home/mobilec3.png"
+                alt="Hero Mobile"
+                width={800}
+                height={600}
+                sizes="100vw"
+                className="w-full h-auto object-cover"
+                priority
+              />
             </div>
           </div>
         </div>
         <div className="relative px-4 pt-6 pb-6">
           <div className="overflow-hidden rounded-3xl bg-white">
             <Image
-              src="/assets/mobile/home/mobileb2.png"
+              src="/assets/mobile/home/mobileb3.png"
               alt="Statistik SmartPath - 310k+ Pengguna, 1000+ Materi, 100+ Instansi"
               width={450}
               height={380}

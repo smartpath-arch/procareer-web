@@ -266,7 +266,7 @@ const AlumniTestimonial = ({
           className={`${plusJakartaSans.className} text-3xl font-bold text-center mb-6`}
         >
           <span className="text-[#1E1E1E]">Testimoni </span>
-          <span className="text-[#2B5BA6]">Alumni</span>
+          <span className="text-[#19499A]">Alumni</span>
         </h2>
 
         <div className="relative overflow-hidden">
@@ -279,7 +279,7 @@ const AlumniTestimonial = ({
           >
             {data.map((testimonial, index) => (
               <div key={index} className="w-full flex-shrink-0 px-2">
-                <div className="relative bg-gradient-to-b from-[#86beff] to-[#5c89c7] rounded-3xl p-6 shadow-lg flex flex-col justify-between min-h-[280px]">
+                <div className="relative bg-gradient-to-b from-[#19499A] to-[#19499A] rounded-3xl p-6 shadow-lg flex flex-col justify-between min-h-[280px]">
                   <p
                     className={`${poppins.className} text-white ${getTestimonialFontSize(
                       testimonial.testimonial,
@@ -358,7 +358,7 @@ const AlumniTestimonial = ({
           className={`${plusJakartaSans.className} text-5xl font-bold text-center mb-8`}
         >
           <span className="text-[#1E1E1E]">Testimoni </span>
-          <span className="text-[#2B5BA6]">Alumni</span>
+          <span className="text-[#19499A]">Alumni</span>
         </h2>
 
         <div className="relative overflow-hidden max-w-7xl mx-auto">
