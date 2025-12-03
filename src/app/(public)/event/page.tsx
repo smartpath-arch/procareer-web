@@ -1,23 +1,52 @@
 "use client";
 
-import Lottie from "lottie-react";
-import maintenanceAnimation from "../../../../public/website-maintenance.json";
+import React from "react";
+import { useQuery } from "@tanstack/react-query";
+import EventHeroSection from "@/components/event/EventHeroSection";
+import EventListSection, {
+  type EventItem,
+} from "@/components/event/EventListSection";
+import EventBenefitSection from "@/components/event/EventBenefitSection";
+import Footer from "@/components/common/Footer";
 
-export default function EventList() {
+async function getEvents(): Promise<EventItem[]> {
+  try {
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL}/events?status=published&limit=100`,
+      {
+        cache: "no-store",
+      },
+    );
+
+    if (!response.ok) {
+      throw new Error("Failed to fetch events");
+    }
+
+    const data = await response.json();
+
+    if (!data.success || !data.items) {
+      return [];
+    }
+
+    return data.items;
+  } catch (error) {
+    console.error("Error fetching events:", error);
+    return [];
+  }
+}
+
+export default function EventPage() {
+  const { data: events, isLoading: isEventsLoading } = useQuery({
+    queryKey: ["events"],
+    queryFn: getEvents,
+  });
+
   return (
-    <section className="flex flex-col items-center justify-center min-h-[60vh] px-4">
-      <div className="max-w-md w-full">
-        <Lottie animationData={maintenanceAnimation} loop={true} />
-      </div>
-      <div className="text-center mt-6">
-        <h1 className="text-2xl font-semibold mb-2">
-          Halaman Dalam Pengembangan
-        </h1>
-        <p className="text-muted-foreground">
-          Halaman ini sedang dalam tahap pengembangan. Mohon tunggu untuk update
-          selanjutnya.
-        </p>
-      </div>
-    </section>
+    <main className="w-full overflow-x-hidden bg-white">
+      <EventHeroSection />
+      <EventBenefitSection />
+      <EventListSection items={events || []} isLoading={isEventsLoading} />
+      <Footer />
+    </main>
   );
 }
