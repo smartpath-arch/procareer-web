@@ -11,37 +11,26 @@ export default function EventHeroSection() {
   return (
     <section className="relative w-full overflow-hidden">
       {/* Mobile - Home-style banner */}
-      <div className="md:hidden relative overflow-hidden bg-white mb-2">
-        <div className="relative bg-gradient-to-b from-[#5C89C7] to-[#86BEFF] rounded-b-[40px] overflow-hidden">
-          <div className="relative z-10 w-full px-6 pt-6 pb-0 -mt-4">
-            <div className="flex items-end justify-between gap-3">
-              <div className="flex-shrink-0 w-[68%] pb-0 self-center">
-                <h1
-                  className={`${plusJakarta.className} text-white
-                    text-[16px] leading-[22px] sm:text-[18px] sm:leading-[25px] tracking-[-0.02em]`}
-                >
-                  <span className="block font-extrabold">Event untuk</span>
-                  <span className="block font-extrabold text-[#FEA600]">
-                    mengembangkan diri
-                  </span>
-                  <span className="block font-extrabold text-[#FEA600]">
-                    & kariermu
-                  </span>
-                </h1>
-              </div>
-
-              <div className="flex-shrink-0 w-[34%] -mr-3 -mb-10">
-                <Image
-                  src="/assets/event/event-hero.png"
-                  alt="Event"
-                  width={220}
-                  height={360}
-                  sizes="34vw"
-                  className="block w-full h-auto object-contain object-bottom"
-                  priority
-                />
-              </div>
-            </div>
+      <div className="md:hidden w-full bg-white mb-4">
+        <div className="relative overflow-hidden bg-gradient-to-b from-[#5C89C7] to-[#86BEFF] rounded-b-[40px] pt-6 pb-8">
+          <div className="w-full flex justify-center -mb-2 pb-4">
+            <Image
+              src="/assets/event/event-hero1.png"
+              alt="Event"
+              width={220}
+              height={360}
+              className="w-[65%] h-auto object-contain"
+              priority
+            />
+          </div>
+          <div className="px-6 text-center">
+            <h1
+              className={`${plusJakarta.className} text-white font-extrabold
+        text-[24px] leading-[24px] tracking-[-0.02em]`}
+            >
+              Upgrade Skill di Event Kami.
+            </h1>
+            <div className="md:block mt-4 md:mt-7 w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[450px] xl:max-w-[480px] h-[3px] rounded md:h-[4px] bg-white mx-auto" />
           </div>
         </div>
       </div>
@@ -57,8 +46,7 @@ export default function EventHeroSection() {
                     text-[32px] leading-[40px] sm:text-[36px] sm:leading-[44px]
                     md:text-[42px] md:leading-[50px] lg:text-[46px] lg:leading-[56px] tracking-[-0.016em]`}
                 >
-                  <span className="block">Event untuk mengembangkan</span>
-                  <span className="block">diri & kariermu</span>
+                  <span className="block">Upgrade Skill di Event Kami</span>
                 </h1>
                 <div className="hidden md:block mt-4 md:mt-7 w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[450px] xl:max-w-[480px] h-[3px] rounded md:h-[4px] bg-white" />
               </div>
@@ -67,7 +55,7 @@ export default function EventHeroSection() {
               <div className="hidden md:block relative w-full lg:w-auto md:order-1">
                 <div className="relative md:h-[500px] lg:h-[600px] w-full lg:w-[750px] xl:w-[850px]">
                   <Image
-                    src="/assets/event/event-hero.png"
+                    src="/assets/event/event-hero1.png"
                     alt="Event Hero"
                     width={850}
                     height={600}

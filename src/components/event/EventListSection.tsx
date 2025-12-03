@@ -237,7 +237,7 @@ export default function EventListSection({ items, isLoading }: Props) {
                 onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
                 disabled={currentPage === 1}
                 className="flex items-center gap-1 px-3 py-2 rounded-lg bg-white border border-white text-[#19499A] font-semibold text-sm
-                         hover:bg-[#FEA600] hover:text-white hover:border-[#FEA600] transition-all disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:text-[#19499A]"
+                         hover:bg-[#19499A] hover:text-white hover:border-[#19499A] transition-all disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:text-[#19499A]"
                 aria-label="Halaman sebelumnya"
               >
                 <ChevronLeft className="h-4 w-4" />
@@ -276,7 +276,7 @@ export default function EventListSection({ items, isLoading }: Props) {
                         className={`w-9 h-9 rounded-lg font-semibold text-sm transition-all
                           ${
                             currentPage === pageNum
-                              ? "bg-[#FEA600] text-white"
+                              ? "bg-[#19499A] text-white"
                               : "bg-white text-[#19499A] hover:bg-[#FEA600] hover:text-white"
                           }`}
                         aria-label={`Halaman ${pageNum}`}
@@ -298,7 +298,7 @@ export default function EventListSection({ items, isLoading }: Props) {
                 }
                 disabled={currentPage === totalPages}
                 className="flex items-center gap-1 px-3 py-2 rounded-lg bg-white border border-white text-[#19499A] font-semibold text-sm
-                         hover:bg-[#FEA600] hover:text-white hover:border-[#FEA600] transition-all disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:text-[#19499A]"
+                         hover:bg-[#19499A] hover:text-white hover:border-[#19499A] transition-all disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:text-[#19499A]"
                 aria-label="Halaman berikutnya"
               >
                 <span className="hidden sm:inline">Next</span>
