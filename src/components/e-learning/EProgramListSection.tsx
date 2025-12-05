@@ -133,7 +133,7 @@ export default function EProgramListSection({
     return (
       <section className={`${plusJakarta.className} w-full bg-white py-10`}>
         <div className="mx-auto max-w-[1420px] px-4 sm:px-6 text-center">
-          <div className="text-[#0056A3] text-xl">Loading courses…</div>
+          <div className="text-[#19499a] text-xl">Loading courses…</div>
         </div>
       </section>
     );
@@ -157,7 +157,7 @@ export default function EProgramListSection({
               onChange={(e) => setQuery(e.target.value)}
               type="text"
               placeholder="Apa skill yang ingin kamu cari?"
-              className="w-full rounded-xl border border-[#0056A3] bg-white pl-10 md:pl-11 pr-4 py-2.5 md:py-3 outline-none
+              className="w-full rounded-xl border border-[#19499a] bg-white pl-10 md:pl-11 pr-4 py-2.5 md:py-3 outline-none
                          text-[14px] md:text-[16px] text-[#0B2540] placeholder:text-[#9AA8B2] focus:ring-2 focus:ring-[#0056A3]/20"
             />
           </label>
@@ -165,7 +165,7 @@ export default function EProgramListSection({
         <div className="lg:hidden mb-4">
           <button
             onClick={() => setShowFilters(!showFilters)}
-            className="w-full flex items-center justify-center gap-2 bg-[#5c89c7] text-white font-semibold py-3 rounded-xl transition-all"
+            className="w-full flex items-center justify-center gap-2 bg-[#19499a] text-white font-semibold py-3 rounded-xl transition-all"
           >
             <Filter className="h-5 w-5" />
             Filter Kategori
@@ -176,7 +176,7 @@ export default function EProgramListSection({
           <aside
             className={`${showFilters ? "block" : "hidden"} lg:block lg:sticky lg:top-6 lg:self-start`}
           >
-            <div className="rounded-2xl bg-[#5c89c7] text-white p-4 md:p-6">
+            <div className="rounded-2xl bg-[#19499a] text-white p-4 md:p-6">
               <h3 className="text-[20px] md:text-[24px] leading-[24px] md:leading-[28px] font-extrabold mb-3 md:mb-4">
                 Kategori
               </h3>
@@ -197,7 +197,7 @@ export default function EProgramListSection({
                           ${active ? "bg-[#D9E6F1]" : "bg-transparent"}`}
                         >
                           {active && (
-                            <Check className="h-3 w-3 md:h-4 md:w-4 text-[#0056A3]" />
+                            <Check className="h-3 w-3 md:h-4 md:w-4 text-[#19499a]" />
                           )}
                         </span>
                       </button>

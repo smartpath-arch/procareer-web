@@ -30,7 +30,7 @@ export default function EventHeroSection() {
             >
               Upgrade Skill di Event Kami.
             </h1>
-            <div className="md:block mt-4 md:mt-7 w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[450px] xl:max-w-[480px] h-[3px] rounded md:h-[4px] bg-white mx-auto" />
+            <div className="hidden md:block mt-4 md:mt-7 w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[450px] xl:max-w-[480px] h-[3px] rounded md:h-[4px] bg-white mx-auto" />
           </div>
         </div>
       </div>

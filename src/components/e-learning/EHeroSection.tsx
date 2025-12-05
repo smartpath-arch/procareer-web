@@ -31,10 +31,7 @@ export default function EHeroSection() {
                     Kamu Cepat Dapat Kerja
                   </span>
                 </h1>
-                <div
-                  className="hidden md:block mt-4 md:mt-7 w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[450px] xl:max-w-[480px] h-[3px] rounded md:h-[4px]"
-                  style={{ background: "#3e659a" }}
-                />
+                <div className="hidden md:block mt-4 md:mt-7 w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[450px] xl:max-w-[480px] h-[3px] rounded md:h-[4px] bg-white" />
               </div>
 
               {/* Mobile image */}
