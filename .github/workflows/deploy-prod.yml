@@ -38,10 +38,10 @@ jobs:
           key: ${{ secrets.PROD_SSH_KEY }}
           script: |
             cd ~/feskillspace-prod
-            docker-compose down
-            docker-compose pull || true
-            docker-compose up -d --build
-            docker-compose ps
+            docker compose down
+            docker compose pull || true
+            docker compose up -d --build
+            docker compose ps
 
       - name: Health check
         if: success()

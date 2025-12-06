@@ -17,52 +17,52 @@ auto-shell: ## Auto-detect branch and enter shell
 	@bash docker.sh shell
 
 build: ## Build production image
-	docker-compose build
+	docker compose build
 
 up: ## Start production containers
-	docker-compose up -d
+	docker compose up -d
 
 down: ## Stop production containers
-	docker-compose down
+	docker compose down
 
 logs: ## View production logs
-	docker-compose logs -f
+	docker compose logs -f
 
 restart: ## Restart production containers
-	docker-compose restart
+	docker compose restart
 
 prod-up: ## Build and start production
-	docker-compose up -d --build
+	docker compose up -d --build
 
 prod-down: ## Stop and remove production containers
-	docker-compose down -v
+	docker compose down -v
 
 dev-up: ## Start development containers
-	docker-compose -f docker-compose.dev.yml up
+	docker compose -f docker-compose.dev.yml up
 
 dev-down: ## Stop development containers
-	docker-compose -f docker-compose.dev.yml down
+	docker compose -f docker-compose.dev.yml down
 
 dev-logs: ## View development logs
-	docker-compose -f docker-compose.dev.yml logs -f
+	docker compose -f docker-compose.dev.yml logs -f
 
 dev-restart: ## Restart development containers
-	docker-compose -f docker-compose.dev.yml restart
+	docker compose -f docker-compose.dev.yml restart
 
 clean: ## Remove all containers, images, and volumes
-	docker-compose down -v --rmi all
+	docker compose down -v --rmi all
 
 prune: ## Remove unused Docker resources
 	docker system prune -af --volumes
 
 shell: ## Enter production container shell
-	docker-compose exec web sh
+	docker compose exec web sh
 
 dev-shell: ## Enter development container shell
-	docker-compose -f docker-compose.dev.yml exec web sh
+	docker compose -f docker-compose.dev.yml exec web sh
 
 status: ## View container status
-	docker-compose ps
+	docker compose ps
 
 inspect: ## Show container details
-	docker-compose exec web node -v && docker-compose exec web pnpm -v
+	docker compose exec web node -v && docker compose exec web pnpm -v

@@ -79,11 +79,11 @@ GitHub Actions akan otomatis menjalankan deployment saat:
 ```bash
 # Development
 cd ~/feskillspace-dev
-docker-compose -f docker-compose.dev.yml logs -f
+docker compose -f docker-compose.dev.yml logs -f
 
 # Production
 cd ~/feskillspace-prod
-docker-compose logs -f
+docker compose logs -f
 ```
 
 ### Restart container
@@ -91,11 +91,11 @@ docker-compose logs -f
 ```bash
 # Development
 cd ~/feskillspace-dev
-docker-compose -f docker-compose.dev.yml restart
+docker compose -f docker-compose.dev.yml restart
 
 # Production
 cd ~/feskillspace-prod
-docker-compose restart
+docker compose restart
 ```
 
 ### Stop container
@@ -103,9 +103,9 @@ docker-compose restart
 ```bash
 # Development
 cd ~/feskillspace-dev
-docker-compose -f docker-compose.dev.yml down
+docker compose -f docker-compose.dev.yml down
 
 # Production
 cd ~/feskillspace-prod
-docker-compose down
+docker compose down
 ```
