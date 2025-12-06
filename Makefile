@@ -5,16 +5,16 @@ help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
 
 auto-up: ## Auto-detect branch and start containers
-	@./docker.sh up -d --build
+	@bash docker.sh up -d --build
 
 auto-down: ## Auto-detect branch and stop containers
-	@./docker.sh down
+	@bash docker.sh down
 
 auto-logs: ## Auto-detect branch and view logs
-	@./docker.sh logs -f
+	@bash docker.sh logs -f
 
 auto-shell: ## Auto-detect branch and enter shell
-	@./docker.sh shell
+	@bash docker.sh shell
 
 build: ## Build production image
 	docker-compose build
