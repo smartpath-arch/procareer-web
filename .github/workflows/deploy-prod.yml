@@ -1,14 +1,15 @@
-name: Deploy FE Prod
+name: Deploy Prod
 
 on:
   push:
-    branches: ["main"]
+    branches: [main]
+  workflow_dispatch:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Add known hosts
@@ -16,22 +17,33 @@ jobs:
           mkdir -p ~/.ssh
           ssh-keyscan -p ${{ secrets.PROD_PORT }} ${{ secrets.PROD_HOST }} >> ~/.ssh/known_hosts
 
-      - name: Deploy to Production Server
+      - name: Copy files to server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.PROD_HOST }}
+          username: ${{ secrets.PROD_USER }}
+          port: ${{ secrets.PROD_PORT }}
+          key: ${{ secrets.PROD_SSH_KEY }}
+          source: "."
+          target: "~/feskillspace-prod"
+          rm: false
+          strip_components: 0
+
+      - name: Deploy with Docker
         uses: appleboy/ssh-action@v1.2.0
         with:
           host: ${{ secrets.PROD_HOST }}
           username: ${{ secrets.PROD_USER }}
           port: ${{ secrets.PROD_PORT }}
           key: ${{ secrets.PROD_SSH_KEY }}
-          debug: true
           script: |
-            set -x
-            echo "Checking if script exists..."
-            ls -la ~/scripts/deploy-prod.sh || echo "Script not found!"
-            echo "Running deployment script..."
-            bash ~/scripts/deploy-prod.sh
+            cd ~/feskillspace-prod
+            docker-compose down
+            docker-compose pull || true
+            docker-compose up -d --build
+            docker-compose ps
 
-      - name: Check Deployment Status
+      - name: Health check
         if: success()
         uses: appleboy/ssh-action@v1.2.0
         with:
@@ -40,5 +52,6 @@ jobs:
           port: ${{ secrets.PROD_PORT }}
           key: ${{ secrets.PROD_SSH_KEY }}
           script: |
-            pm2 list | grep smartpath-fe-prod
-            curl -I http://localhost:3001 || exit 1
+            sleep 15
+            docker ps | grep feskillspace-web
+            curl -f http://localhost:3000 || exit 1
