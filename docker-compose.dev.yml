@@ -7,7 +7,7 @@ services:
     container_name: feskillspace-web-dev
     restart: unless-stopped
     ports:
-      - "3000:3000"
+      - "3002:3000"
     volumes:
       - .:/app
       # Prevent overwriting node_modules from host
