@@ -1,14 +1,15 @@
-name: Deploy FE Dev
+name: Deploy Dev
 
 on:
   push:
-    branches: ["dev"]
+    branches: [dev]
+  workflow_dispatch:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Add known hosts
@@ -16,22 +17,33 @@ jobs:
           mkdir -p ~/.ssh
           ssh-keyscan -p ${{ secrets.DEV_PORT }} ${{ secrets.DEV_HOST }} >> ~/.ssh/known_hosts
 
-      - name: Deploy to Development Server
+      - name: Copy files to server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.DEV_HOST }}
+          username: ${{ secrets.DEV_USER }}
+          port: ${{ secrets.DEV_PORT }}
+          key: ${{ secrets.DEV_SSH_KEY }}
+          source: "."
+          target: "~/feskillspace-dev"
+          rm: false
+          strip_components: 0
+
+      - name: Deploy with Docker
         uses: appleboy/ssh-action@v1.2.0
         with:
           host: ${{ secrets.DEV_HOST }}
           username: ${{ secrets.DEV_USER }}
           port: ${{ secrets.DEV_PORT }}
           key: ${{ secrets.DEV_SSH_KEY }}
-          debug: true
           script: |
-            set -x
-            echo "Checking if script exists..."
-            ls -la ~/scripts/deploy-dev.sh || echo "Script not found!"
-            echo "Running deployment script..."
-            bash ~/scripts/deploy-dev.sh
+            cd ~/feskillspace-dev
+            docker compose -f docker-compose.dev.yml down
+            docker compose -f docker-compose.dev.yml pull || true
+            docker compose -f docker-compose.dev.yml up -d --build
+            docker compose -f docker-compose.dev.yml ps
 
-      - name: Check Deployment Status
+      - name: Health check
         if: success()
         uses: appleboy/ssh-action@v1.2.0
         with:
@@ -40,5 +52,6 @@ jobs:
           port: ${{ secrets.DEV_PORT }}
           key: ${{ secrets.DEV_SSH_KEY }}
           script: |
-            pm2 list | grep smartpath-fe-dev
-            curl -I http://localhost:3000 || exit 1
+            sleep 10
+            docker ps | grep feskillspace-web-dev
+            curl -f http://localhost:3000 || exit 1
