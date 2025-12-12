@@ -53,11 +53,11 @@ export default function EHeroSection() {
               {/* Mobile image */}
               <div className="md:hidden flex justify-center order-1">
                 <Image
-                  src="/assets/bootcamp-webinar/hero-bootcamp.png"
+                  src="/assets/bootcamp-webinar/hero-bootcamp1.png"
                   alt="Bootcamp Webinar"
                   width={400}
                   height={300}
-                  className="h-auto w-full max-w-[320px] object-contain"
+                  className="h-auto w-full max-w-[320px] object-contain -translate-x-[20px]"
                   priority
                 />
               </div>
@@ -69,14 +69,14 @@ export default function EHeroSection() {
                   style={{ marginRight: "clamp(0px, 4vw, 100px)" }}
                 >
                   <Image
-                    src="/assets/bootcamp-webinar/hero-bootcamp.png"
+                    src="/assets/bootcamp-webinar/hero-bootcamp1.png"
                     alt="Bootcamp Webinar"
                     width={850}
                     height={600}
                     className="absolute
                       md:bottom-0 md:right-0
-                      lg:bottom-0 lg:right-0
-                      xl:bottom-0 xl:right-0
+                      lg:bottom-0 lg:right-30
+                      xl:bottom-0 xl:right-50
                       h-auto w-full max-w-[450px]
                       lg:h-[450px] lg:w-[600px]
                       xl:h-[500px] xl:w-[700px]

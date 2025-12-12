@@ -15,7 +15,7 @@ export default function EventHeroSection() {
         <div className="relative overflow-hidden bg-gradient-to-b from-[#5C89C7] to-[#86BEFF] rounded-b-[40px] pt-6 pb-8">
           <div className="w-full flex justify-center -mb-2 pb-4">
             <Image
-              src="/assets/event/event-hero1.png"
+              src="/assets/event/event-hero2.png"
               alt="Event"
               width={220}
               height={360}
@@ -55,13 +55,13 @@ export default function EventHeroSection() {
               <div className="hidden md:block relative w-full lg:w-auto md:order-1">
                 <div className="relative md:h-[500px] lg:h-[600px] w-full lg:w-[750px] xl:w-[850px]">
                   <Image
-                    src="/assets/event/event-hero1.png"
+                    src="/assets/event/event-hero2.png"
                     alt="Event Hero"
                     width={850}
                     height={600}
                     className="absolute
-                      md:bottom-[-100px] md:right-[-120px]
-                      lg:bottom-[-61px] lg:right-[-140px]
+                      md:bottom-[-60px] md:right-[-120px]
+                      lg:bottom-[-20px] lg:right-[-140px]
                       h-auto w-full max-w-[450px]
                       lg:h-[600px] lg:w-[750px]
                       xl:h-[650px] xl:w-[850px]
