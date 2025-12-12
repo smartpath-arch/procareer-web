@@ -217,7 +217,7 @@ NEXTAUTH_SECRET=dev-secret-change-me
 
 **⚠️ Production Note:**
 
-- Change `NEXT_PUBLIC_API_URL` to your production backend URL (e.g., `https://core.smartpath.id`)
+- Change `NEXT_PUBLIC_API_URL` to your production backend URL (e.g., `https://api.skillspace.id`)
 - Generate a secure `NEXTAUTH_SECRET` using: `openssl rand -base64 32`
 
 ### Running The Application
@@ -406,7 +406,7 @@ GET /api/bootcamps
     "slug": "data-science-bootcamp",
     "dateISO": "2025-12-31T23:59:59Z",
     "dateText": "Hingga 31 Desember 2025",
-    "poster": "https://core.smartpath.id/uploads/bootcamp-poster.jpg",
+    "poster": "https://api.skillspace.id/uploads/bootcamp-poster.jpg",
     "linkMayar": "https://mayar.link/smartpath/bootcamp"
   }
 ]
@@ -471,7 +471,7 @@ The frontend communicates with a separate backend service:
 **Base URLs:**
 
 - Development: `http://localhost:4000`
-- Production: `https://core.smartpath.id`
+- Production: `https://api.skillspace.id`
 
 **Required Backend Endpoints:**
 
@@ -794,6 +794,20 @@ curl -I http://localhost:3001  # production
 curl -I http://localhost:3000  # development
 ```
 
+#### Server Setup
+
+For detailed NGINX setup and production server configuration, see:
+
+📖 **[NGINX Setup Guide](NGINX_SETUP.md)** - Complete guide for setting up NGINX reverse proxy on Ubuntu VPS
+
+The guide covers:
+
+- NGINX installation and configuration
+- SSL/HTTPS setup with Let's Encrypt
+- Performance optimization
+- Security best practices
+- Monitoring and troubleshooting
+
 #### Troubleshooting Deployment Issues
 
 **If deployment fails:**
@@ -836,10 +850,14 @@ If you encounter any issues during deployment or need assistance:
 **Production:**
 
 ```bash
-NEXT_PUBLIC_API_URL=https://core.smartpath.id pnpm build
+NEXT_PUBLIC_API_URL=https://api.skillspace.id pnpm build
 ```
 
 **Note:** Environment variables are configured in GitHub Secrets for production deployment.
+
+**Server Setup:**
+
+For production deployment with NGINX, refer to [NGINX_SETUP.md](NGINX_SETUP.md) for complete setup instructions.
 
 ---
 
@@ -977,7 +995,7 @@ Unauthorized copying, distribution, modification, or use of this software, via a
 
 ### SmartPath
 
-- **Website:** [https://smartpath.id](https://smartpath.id)
+- **Website:** [https://skillspace.id](https://skillspace.id)
 - **Email:** admin@smartpath.id
 - **Instagram:** [@smartpath.id](https://www.instagram.com/smartpath.id/)
 - **LinkedIn:** [SmartPath](https://www.linkedin.com/company/smartpath-id)
