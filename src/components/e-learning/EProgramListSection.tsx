@@ -66,15 +66,15 @@ const CATEGORY_COLORS: Record<string, string> = {
 const TYPE_CONFIG = {
   Exclusive: {
     icon: Crown,
-    color: "text-yellow-600", // Gold tone
+    color: "text-[#bea057]", // Gold tone
   },
   Premium: {
     icon: Award,
-    color: "text-purple-900", // Emerald green for premium
+    color: "text-[#5e6d8b]", // Grayish blue for premium
   },
   Basic: {
     icon: Circle, // Basic has icon Circle
-    color: "text-emerald-600", // Deep purple for basic
+    color: "text-[#28508d]", // Deep blue for basic
   },
 };
 

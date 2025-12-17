@@ -84,7 +84,7 @@ export default function Navbar() {
             </Link>
           </div>
           <a
-            href="https://smartpath-id.myr.id/portal"
+            href="https://skillspace.myr.id/portal"
             target="_blank"
             rel="noopener noreferrer"
             className="relative text-[17px] font-semibold ext-white bg-[#19499A] px-6 py-2 rounded-md hover:bg-[#4a72a3] transition-colors duration-300"
@@ -124,7 +124,7 @@ export default function Navbar() {
               </ul>
             </nav>
             <a
-              href="https://smartpath-id.myr.id/portal"
+              href="https://skillspace.myr.id/portal"
               target="_blank"
               rel="noopener noreferrer"
               className="relative text-[18px] font-semibold text-white bg-[#19499A] px-6 py-2 rounded-md hover:bg-[#4a72a3] transition-colors duration-300"

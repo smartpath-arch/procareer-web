@@ -16,22 +16,22 @@ export default function Footer() {
     {
       name: "TikTok",
       icon: "/assets/home/footer/tiktok.svg",
-      url: "https://www.tiktok.com/@smartpath",
+      url: "",
     },
     {
       name: "Instagram",
       icon: "/assets/home/footer/instagram.svg",
-      url: "https://www.instagram.com/smartpath.id",
+      url: "https://www.instagram.com/skillspace_id/",
     },
     {
       name: "LinkedIn",
       icon: "/assets/home/footer/linkedin.svg",
-      url: "https://www.linkedin.com/company/smartpath-id/",
+      url: "",
     },
     {
       name: "YouTube",
       icon: "/assets/home/footer/youtube.svg",
-      url: "https://www.youtube.com/@AdminSmartPath2",
+      url: "",
     },
   ] as const;
   return (
@@ -111,9 +111,7 @@ export default function Footer() {
                   d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                 />
               </svg>
-              <span>
-                Jl. Swadaya 3, Depok, Sleman, Daerah Istimewa Yogyakarta
-              </span>
+              <span>Batam Center, Batam, Indonesia</span>
             </a>
           </div>
           <div className="w-full pt-2">
@@ -142,7 +140,7 @@ export default function Footer() {
                 <span>+62 882-0061-38949</span>
               </a>
               <a
-                href="mailto:admin@smartpath.id"
+                href="mailto:admin@skillspace.id"
                 className="flex items-center gap-3 text-gray-600 hover:text-blue-600 transition-colors text-sm"
               >
                 <svg
@@ -159,35 +157,47 @@ export default function Footer() {
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                <span>Admin@skillspace.id</span>
+                <span>admin@skillspace.id</span>
               </a>
             </div>
           </div>
           <div className="pt-6 border-t border-gray-200 w-full text-center">
             <p className="text-gray-400 text-sm">
-              Copyright 2025© SmartPath. All Rights Reserved
+              Copyright 2025© SkillSpace, All Rights Reserved
             </p>
           </div>
           <div className="flex items-center justify-center gap-8 pb-2">
-            {socialMedia.map((s) => (
-              <a
-                key={s.name}
-                href={s.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-blue-600 transition-colors"
-                aria-label={s.name}
-                title={s.name}
-              >
-                <Image
-                  src={s.icon}
-                  alt={s.name}
-                  width={24}
-                  height={24}
-                  className="w-6 h-6 opacity-40 hover:opacity-100 transition-opacity"
-                />
-              </a>
-            ))}
+            {socialMedia.map((s) =>
+              s.url ? (
+                <a
+                  key={s.name}
+                  href={s.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-blue-600 transition-colors"
+                  aria-label={s.name}
+                  title={s.name}
+                >
+                  <Image
+                    src={s.icon}
+                    alt={s.name}
+                    width={24}
+                    height={24}
+                    className="w-6 h-6 opacity-40 hover:opacity-100 transition-opacity"
+                  />
+                </a>
+              ) : (
+                <div key={s.name} className="text-gray-400" title={s.name}>
+                  <Image
+                    src={s.icon}
+                    alt={s.name}
+                    width={24}
+                    height={24}
+                    className="w-6 h-6 opacity-40"
+                  />
+                </div>
+              ),
+            )}
           </div>
         </div>
       </div>
@@ -269,9 +279,7 @@ export default function Footer() {
                       d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                     />
                   </svg>
-                  <span>
-                    Jl. Swadaya 3, Depok, Sleman, Daerah Istimewa Yogyakarta
-                  </span>
+                  <span>Batam Center, Batam, Indonesia</span>
                 </a>
               </div>
               <div>
@@ -300,7 +308,7 @@ export default function Footer() {
                     <span>+62 882-0061-38949</span>
                   </a>
                   <a
-                    href="mailto:admin@smartpath.id"
+                    href="mailto:admin@skillspace.id"
                     className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors text-base"
                   >
                     <svg
@@ -317,7 +325,7 @@ export default function Footer() {
                         d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                       />
                     </svg>
-                    <span>admin@smartpath.id</span>
+                    <span>admin@skillspace.id</span>
                   </a>
                 </div>
               </div>
@@ -325,28 +333,40 @@ export default function Footer() {
           </div>
           <div className="mt-12 pt-8 border-t border-gray-200 flex justify-between items-center">
             <p className="text-gray-400 text-sm">
-              Copyright 2025© SmartPath, All Rights Reserved
+              Copyright 2025© SkillSpace, All Rights Reserved
             </p>
             <div className="flex gap-4">
-              {socialMedia.map((s) => (
-                <a
-                  key={s.name}
-                  href={s.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-blue-600 transition-colors"
-                  aria-label={s.name}
-                  title={s.name}
-                >
-                  <Image
-                    src={s.icon}
-                    alt={s.name}
-                    width={24}
-                    height={24}
-                    className="w-6 h-6 opacity-40 hover:opacity-100 transition-opacity"
-                  />
-                </a>
-              ))}
+              {socialMedia.map((s) =>
+                s.url ? (
+                  <a
+                    key={s.name}
+                    href={s.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-blue-600 transition-colors"
+                    aria-label={s.name}
+                    title={s.name}
+                  >
+                    <Image
+                      src={s.icon}
+                      alt={s.name}
+                      width={24}
+                      height={24}
+                      className="w-6 h-6 opacity-40 hover:opacity-100 transition-opacity"
+                    />
+                  </a>
+                ) : (
+                  <div key={s.name} className="text-gray-400" title={s.name}>
+                    <Image
+                      src={s.icon}
+                      alt={s.name}
+                      width={24}
+                      height={24}
+                      className="w-6 h-6 opacity-40"
+                    />
+                  </div>
+                ),
+              )}
             </div>
           </div>
         </div>

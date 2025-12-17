@@ -24,18 +24,18 @@ interface BenefitPackage {
 const TYPE_CONFIG = {
   Exclusive: {
     icon: Crown,
-    color: "text-yellow-600",
-    borderColor: "border-yellow-600",
+    color: "text-[#bea057]",
+    borderColor: "border-[#bea057]",
   },
   Premium: {
     icon: Award,
-    color: "text-purple-900",
-    borderColor: "border-purple-900",
+    color: "text-[#5e6d8b]",
+    borderColor: "border-[#5e6d8b]",
   },
   Basic: {
     icon: Circle,
-    color: "text-emerald-600",
-    borderColor: "border-emerald-600",
+    color: "text-[#28508d]",
+    borderColor: "border-[#28508d]",
   },
 };
 
