@@ -42,7 +42,7 @@ async function getCourses(): Promise<CourseItem[]> {
       category: course.category ?? "Digital Marketing",
       type: normalizePackageType(course.packages?.[0]?.label),
       participants: `${course.participants ?? 0} Peserta`,
-      duration: String(Math.ceil((course.durationMin ?? 60) / 60)),
+      duration: String(course.durationMin ?? 60),
       href: course.payLink ?? "#",
       poster: { url: course.poster?.url },
     }));
