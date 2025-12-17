@@ -78,6 +78,29 @@ const TYPE_CONFIG = {
   },
 };
 
+// Format duration from minutes to readable format
+function formatDuration(minutes: string | number | undefined): string {
+  if (!minutes) return "";
+
+  const totalMinutes =
+    typeof minutes === "string" ? parseInt(minutes, 10) : minutes;
+
+  if (isNaN(totalMinutes)) return "";
+
+  if (totalMinutes < 60) {
+    return `${totalMinutes} menit`;
+  }
+
+  const hours = Math.floor(totalMinutes / 60);
+  const remainingMinutes = totalMinutes % 60;
+
+  if (remainingMinutes === 0) {
+    return `${hours} jam`;
+  }
+
+  return `${hours} jam ${remainingMinutes} menit`;
+}
+
 export default function EProgramListSection({
   items,
   categories,
@@ -275,7 +298,7 @@ export default function EProgramListSection({
                         <div className="flex items-center gap-1.5 text-[#0B2540]/70">
                           <Clock className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
                           <span className="text-[11px] sm:text-[12px]">
-                            Durasi {it.duration} jam
+                            Durasi {formatDuration(it.duration)}
                           </span>
                         </div>
                       )}
