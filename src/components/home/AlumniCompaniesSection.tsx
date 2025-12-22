@@ -32,7 +32,7 @@ export default function AlumniCompaniesSection() {
       aria-label="Alumni and partner companies"
       className="w-full bg-[#FFFFFF]"
     >
-      <div className="relative bg-[#FFFFFF]">
+      <div className="hidden relative bg-[#FFFFFF]">
         <div className="relative max-w-7xl mx-auto px-4 md:px-6 pt-6 pb-2 md:pt-10 md:pb-4">
           <div className="pb-1 md:pb-2">
             <h2
@@ -46,7 +46,6 @@ export default function AlumniCompaniesSection() {
             <h2 className="hidden md:block text-center font-extrabold text-[#19499A] text-2xl sm:text-3xl md:text-[44px] leading-tight">
               Thousands of Our Alumni Land Jobs at Top Companies
             </h2>
-            {/* underline removed */}
           </div>
         </div>
 
@@ -77,7 +76,7 @@ export default function AlumniCompaniesSection() {
       <div className="bg-[#F2F4F8] border border-[#E5E7EB]/50">
         <div className="md:hidden px-5 py-8">
           <h3 className="text-[28px] text-center font-extrabold text-[#19499A] mb-6">
-            Why Skill Space?
+            Why SkillSpace?
           </h3>
           <ul className="space-y-4">
             {benefits.map((b) => (
@@ -98,7 +97,7 @@ export default function AlumniCompaniesSection() {
             <div className="flex items-center gap-16">
               <div className="flex-1 flex justify-center">
                 <h3 className="text-5xl font-extrabold text-[#19499A] whitespace-nowrap">
-                  Why Skill Space?
+                  Why SkillSpace?
                 </h3>
               </div>
               <ul className="flex-1 space-y-4 pr-20">

@@ -87,7 +87,7 @@ export default function Navbar() {
             href="https://skillspace.myr.id/portal"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative text-[17px] font-semibold ext-white bg-[#19499A] px-6 py-2 rounded-md hover:bg-[#4a72a3] transition-colors duration-300"
+            className="relative text-[17px] font-semibold text-white bg-[#19499A] px-6 py-2 rounded-md hover:bg-[#4a72a3] transition-colors duration-300"
           >
             Login
           </a>

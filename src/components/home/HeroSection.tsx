@@ -92,10 +92,10 @@ export default function HeroSection() {
       {/* Mobile */}
       <div className="md:hidden">
         <div className="relative bg-gradient-to-b from-[#5C89C7] to-[#86BEFF] rounded-b-[40px] overflow-hidden">
-          <div className="relative z-10 w-full px-6 pt-3 pb-0">
-            <div className="w-full pt-3 pb-0">
+          <div className="relative z-10 w-full px-6 pb-0">
+            <div className="w-full pb-0">
               <Image
-                src="/assets/mobile/home/mobilec3.png"
+                src="/assets/mobile/home/mobileheroskillspace.png"
                 alt="Hero Mobile"
                 width={800}
                 height={600}
@@ -109,7 +109,7 @@ export default function HeroSection() {
         <div className="relative px-4 pt-6 pb-6">
           <div className="overflow-hidden rounded-3xl bg-white">
             <Image
-              src="/assets/mobile/home/mobileb3.png"
+              src="/assets/mobile/home/mobileb4.png"
               alt="Statistik SmartPath - 310k+ Pengguna, 1000+ Materi, 100+ Instansi"
               width={450}
               height={380}
@@ -129,7 +129,7 @@ export default function HeroSection() {
             }`}
           >
             <Image
-              src="/assets/home/hero-section/herosection3.png"
+              src="/assets/home/hero-section/herosection4.png"
               alt="Bantu Kamu Cepat Berkarir di Bidang Data & AI"
               width={1600}
               height={900}
@@ -146,7 +146,7 @@ export default function HeroSection() {
         >
           <div className="overflow-hidden rounded-2xl shadow-2xl">
             <Image
-              src="/assets/home/herostatistik2.png"
+              src="/assets/home/herostatistik3.png"
               alt="Statistik SmartPath"
               width={1600}
               height={600}

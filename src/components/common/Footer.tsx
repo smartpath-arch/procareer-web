@@ -62,7 +62,7 @@ export default function Footer() {
             </Link>
           </div>
           <p className="text-gray-600 text-lg leading-relaxed text-center -mt-11">
-            One stop solution bimbingan sukses kuliah dan karir
+            Bantu cepat berkarir di bidang Data & AI
           </p>
           <nav aria-label="Footer navigation" className="w-full">
             <ul className="flex flex-col space-y-4">
@@ -120,7 +120,7 @@ export default function Footer() {
             </h3>
             <div className="space-y-3">
               <a
-                href="tel:+6288200613849"
+                href="tel:+6285122903006"
                 className="flex items-center gap-3 text-gray-600 hover:text-blue-600 transition-colors text-sm"
               >
                 <svg
@@ -137,7 +137,7 @@ export default function Footer() {
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   />
                 </svg>
-                <span>+62 882-0061-38949</span>
+                <span>+62 851-2290-3006</span>
               </a>
               <a
                 href="mailto:admin@skillspace.id"
@@ -222,7 +222,7 @@ export default function Footer() {
                 />
               </Link>
               <p className="text-gray-600 text-base leading-relaxed -mt-2">
-                One stop solution bimbingan sukses kuliah dan karir
+                Bantu cepat berkarir di bidang Data & AI
               </p>
               <nav aria-label="Footer navigation">
                 <ul className="flex flex-wrap items-center gap-x-6 gap-y-2 mt-2">
@@ -288,7 +288,7 @@ export default function Footer() {
                 </h3>
                 <div className="space-y-3">
                   <a
-                    href="tel:+6288200613849"
+                    href="tel:+6285122903006"
                     className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors text-base"
                   >
                     <svg
@@ -305,7 +305,7 @@ export default function Footer() {
                         d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                       />
                     </svg>
-                    <span>+62 882-0061-38949</span>
+                    <span>+62 851-2290-3006</span>
                   </a>
                   <a
                     href="mailto:admin@skillspace.id"

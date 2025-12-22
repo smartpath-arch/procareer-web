@@ -162,61 +162,87 @@ const PublishedAndPartnership: React.FC = () => {
 
   return (
     <div className="w-screen bg-white py-8 md:py-16 overflow-hidden">
-      {/* Desktop Layout */}
-      <div className="hidden md:flex flex-row justify-between gap-15">
-        {/* Published On */}
-        <div className="pr-4 md:pr-0 md:flex-1">
-          <div className="bg-[#EAF3FF] rounded-r-3xl p-8 space-y-6 md:pl-16 pl-4">
-            <h2 className="text-center text-3xl md:text-4xl font-extrabold text-gray-900 font-['Plus Jakarta Sans']">
-              Published On
-            </h2>
+      {false && (
+        <div className="hidden md:flex flex-row justify-between gap-15">
+          {/* Published On */}
+          <div className="pr-4 md:pr-0 md:flex-1">
+            <div className="bg-[#EAF3FF] rounded-r-3xl p-8 space-y-6 md:pl-16 pl-4">
+              <h2 className="text-center text-3xl md:text-4xl font-extrabold text-gray-900 font-['Plus Jakarta Sans']">
+                Published On
+              </h2>
 
-            <div className="flex gap-x-2 md:gap-x-4">
-              {/* Kolom kiri */}
-              <div className="marquee-col">
-                <div className="marquee-track marquee-down">
-                  {publishedDupDesktop.map((c, i) => (
-                    <LogoCard key={`pub-left-${c.name}-${i}`} company={c} />
-                  ))}
+              <div className="flex gap-x-2 md:gap-x-4">
+                {/* Kolom kiri */}
+                <div className="marquee-col">
+                  <div className="marquee-track marquee-down">
+                    {publishedDupDesktop.map((c, i) => (
+                      <LogoCard key={`pub-left-${c.name}-${i}`} company={c} />
+                    ))}
+                  </div>
+                </div>
+
+                {/* Kolom kanan */}
+                <div className="marquee-col">
+                  <div className="marquee-track marquee-up">
+                    {publishedDupDesktop.map((c, i) => (
+                      <LogoCard key={`pub-right-${c.name}-${i}`} company={c} />
+                    ))}
+                  </div>
                 </div>
               </div>
+            </div>
+          </div>
 
-              {/* Kolom kanan */}
-              <div className="marquee-col">
-                <div className="marquee-track marquee-up">
-                  {publishedDupDesktop.map((c, i) => (
-                    <LogoCard key={`pub-right-${c.name}-${i}`} company={c} />
-                  ))}
+          {/* Partnership With */}
+          <div className="pl-4 md:pl-0 md:flex-1">
+            <div className="bg-[#EAF3FF] rounded-l-3xl p-8 space-y-6 md:pr-16 pr-4">
+              <h2 className="text-center text-3xl md:text-4xl font-extrabold text-gray-900 font-['Plus Jakarta Sans']">
+                Partnership With
+              </h2>
+
+              <div className="flex gap-x-2 md:gap-x-4">
+                {/* Kolom kiri */}
+                <div className="marquee-col">
+                  <div className="marquee-track marquee-down">
+                    {partnerDupDesktop.map((c, i) => (
+                      <LogoCard key={`part-left-${c.name}-${i}`} company={c} />
+                    ))}
+                  </div>
+                </div>
+
+                {/* Kolom kanan */}
+                <div className="marquee-col">
+                  <div className="marquee-track marquee-up">
+                    {partnerDupDesktop.map((c, i) => (
+                      <LogoCard key={`part-right-${c.name}-${i}`} company={c} />
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      )}
 
-        {/* Partnership With */}
-        <div className="pl-4 md:pl-0 md:flex-1">
-          <div className="bg-[#EAF3FF] rounded-l-3xl p-8 space-y-6 md:pr-16 pr-4">
-            <h2 className="text-center text-3xl md:text-4xl font-extrabold text-gray-900 font-['Plus Jakarta Sans']">
+      {/* NEW Desktop Layout - Partnership Only */}
+      <div className="hidden md:block">
+        <div className="space-y-3">
+          <div className="flex flex-col items-center">
+            <h2 className="text-3xl md:text-4xl font-semibold text-[#1E5BA8] font-['Poppins']">
               Partnership With
             </h2>
-
-            <div className="flex gap-x-2 md:gap-x-4">
-              {/* Kolom kiri */}
-              <div className="marquee-col">
-                <div className="marquee-track marquee-down">
-                  {partnerDupDesktop.map((c, i) => (
-                    <LogoCard key={`part-left-${c.name}-${i}`} company={c} />
-                  ))}
-                </div>
-              </div>
-
-              {/* Kolom kanan */}
-              <div className="marquee-col">
-                <div className="marquee-track marquee-up">
-                  {partnerDupDesktop.map((c, i) => (
-                    <LogoCard key={`part-right-${c.name}-${i}`} company={c} />
-                  ))}
-                </div>
+            <div className="w-72 h-1 bg-[#AFC6FF] rounded-full mt-2.5"></div>
+          </div>
+          <div className="relative overflow-hidden">
+            <div className="carousel-container">
+              <div className="carousel-track-right">
+                {partnerDup.map((c, i) => (
+                  <LogoCard
+                    key={`part-desktop-${c.name}-${i}`}
+                    company={c}
+                    isMobile={true}
+                  />
+                ))}
               </div>
             </div>
           </div>
@@ -226,28 +252,30 @@ const PublishedAndPartnership: React.FC = () => {
       {/* Mobile Layout */}
       <div className="flex md:hidden flex-col space-y-10 px-4">
         {/* Published By */}
-        <div className="space-y-3">
-          <div className="flex flex-col items-center">
-            <h2 className="text-3xl font-semibold text-[#1E5BA8] font-['Poppins']">
-              Published By
-            </h2>
-            <div className="w-52 h-1 bg-[#AFC6FF] rounded-full mt-2.5"></div>
-          </div>
+        {false && (
+          <div className="space-y-3">
+            <div className="flex flex-col items-center">
+              <h2 className="text-3xl font-semibold text-[#1E5BA8] font-['Poppins']">
+                Published By
+              </h2>
+              <div className="w-52 h-1 bg-[#AFC6FF] rounded-full mt-2.5"></div>
+            </div>
 
-          <div className="relative overflow-hidden">
-            <div className="carousel-container">
-              <div className="carousel-track-left">
-                {publishedDup.map((c, i) => (
-                  <LogoCard
-                    key={`pub-mobile-${c.name}-${i}`}
-                    company={c}
-                    isMobile={true}
-                  />
-                ))}
+            <div className="relative overflow-hidden">
+              <div className="carousel-container">
+                <div className="carousel-track-left">
+                  {publishedDup.map((c, i) => (
+                    <LogoCard
+                      key={`pub-mobile-${c.name}-${i}`}
+                      company={c}
+                      isMobile={true}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        )}
 
         {/* Partnership With */}
         <div className="space-y-3">
