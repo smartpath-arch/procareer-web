@@ -13,7 +13,7 @@ export const eLearningTestimonials: TestimonialData[] = [
     role: "Business Analyst",
     company: "BCA",
     testimonial:
-      "Kaget banget bisa keterima di Bank BCA sebagai Business Analyst! Semua tips dan triknya dari SmartPath emang pas banget buat persiapan aku masuk BCA",
+      "Kaget banget bisa keterima di Bank BCA sebagai Business Analyst! Semua tips dan triknya dari SkillSpace emang pas banget buat persiapan aku masuk BCA",
     profileImage: "/assets/e-learning/fauziyahrahman.svg",
     companyLogo: "/assets/mobile/home/testimonial/companies/bca.svg",
   },
@@ -22,7 +22,7 @@ export const eLearningTestimonials: TestimonialData[] = [
     role: "Data Analyst",
     company: "P&G",
     testimonial:
-      "Thanks SmartPath! Program belajarnya berguna banget. Cara pengajarannya enak banget, bikin aku gampang ngerti. Ga nyesel ikut program ini. Sekarang aku kerja di P&G sebagai Data Analyst",
+      "Thanks SkillSpace! Program belajarnya berguna banget. Cara pengajarannya enak banget, bikin aku gampang ngerti. Ga nyesel ikut program ini. Sekarang aku kerja di P&G sebagai Data Analyst",
     profileImage: "/assets/e-learning/adityasaputra.svg",
     companyLogo: "/assets/mobile/home/testimonial/companies/pg.svg",
   },
@@ -31,7 +31,7 @@ export const eLearningTestimonials: TestimonialData[] = [
     role: "PPIC Staff",
     company: "Indofood",
     testimonial:
-      "Pengalaman belajar di SmartPath luar biasa! Setelah ikut kelasnya, saya terapin ilmunya dan keterima di Indofood sebagai PPIC Staff. Kelasnya gak cuma ngajarin teori tapi juga praktek langsung yang bikin aku lebih siap masuk dunia kerja.",
+      "Pengalaman belajar di SkillSpace luar biasa! Setelah ikut kelasnya, saya terapin ilmunya dan keterima di Indofood sebagai PPIC Staff. Kelasnya gak cuma ngajarin teori tapi juga praktek langsung yang bikin aku lebih siap masuk dunia kerja.",
     profileImage: "/assets/e-learning/sitinurlaelah.svg",
     companyLogo: "/assets/mobile/home/testimonial/companies/indofood.svg",
   },
@@ -40,7 +40,7 @@ export const eLearningTestimonials: TestimonialData[] = [
     role: "Research Analyst Intern",
     company: "Pertamina",
     testimonial:
-      "Belajarnya sangat oke di SmartPath. Sekarang saya udah kerja di pertamina sebagai Research Analyst Intern. Ilmu yang diajarkan bener-bener kepake di dunia kerja. Cara penyampaiannya juga jelas dan gampang dimengerti, ga nyesel ikut program ini!",
+      "Belajarnya sangat oke di SkillSpace. Sekarang saya udah kerja di pertamina sebagai Research Analyst Intern. Ilmu yang diajarkan bener-bener kepake di dunia kerja. Cara penyampaiannya juga jelas dan gampang dimengerti, ga nyesel ikut program ini!",
     profileImage: "/assets/e-learning/lailafitri.svg",
     companyLogo: "/assets/mobile/home/testimonial/companies/pertamina.svg",
   },
@@ -49,7 +49,7 @@ export const eLearningTestimonials: TestimonialData[] = [
     role: "Operations Associate",
     company: "Ruang Guru",
     testimonial:
-      "Awalnya aku cuma coba-coba ikut di SmartPath, gak terlalu yakin bisa berhasil. Tapi ternyata, ilmunya beneran berguna dan bikin aku paham gimana cara lewatin proses rekrutmen. Sekarang aku di Ruang Guru, kerja sebagai Operations Associate, dan rasanya happy banget bisa sampai sini",
+      "Awalnya aku cuma coba-coba ikut di SkillSpace, gak terlalu yakin bisa berhasil. Tapi ternyata, ilmunya beneran berguna dan bikin aku paham gimana cara lewatin proses rekrutmen. Sekarang aku di Ruang Guru, kerja sebagai Operations Associate, dan rasanya happy banget bisa sampai sini",
     profileImage: "/assets/e-learning/fikrynugroho.svg",
     companyLogo: "/assets/mobile/home/testimonial/companies/ruangguru.svg",
   },
@@ -58,7 +58,7 @@ export const eLearningTestimonials: TestimonialData[] = [
     role: "Business Analyst",
     company: "BCA",
     testimonial:
-      "Kaget banget bisa keterima di Bank BCA sebagai Business Analyst! Semua tips dan triknya dari SmartPath emang pas banget buat persiapan aku masuk BCA",
+      "Kaget banget bisa keterima di Bank BCA sebagai Business Analyst! Semua tips dan triknya dari SkillSpace emang pas banget buat persiapan aku masuk BCA",
     profileImage: "/assets/e-learning/fauziyahrahman.svg",
     companyLogo: "/assets/mobile/home/testimonial/companies/bca.svg",
   },

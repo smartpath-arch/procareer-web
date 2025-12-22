@@ -37,7 +37,7 @@ const AlumniTestimonial = ({
       role: "Business Analyst",
       company: "BCA",
       testimonial:
-        "Kaget banget bisa keterima di Bank BCA sebagai Business Analyst! Semua tips dan triknya dari SmartPath emang pas banget buat persiapan aku masuk BCA",
+        "Kaget banget bisa keterima di Bank BCA sebagai Business Analyst! Semua tips dan triknya dari SkillSpace emang pas banget buat persiapan aku masuk BCA",
       profileImage: "/assets/e-learning/fauziyahrahman.svg",
       companyLogo: "/assets/mobile/home/testimonial/companies/bca.svg",
     },
@@ -46,7 +46,7 @@ const AlumniTestimonial = ({
       role: "Data Analyst",
       company: "P&G",
       testimonial:
-        "Thanks SmartPath! Program belajarnya berguna banget. Cara pengajarannya enak banget, bikin aku gampang ngerti. Ga nyesel ikut program ini. Sekarang aku kerja di P&G sebagai Data Analyst",
+        "Thanks SkillSpace! Program belajarnya berguna banget. Cara pengajarannya enak banget, bikin aku gampang ngerti. Ga nyesel ikut program ini. Sekarang aku kerja di P&G sebagai Data Analyst",
       profileImage: "/assets/e-learning/adityasaputra.svg",
       companyLogo: "/assets/mobile/home/testimonial/companies/pg.svg",
     },
@@ -55,7 +55,7 @@ const AlumniTestimonial = ({
       role: "PPIC Staff",
       company: "Indofood",
       testimonial:
-        "Pengalaman belajar di SmartPath luar biasa! Setelah ikut kelasnya, saya terapin ilmunya dan keterima di Indofood sebagai PPIC Staff. Kelasnya gak cuma ngajarin teori tapi juga praktek langsung yang bikin aku lebih siap masuk dunia kerja.",
+        "Pengalaman belajar di SkillSpace luar biasa! Setelah ikut kelasnya, saya terapin ilmunya dan keterima di Indofood sebagai PPIC Staff. Kelasnya gak cuma ngajarin teori tapi juga praktek langsung yang bikin aku lebih siap masuk dunia kerja.",
       profileImage: "/assets/e-learning/sitinurlaelah.svg",
       companyLogo: "/assets/mobile/home/testimonial/companies/indofood.svg",
     },
@@ -64,7 +64,7 @@ const AlumniTestimonial = ({
       role: "Research Analyst Intern",
       company: "Pertamina",
       testimonial:
-        "Belajarnya sangat oke di SmartPath. Sekarang saya udah kerja di pertamina sebagai Research Analyst Intern. Ilmu yang diajarkan bener-bener kepake di dunia kerja. Cara penyampaiannya juga jelas dan gampang dimengerti, ga nyesel ikut program ini!",
+        "Belajarnya sangat oke di SkillSpace. Sekarang saya udah kerja di pertamina sebagai Research Analyst Intern. Ilmu yang diajarkan bener-bener kepake di dunia kerja. Cara penyampaiannya juga jelas dan gampang dimengerti, ga nyesel ikut program ini!",
       profileImage: "/assets/e-learning/lailafitri.svg",
       companyLogo: "/assets/mobile/home/testimonial/companies/pertamina.svg",
     },
@@ -73,7 +73,7 @@ const AlumniTestimonial = ({
       role: "Operations Associate",
       company: "Ruang Guru",
       testimonial:
-        "Awalnya aku cuma coba-coba ikut di SmartPath, gak terlalu yakin bisa berhasil. Tapi ternyata, ilmunya beneran berguna dan bikin aku paham gimana cara lewatin proses rekrutmen. Sekarang aku di Ruang Guru, kerja sebagai Operations Associate, dan rasanya happy banget bisa sampai sini",
+        "Awalnya aku cuma coba-coba ikut di SkillSpace, gak terlalu yakin bisa berhasil. Tapi ternyata, ilmunya beneran berguna dan bikin aku paham gimana cara lewatin proses rekrutmen. Sekarang aku di Ruang Guru, kerja sebagai Operations Associate, dan rasanya happy banget bisa sampai sini",
       profileImage: "/assets/e-learning/fikrynugroho.svg",
       companyLogo: "/assets/mobile/home/testimonial/companies/ruangguru.svg",
     },
@@ -82,7 +82,7 @@ const AlumniTestimonial = ({
       role: "Software Engineer",
       company: "Shopee",
       testimonial:
-        "SmartPath tuh bikin belajar jadi fun! Sekarang nih aku jadi Software Engineer di Shopee, dan semua yang aku pelajari di sini bener-bener relevan sama dunia kerja",
+        "SkillSpace tuh bikin belajar jadi fun! Sekarang nih aku jadi Software Engineer di Shopee, dan semua yang aku pelajari di sini bener-bener relevan sama dunia kerja",
       profileImage: "/assets/bootcamp-webinar/agungprasetiya.svg",
       companyLogo: "/assets/mobile/home/testimonial/companies/shopee.svg",
     },
@@ -91,18 +91,18 @@ const AlumniTestimonial = ({
       role: "Retail Operation",
       company: "Trans Retail Indonesia",
       testimonial:
-        "Dulu aku gak tau harus mulai dari mana buat ngejar karir, tapi SmartPath bener-bener jadi titik awal buat aku. Kelasnya bagus banget sumpah! Akhirnya sekarang aku bisa kerja di Trans Retail Indonesia posisi Retail Operation",
+        "Dulu aku gak tau harus mulai dari mana buat ngejar karir, tapi SkillSpace bener-bener jadi titik awal buat aku. Kelasnya bagus banget sumpah! Akhirnya sekarang aku bisa kerja di Trans Retail Indonesia posisi Retail Operation",
       profileImage: "/assets/bootcamp-webinar/indahwulandari.svg",
       companyLogo: "/assets/mobile/home/testimonial/companies/transretail.svg",
     },
     {
-      name: "Isyana Dewi",
-      role: "Marketing Staff",
-      company: "Djarum",
+      name: "Rahmat Hidayat",
+      role: "Software Engineer Intern",
+      company: "BNI",
       testimonial:
-        "Awalnya aku ragu bisa bersaing di dunia kerja, tapi setelah ikut SmartPath, aku lebih pede dan siap menghadapi tantangan. Sekarang aku kerja di Djarum sebagai Marketing Staff dan semua yang aku pelajari bener-bener berguna!",
-      profileImage: "/assets/e-learning/isyanadewi.svg",
-      companyLogo: "/assets/mobile/home/testimonial/companies/djarum.svg",
+        "Banyak banget ilmu yang aku dapet selama belajar di SkillSpace. Dari materi yang aplikatif, hingga studi kasus nyata, semuanya bikin aku makin siap buat masuk ke dunia kerja. Sekarang aku udah kerja di Bank BNI sebagai Software Engineer intern, dan gak nyesel sama sekali ikut program ini.",
+      profileImage: "/assets/e-learning/rahmathidayat.svg",
+      companyLogo: "/assets/mobile/home/testimonial/companies/bni.svg",
     },
   ];
 

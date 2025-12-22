@@ -13,7 +13,7 @@ export const bootcampTestimonials: TestimonialData[] = [
     role: "Software Engineer",
     company: "Shopee",
     testimonial:
-      "SmartPath tuh bikin belajar jadi fun! Sekarang nih aku jadi Software Engineer di Shopee, dan semua yang aku pelajari di sini bener-bener relevan sama dunia kerja",
+      "SkillSpace tuh bikin belajar jadi fun! Sekarang nih aku jadi Software Engineer di Shopee, dan semua yang aku pelajari di sini bener-bener relevan sama dunia kerja",
     profileImage: "/assets/bootcamp-webinar/agungprasetiya.svg",
     companyLogo: "/assets/mobile/home/testimonial/companies/shopee.svg",
   },
@@ -22,7 +22,7 @@ export const bootcampTestimonials: TestimonialData[] = [
     role: "Retail Operation",
     company: "Trans Retail Indonesia",
     testimonial:
-      "Dulu aku gak tau harus mulai dari mana buat ngejar karir, tapi SmartPath bener-bener jadi titik awal buat aku. Kelasnya bagus banget sumpah! Akhirnya sekarang aku bisa kerja di Trans Retail Indonesia posisi Retail Operation",
+      "Dulu aku gak tau harus mulai dari mana buat ngejar karir, tapi SkillSpace bener-bener jadi titik awal buat aku. Kelasnya bagus banget sumpah! Akhirnya sekarang aku bisa kerja di Trans Retail Indonesia posisi Retail Operation",
     profileImage: "/assets/bootcamp-webinar/indahwulandari.svg",
     companyLogo: "/assets/mobile/home/testimonial/companies/transretail.svg",
   },
@@ -31,7 +31,7 @@ export const bootcampTestimonials: TestimonialData[] = [
     role: "Operational Staf",
     company: "Bank BSI",
     testimonial:
-      "Gak pernah kepikiran bisa sampai sejauh ini! Berkat program SmartPath, sekarang aku kerja di Bank BSI sebagai Operational Staff. Ilmunya beneran kepake di dunia kerjaa",
+      "Gak pernah kepikiran bisa sampai sejauh ini! Berkat program SkillSpace, sekarang aku kerja di Bank BSI sebagai Operational Staff. Ilmunya beneran kepake di dunia kerjaa",
     profileImage: "/assets/bootcamp-webinar/anindyapratiwi.svg",
     companyLogo: "/assets/mobile/home/testimonial/companies/BSI.webp",
   },
@@ -40,7 +40,7 @@ export const bootcampTestimonials: TestimonialData[] = [
     role: "Accounting Analyst Intern",
     company: "Astra",
     testimonial:
-      "Gak nyesel ikut SmartPath! Setelah usaha keras, aku akhirnya diterima magang di Astra sebagai Accounting Analyst intern. Ilmunya sangat berguna, terutama saat interview dan tes potensi",
+      "Gak nyesel ikut SkillSpace! Setelah usaha keras, aku akhirnya diterima magang di Astra sebagai Accounting Analyst intern. Ilmunya sangat berguna, terutama saat interview dan tes potensi",
     profileImage: "/assets/bootcamp-webinar/rikaanisah.svg",
     companyLogo: "/assets/mobile/home/testimonial/companies/Astra.png",
   },
@@ -49,7 +49,7 @@ export const bootcampTestimonials: TestimonialData[] = [
     role: "Product Supply Intern",
     company: "P&G",
     testimonial:
-      "Akhirnyaaa! abis belajar di SmartPath aku berhasil diterima di P&G sebagai Product Supply Intern. Ilmu yang dikasih bener-bener langsung bisa dipakai di dunia kerja. Rasanya gak nyesel ikut program ini, makasih banget!",
+      "Akhirnyaaa! abis belajar di SkillSpace aku berhasil diterima di P&G sebagai Product Supply Intern. Ilmu yang dikasih bener-bener langsung bisa dipakai di dunia kerja. Rasanya gak nyesel ikut program ini, makasih banget!",
     profileImage: "/assets/bootcamp-webinar/sucirahayu.svg",
     companyLogo: "/assets/mobile/home/testimonial/companies/pg.svg",
   },
@@ -58,7 +58,7 @@ export const bootcampTestimonials: TestimonialData[] = [
     role: "Software Engineer Intern",
     company: "BNI",
     testimonial:
-      "Banyak banget ilmu yang aku dapet selama belajar di SmartPath. Dari materi yang aplikatif, hingga studi kasus nyata, semuanya bikin aku makin siap buat masuk ke dunia kerja. Sekarang aku udah kerja di Bank BNI sebagai Software Engineer intern, dan gak nyesel sama sekali ikut program ini.",
+      "Banyak banget ilmu yang aku dapet selama belajar di SkillSpace. Dari materi yang aplikatif, hingga studi kasus nyata, semuanya bikin aku makin siap buat masuk ke dunia kerja. Sekarang aku udah kerja di Bank BNI sebagai Software Engineer intern, dan gak nyesel sama sekali ikut program ini.",
     profileImage: "/assets/bootcamp-webinar/RahmatHidayat.png",
     companyLogo: "/assets/mobile/home/testimonial/companies/shopee.svg",
   },
@@ -67,7 +67,7 @@ export const bootcampTestimonials: TestimonialData[] = [
     role: "Production Planner Intern",
     company: "Indofood",
     testimonial:
-      "After ikut program SmartPath, aku akhirnya keterima di Indofood sebagai Production Planner Intern. Percaya diri banget sekarang kalo di kerjaan. Dari awal, banyak banget trik praktis yang gak cuma soal teknis, tapi juga cara berpikir yang strategis. Sangat rekomen buat yang mau upgrade skill!",
+      "After ikut program SkillSpace, aku akhirnya keterima di Indofood sebagai Production Planner Intern. Percaya diri banget sekarang kalo di kerjaan. Dari awal, banyak banget trik praktis yang gak cuma soal teknis, tapi juga cara berpikir yang strategis. Sangat rekomen buat yang mau upgrade skill!",
     profileImage: "/assets/bootcamp-webinar/NiWayan.png",
     companyLogo: "/assets/mobile/home/testimonial/companies/indofood.svg",
   },
@@ -76,7 +76,7 @@ export const bootcampTestimonials: TestimonialData[] = [
     role: "Logistic Coordinator",
     company: "Paragon",
     testimonial:
-      "Semua materi di SmartPath bisa bikin saya pede buat lamar kerja di Paragon sebagai Logistic Coordinator dan akhirnya keterima. Thanks banget SmartPath buat semua bimbingannya!",
+      "Semua materi di SkillSpace bisa bikin saya pede buat lamar kerja di Paragon sebagai Logistic Coordinator dan akhirnya keterima. Thanks banget SkillSpace buat semua bimbingannya!",
     profileImage: "/assets/bootcamp-webinar/Surya Darma.png",
     companyLogo: "/assets/mobile/home/testimonial/companies/paragon.svg",
   },
