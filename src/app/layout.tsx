@@ -13,6 +13,12 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "SkillSpace",
   description: "SkillSpace - Bantu Kamu Cepat Berkarir di Bidang Data & AI",
+  applicationName: "SkillSpace",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "SkillSpace",
+  },
   icons: {
     icon: [
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
@@ -32,7 +38,7 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 5,
   userScalable: true,
-  themeColor: "#F7C948",
+  themeColor: "#FFFFFF",
 };
 
 export default function RootLayout({

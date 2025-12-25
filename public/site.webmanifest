@@ -1,19 +1,25 @@
 {
   "name": "SkillSpace",
   "short_name": "SkillSpace",
+  "description": "SkillSpace - Bantu Kamu Cepat Berkarir di Bidang Data & AI",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
       "src": "/android-chrome-512x512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ],
-  "theme_color": "#F7C948",
-  "background_color": "#F7C948",
-  "display": "standalone"
+  "theme_color": "#FFFFFF",
+  "background_color": "#FFFFFF",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/",
+  "orientation": "portrait-primary"
 }
