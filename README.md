@@ -160,9 +160,16 @@ To democratize access to quality education and career development resources acro
 
 Ensure you have the following installed on your system:
 
+**Required:**
+
 - **Node.js** `>= 20.18.0` - [Download](https://nodejs.org/)
 - **pnpm** `>= 9.0.0` - [Installation Guide](https://pnpm.io/installation)
 - **Git** - [Download](https://git-scm.com/)
+
+**Optional (for Docker deployment):**
+
+- **Docker** `>= 24.0.0` - [Download](https://www.docker.com/products/docker-desktop)
+- **Docker Compose** `>= 2.20.0` - Included with Docker Desktop
 
 Verify installations:
 
@@ -170,6 +177,8 @@ Verify installations:
 node --version   # Should output v20.18.0 or higher
 pnpm --version   # Should output 9.x.x or higher
 git --version    # Should output git version
+docker --version # Should output Docker version (optional)
+docker compose version # Should output Docker Compose version (optional)
 ```
 
 ### Installation
@@ -263,6 +272,67 @@ pnpm start
 ```
 
 Runs the built application on [http://localhost:3000](http://localhost:3000).
+
+#### Docker Development (Recommended for Production-like Environment)
+
+Run the application in Docker containers (same as production):
+
+**Development Container:**
+
+```bash
+# Start development container with hot-reload
+docker compose -f docker-compose.dev.yml up --build
+
+# Run in detached mode (background)
+docker compose -f docker-compose.dev.yml up -d --build
+
+# Stop container
+docker compose -f docker-compose.dev.yml down
+
+# View logs
+docker compose -f docker-compose.dev.yml logs -f
+```
+
+The application will be available at [http://localhost:3002](http://localhost:3002)
+
+**Production Container (Local Testing):**
+
+```bash
+# Build and start production container
+docker compose up --build
+
+# Run in detached mode
+docker compose up -d --build
+
+# Stop container
+docker compose down
+
+# View logs
+docker compose logs -f web
+```
+
+The application will be available at [http://localhost:3003](http://localhost:3003)
+
+**Docker Container Management:**
+
+```bash
+# Check running containers
+docker ps
+
+# Execute commands inside container
+docker exec -it feskillspace-web sh
+docker exec -it feskillspace-web-dev sh
+
+# View container logs
+docker logs feskillspace-web
+docker logs -f feskillspace-web-dev  # Follow logs
+
+# Restart container
+docker restart feskillspace-web
+
+# Remove all stopped containers
+docker compose down --volumes
+```
 
 #### Other Commands
 
@@ -363,17 +433,15 @@ feskillspace/
 │   ├── site.webmanifest
 │   └── website-maintenance.json
 │
-├── .github/                          # GitHub configuration
-│   └── workflows/                    # CI/CD workflows
-│       ├── ci.yml                    # Continuous Integration
-│       ├── deploy-prod.yml           # Production deployment (main branch)
-│       └── deploy-dev.yml            # Development deployment (dev branch)
-│
 ├── .husky/                           # Git hooks
 │   └── pre-commit                    # Pre-commit linting
 │
 ├── scripts/                          # Deployment scripts
 │   └── README.md                     # Scripts documentation
+│
+├── Dockerfile                        # Multi-stage Docker build configuration
+├── docker-compose.yml                # Production Docker Compose config
+├── docker-compose.dev.yml            # Development Docker Compose config
 │
 ├── next.config.ts                    # Next.js configuration
 ├── tailwind.config.ts                # Tailwind CSS configuration
@@ -382,7 +450,8 @@ feskillspace/
 ├── postcss.config.mjs                # PostCSS configuration
 ├── components.json                   # shadcn/ui configuration
 │
-├── .env.local                        # Environment variables (not in git)
+├── .env                              # Environment variables for Docker (not in git)
+├── .env.local                        # Environment variables for local dev (not in git)
 ├── .gitignore                        # Git ignore rules
 ├── package.json                      # Dependencies and scripts
 ├── pnpm-lock.yaml                    # Lockfile
@@ -722,6 +791,58 @@ import { cn } from "@/lib/utils";
    const plusJakarta = Plus_Jakarta_Sans({ subsets: ["latin"] });
    ```
 
+### Docker Best Practices
+
+**Building Docker Images:**
+
+1. **Use multi-stage builds** - Already configured in Dockerfile
+   - Keeps images small
+   - Separates build and runtime dependencies
+
+2. **Leverage build cache** - Order matters
+   - Copy package files first
+   - Install dependencies
+   - Then copy source code
+
+3. **Use .dockerignore** - Exclude unnecessary files
+   ```
+   node_modules
+   .next
+   .git
+   .env.local
+   ```
+
+**Running Containers:**
+
+1. **Environment Variables**
+   - Use `.env` file for Docker deployments
+   - Use `.env.local` for local pnpm development
+   - Never commit sensitive data
+
+2. **Container Health**
+   - Monitor with `docker ps`
+   - Check logs with `docker logs -f [container]`
+   - Use health checks (already configured)
+
+**Development Workflow:**
+
+1. **Test locally with Docker** before pushing
+
+   ```bash
+   docker compose up --build
+   ```
+
+2. **Check build size**
+
+   ```bash
+   docker images | grep feskillspace
+   ```
+
+3. **Debug inside container**
+   ```bash
+   docker exec -it feskillspace-web sh
+   ```
+
 ---
 
 ## Build and Deployment
@@ -742,113 +863,30 @@ pnpm build
 
 ### Deployment Workflow
 
-This project uses **automated CI/CD deployment** to VPS via **GitHub Actions**.
-
-#### For Developers - Simple Deployment Process
-
-Developers don't need to worry about manual deployment. Simply follow this workflow:
-
-1. **Make your changes and commit**
-
-   ```bash
-   git add .
-   git commit -m "feat: your feature description"
-   ```
-
-2. **Push to the appropriate branch**
-
-   **For Development/Testing:**
-
-   ```bash
-   git push origin dev
-   ```
-
-   **For Production:**
-
-   ```bash
-   git push origin main
-   ```
-
-3. **Automatic deployment**
-   - GitHub Actions will automatically trigger
-   - CI/CD pipeline will SSH to VPS and run deployment scripts
-   - PM2 will restart the application
-   - Health check verifies deployment success
-   - Monitor deployment progress in **GitHub Actions** tab
-
-**That's it!** The deployment is fully automated.
+This project uses **Docker & Docker Compose** for deployment to VPS.
 
 #### Deployment Architecture
 
 **Infrastructure:**
 
 - **Hosting:** VPS (Virtual Private Server)
-- **CI/CD:** GitHub Actions
-- **Process Manager:** PM2
-- **Deployment Method:** SSH-based automated deployment
+- **Containerization:** Docker & Docker Compose
+- **Deployment Method:** Manual deployment with Docker
 
 **Environments:**
 
-| Environment | Branch | Port | Process Name         | Workflow File     |
-| ----------- | ------ | ---- | -------------------- | ----------------- |
-| Development | `dev`  | 3000 | `skillspace-fe-dev`  | `deploy-dev.yml`  |
-| Production  | `main` | 3001 | `skillspace-fe-prod` | `deploy-prod.yml` |
+| Environment | Host Port | Container              | Docker Compose File      |
+| ----------- | --------- | ---------------------- | ------------------------ |
+| Development | 3002      | `feskillspace-web-dev` | `docker-compose.dev.yml` |
+| Production  | 3003      | `feskillspace-web`     | `docker-compose.yml`     |
 
-**Deployment Flow:**
+**Docker Configuration:**
 
-1. Developer pushes to `dev` or `main` branch
-2. GitHub Actions runner checks out code
-3. SSH connection established to VPS server
-4. Deployment script executed on server (`~/scripts/deploy-[env].sh`)
-5. Application built and restarted with PM2
-6. Health check performed to verify deployment
-7. Notification sent on success/failure
-
-#### Monitoring Deployment
-
-**Check Deployment Status:**
-
-1. Go to GitHub repository
-2. Click on **Actions** tab
-3. View the latest workflow run
-4. Check logs for each step
-
-**Common Deployment Checks:**
-
-```bash
-# Check if app is running on VPS (DevOps only)
-pm2 list
-
-# View application logs
-pm2 logs skillspace-fe-prod  # for production
-pm2 logs skillspace-fe-dev   # for development
-
-# Check application health
-curl -I http://localhost:3001  # production
-curl -I http://localhost:3000  # development
-```
-
-#### Troubleshooting Deployment Issues
-
-**If deployment fails:**
-
-1. **Check GitHub Actions logs**
-   - Go to Actions tab → Select failed workflow
-   - Review error messages in each step
-
-2. **Common Issues:**
-
-   | Issue                 | Possible Cause            | Solution                                   |
-   | --------------------- | ------------------------- | ------------------------------------------ |
-   | SSH connection failed | Invalid credentials       | Contact DevOps team                        |
-   | Build failed          | Code errors, dependencies | Check build logs, fix errors locally first |
-   | PM2 restart failed    | Port already in use       | Contact DevOps team                        |
-   | Health check failed   | App crashed, wrong port   | Check application logs                     |
-
-3. **Before Contacting Support:**
-   - Verify your code builds locally (`pnpm build`)
-   - Check for TypeScript errors (`pnpm lint`)
-   - Review commit for breaking changes
+- **Multi-stage Build:** Uses 3-stage Dockerfile (deps → builder → runner)
+- **Base Image:** node:20.18.0-alpine
+- **Package Manager:** pnpm 9.15.9
+- **Production Runtime:** Next.js Standalone mode
+- **Health Check:** Built-in HTTP health check endpoint
 
 #### Deployment Support
 
@@ -860,8 +898,7 @@ If you encounter any issues during deployment or need assistance:
 
 **Please provide:**
 
-- Commit hash or PR number
-- Error logs from GitHub Actions (screenshot or copy-paste)
+- Environment (dev/prod)
 - What you've tried to fix the issue
 - Description of the issue
 
@@ -873,7 +910,13 @@ If you encounter any issues during deployment or need assistance:
 NEXT_PUBLIC_API_URL=https://api.skillspace.id pnpm build
 ```
 
-**Note:** Environment variables are configured in GitHub Secrets for production deployment.
+**Development:**
+
+```bash
+NEXT_PUBLIC_API_URL=http://localhost:4000 pnpm build
+```
+
+**Note:** Environment variables should be configured in `.env` file on the VPS server.
 
 ---
 
@@ -887,8 +930,8 @@ This project follows a **Git Flow** branching model:
 
 **Main Branches:**
 
-- **`main`** - Production-ready code. Auto-deploys to production VPS (port 3001)
-- **`dev`** - Development/staging branch. Auto-deploys to development VPS (port 3000)
+- **`main`** - Production-ready code
+- **`dev`** - Development/staging branch
 
 **Supporting Branches:**
 
