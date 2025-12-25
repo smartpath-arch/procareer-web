@@ -19,3 +19,7 @@ services:
       - feskillspace-network
     stdin_open: true
     tty: true
+
+networks:
+  feskillspace-network:
+    driver: bridge
