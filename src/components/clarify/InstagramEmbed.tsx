@@ -20,7 +20,6 @@ const InstagramEmbed: React.FC<InstagramEmbedProps> = ({ postUrl }) => {
     }
   }, [isClient, postUrl]);
 
-  // Embed HTML for Instagram post
   const embedHtml = `
     <blockquote 
       class="instagram-media" 
@@ -31,7 +30,6 @@ const InstagramEmbed: React.FC<InstagramEmbedProps> = ({ postUrl }) => {
     </blockquote>
   `;
 
-  // Add CSS to hide the likes, comments, and caption
   const hideCss = `
     <style>
       /* Hide Caption */

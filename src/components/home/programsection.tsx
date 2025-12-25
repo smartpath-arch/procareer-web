@@ -5,7 +5,6 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-// Add custom animations
 const customStyles = `
   @keyframes fade-in {
     from {
@@ -227,11 +226,7 @@ const MobileCarousel: React.FC = () => {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrent((prev) => {
-        const next = (prev + 1) % slides.length;
-        console.log("Carousel moving to:", next, slides[next]?.title);
-        return next;
-      });
+      setCurrent((prev) => (prev + 1) % slides.length);
     }, 4000);
     return () => clearInterval(timer);
   }, [slides.length, autoplayKey]);

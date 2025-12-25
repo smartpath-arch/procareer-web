@@ -1,10 +1,10 @@
-# SmartPath - Frontend Application
+# SkillSpace - Frontend Application
 
 <div align="center">
-  <img src="public/assets/common/navbar/logo-smartpath.svg" alt="SmartPath Logo" width="200"/>
+  <img src="public/assets/common/navbar/logoheaderskillspace.svg" alt="SkillSpace Logo" width="200"/>
 
   <p align="center">
-    <strong>One-Stop Solution for Successful Education and Career Guidance</strong>
+    <strong>Bantu freshgraduate cepat berkarir di bidang Data & AI</strong>
   </p>
 
   <p align="center">
@@ -44,7 +44,7 @@
 
 ## About The Project
 
-**SmartPath** is a cutting-edge educational technology platform designed to bridge the gap between academic learning and professional career success. The platform serves as a comprehensive ecosystem for:
+**SkillSpace** is a cutting-edge educational technology platform designed to bridge the gap between academic learning and professional career success. The platform serves as a comprehensive ecosystem for:
 
 - **Students** seeking to enhance their skills and prepare for the job market
 - **Professionals** looking to upskill or switch careers
@@ -56,16 +56,16 @@ To democratize access to quality education and career development resources acro
 
 ### Impact
 
-- 📊 **300,000+** students reached
-- 🎓 **40+** scholarship recipients
-- 🏢 **Top Companies** - Alumni placed at Shopee, P&G, Astra, BNI, Indofood, and more
-- 📰 **Media Recognition** - Featured in CNBC Indonesia, CNN Indonesia, Tribun News, and other major outlets
+- **300,000+** students reached
+- **40+** scholarship recipients
+- **Top Companies** - Alumni placed at Shopee, Grab, Gojek, Tokopedia, Lazada, Unilever, and more
+- **Media Recognition** - Featured in CNBC Indonesia, CNN Indonesia, Tribun News, Kumparan, and other major outlets
 
 ---
 
 ## Key Features
 
-### 🎯 E-Learning Platform
+### E-Learning Platform
 
 - **Course Catalog** - Browse 100+ self-paced online courses
 - **Category Filtering** - Organized by professional domains:
@@ -77,25 +77,29 @@ To democratize access to quality education and career development resources acro
 - **Multi-tier Packages** - Exclusive, Premium, and Basic access levels
 - **Search Functionality** - Real-time course search
 - **Progress Tracking** - Monitor learning journey
+- **Responsive Design** - Optimized viewing on all devices
 
-### 🚀 Bootcamp & Webinar Programs
+### Bootcamp & Webinar Programs
 
 - **Intensive Bootcamps** - Job-ready training programs
 - **Expert Webinars** - Knowledge sharing sessions with industry leaders
 - **Program Management** - Track registration deadlines and availability
+- **Certificate of Completion** - Industry-recognized certificates
 
-### 💼 Career Development
+### Career Development
 
 - **Professional Mentorship** - One-on-one guidance from industry experts
 - **Job Placement Support** - Interview preparation and career counseling
 - **Scholarship Opportunities** - Financial aid for qualified candidates
-- **Corporate Training** - Customized B2B solutions (coming soon)
+- **Corporate Training** - Customized B2B solutions
 
-### 🌐 Platform Features
+### Platform Features
 
-- **Responsive Design** - Optimized for mobile, tablet, and desktop
+- **Modern UI/UX** - Clean, intuitive interface
 - **Real-time Updates** - Live program availability and notifications
 - **Social Proof** - Alumni testimonials and success stories
+- **Instagram Integration** - Dynamic social media content display
+- **Multi-device Support** - Seamless experience across platforms
 
 ---
 
@@ -103,7 +107,7 @@ To democratize access to quality education and career development resources acro
 
 ### Core Framework
 
-- **[Next.js 15.5.4](https://nextjs.org/)** - React framework with App Router
+- **[Next.js 16.0.10](https://nextjs.org/)** - React framework with App Router
 - **[React 19.1.0](https://react.dev/)** - UI library with latest features
 - **[TypeScript 5](https://www.typescriptlang.org/)** - Type-safe development
 
@@ -117,9 +121,10 @@ To democratize access to quality education and career development resources acro
 
 - **[Tailwind CSS 4](https://tailwindcss.com/)** - Utility-first CSS framework
 - **[Radix UI](https://www.radix-ui.com/)** - Accessible component primitives
-- **[Lucide React](https://lucide.dev/)** - Icon library (550+ icons)
-- **[Class Variance Authority](https://cva.style/)** - Component variants
-- **[Tailwind Merge](https://github.com/dcastil/tailwind-merge)** - Intelligent class merging
+- **[Lucide React 0.544.0](https://lucide.dev/)** - Icon library (550+ icons)
+- **[Class Variance Authority 0.7.1](https://cva.style/)** - Component variants
+- **[Tailwind Merge 3.3.1](https://github.com/dcastil/tailwind-merge)** - Intelligent class merging
+- **[tw-animate-css 1.4.0](https://github.com/safak/tw-animate-css)** - Animation utilities
 
 ### Interactions & Animations
 
@@ -127,6 +132,10 @@ To democratize access to quality education and career development resources acro
 - **[Lottie React 2.4.1](https://github.com/Gamote/lottie-react)** - JSON animations
 - **[Sonner 2.0.7](https://sonner.emilkowal.ski/)** - Toast notifications
 - **[Next Themes 0.4.6](https://github.com/pacocoursey/next-themes)** - Theme management
+
+### Date & Time
+
+- **[date-fns 4.1.0](https://date-fns.org/)** - Modern JavaScript date utility library
 
 ### Authentication (Configured)
 
@@ -168,8 +177,8 @@ git --version    # Should output git version
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/daniadrian/fesmartpath.git
-cd smartpath-web
+git clone https://github.com/daniadrian/feskillspace.git
+cd feskillspace
 ```
 
 2. **Install dependencies**
@@ -178,7 +187,7 @@ cd smartpath-web
 pnpm install
 ```
 
-This will install all required packages defined in `package.json`.
+This will install all required packages defined in [package.json](package.json).
 
 3. **Set up Git hooks**
 
@@ -215,7 +224,7 @@ NEXTAUTH_SECRET=dev-secret-change-me
 | `NEXTAUTH_URL`        | Frontend application URL for auth callbacks                            | Yes      | `http://localhost:3000` |
 | `NEXTAUTH_SECRET`     | Secret key for session encryption (use random 32+ chars in production) | Yes      | -                       |
 
-**⚠️ Production Note:**
+**Production Note:**
 
 - Change `NEXT_PUBLIC_API_URL` to your production backend URL (e.g., `https://api.skillspace.id`)
 - Generate a secure `NEXTAUTH_SECRET` using: `openssl rand -base64 32`
@@ -273,12 +282,17 @@ npx tsc --noEmit
 ## Project Structure
 
 ```
-smartpath-web/
+feskillspace/
 │
 ├── src/
 │   ├── app/                          # Next.js App Router
 │   │   ├── layout.tsx                # Root layout with providers
 │   │   ├── globals.css               # Global styles
+│   │   ├── api/                      # Next.js API routes
+│   │   │   ├── bootcamps/route.ts    # Bootcamp data endpoint
+│   │   │   ├── elearning/route.ts    # E-learning data endpoint
+│   │   │   └── webinars/route.ts     # Webinar data endpoint
+│   │   │
 │   │   └── (public)/                 # Public route group
 │   │       ├── layout.tsx            # Public pages layout
 │   │       ├── page.tsx              # Homepage
@@ -286,16 +300,11 @@ smartpath-web/
 │   │       ├── e-learning/           # E-Learning catalog
 │   │       │   ├── page.tsx
 │   │       │   └── [slug]/           # Course detail (dynamic)
-│   │       ├── event/                # Events (under development)
-│   │       ├── for-corporate/        # Corporate solutions (under development)
+│   │       ├── event/                # Events page
+│   │       ├── for-corporate/        # Corporate solutions page
 │   │       ├── clarify/              # Transparency/clarification page
 │   │       ├── loading.tsx           # Global loading state
 │   │       └── not-found.tsx         # 404 page
-│   │
-│   ├── api/                          # Next.js API routes
-│   │   ├── bootcamps/route.ts        # Bootcamp data endpoint
-│   │   ├── elearning/route.ts        # E-learning data endpoint
-│   │   └── webinars/route.ts         # Webinar data endpoint
 │   │
 │   ├── components/                   # React components
 │   │   ├── common/                   # Shared components
@@ -309,37 +318,62 @@ smartpath-web/
 │   │   │   ├── AlumniTestimonial.tsx
 │   │   │   └── PublishedAndPartnership.tsx
 │   │   ├── bootcamp-webinar/         # Bootcamp page components
+│   │   │   ├── HeroSection.tsx
+│   │   │   ├── BenefitSection.tsx
+│   │   │   ├── ProgramListSection.tsx
+│   │   │   └── TestimoniSection.tsx
 │   │   ├── e-learning/               # E-learning page components
+│   │   │   ├── EHeroSection.tsx
+│   │   │   ├── EBenefitSection.tsx
+│   │   │   └── EProgramListSection.tsx
+│   │   ├── event/                    # Event page components
+│   │   │   ├── EventHeroSection.tsx
+│   │   │   ├── EventBenefitSection.tsx
+│   │   │   └── EventListSection.tsx
 │   │   ├── clarify/                  # Clarification page components
+│   │   │   ├── InstagramEmbed.tsx
+│   │   │   └── TestimonialsSlider.tsx
 │   │   └── provider.tsx              # Client providers wrapper
 │   │
 │   ├── lib/                          # Utilities and configurations
 │   │   ├── utils.ts                  # Helper functions (cn utility)
 │   │   └── testimonials/             # Testimonial data
 │   │       ├── bootcampTestimonials.ts
-│   │       └── eLearningTestimonials.ts
+│   │       ├── eLearningTestimonials.ts
+│   │       └── clarifyTestimonials.ts
 │   │
 │   └── global.d.ts                   # TypeScript global declarations
 │
 ├── public/                           # Static assets
 │   ├── assets/
 │   │   ├── home/                     # Homepage images
+│   │   │   ├── companies/            # Alumni company logos
+│   │   │   ├── published-on/         # Media publication logos
+│   │   │   ├── partnership-with/     # Partnership logos
+│   │   │   ├── hero-section/         # Hero section assets
+│   │   │   └── footer/               # Footer assets
 │   │   ├── bootcamp-webinar/         # Bootcamp images
 │   │   ├── e-learning/               # E-learning images
+│   │   ├── event/                    # Event page assets
 │   │   ├── clarify/                  # Clarification page assets
 │   │   ├── common/navbar/            # Logo and navigation assets
 │   │   ├── mobile/                   # Mobile-optimized assets
 │   │   └── icon/                     # Icons and favicons
 │   ├── favicon.ico
-│   └── site.webmanifest
+│   ├── site.webmanifest
+│   └── website-maintenance.json
 │
 ├── .github/                          # GitHub configuration
 │   └── workflows/                    # CI/CD workflows
+│       ├── ci.yml                    # Continuous Integration
 │       ├── deploy-prod.yml           # Production deployment (main branch)
 │       └── deploy-dev.yml            # Development deployment (dev branch)
 │
 ├── .husky/                           # Git hooks
 │   └── pre-commit                    # Pre-commit linting
+│
+├── scripts/                          # Deployment scripts
+│   └── README.md                     # Scripts documentation
 │
 ├── next.config.ts                    # Next.js configuration
 ├── tailwind.config.ts                # Tailwind CSS configuration
@@ -358,8 +392,8 @@ smartpath-web/
 
 ### Key Directories
 
-- **`src/app/`** - Next.js 15 App Router pages using file-based routing
-- **`src/api/`** - Backend integration layer (Next.js API routes)
+- **`src/app/`** - Next.js 16 App Router pages using file-based routing
+- **`src/app/api/`** - Backend integration layer (Next.js API routes)
 - **`src/components/`** - Reusable React components organized by feature
 - **`src/lib/`** - Utility functions, constants, and shared logic
 - **`public/`** - Static files served directly (images, fonts, manifests)
@@ -407,7 +441,7 @@ GET /api/bootcamps
     "dateISO": "2025-12-31T23:59:59Z",
     "dateText": "Hingga 31 Desember 2025",
     "poster": "https://api.skillspace.id/uploads/bootcamp-poster.jpg",
-    "linkMayar": "https://mayar.link/smartpath/bootcamp"
+    "linkMayar": "https://mayar.link/skillspace/bootcamp"
   }
 ]
 ```
@@ -449,7 +483,7 @@ GET /api/elearning
       "type": "Premium",
       "participants": "250 Peserta",
       "duration": "12 jam",
-      "href": "https://mayar.link/smartpath/data-analysis",
+      "href": "https://mayar.link/skillspace/data-analysis",
       "poster": { "url": "/uploads/course-poster.jpg" }
     }
   ]
@@ -584,15 +618,15 @@ export function Component({ className, ...props }: ComponentProps) {
 3. **Add API Route (if needed)**
 
    ```bash
-   mkdir -p src/api/new-endpoint
-   touch src/api/new-endpoint/route.ts
+   mkdir -p src/app/api/new-endpoint
+   touch src/app/api/new-endpoint/route.ts
    ```
 
 4. **Create Page**
 
    ```bash
-   mkdir -p src/app/\(public\)/new-page
-   touch src/app/\(public\)/new-page/page.tsx
+   mkdir -p src/app/(public)/new-page
+   touch src/app/(public)/new-page/page.tsx
    ```
 
 5. **Test Locally**
@@ -620,7 +654,7 @@ import Image from "next/image";
 
 **Remote Images:**
 
-Remote image domains must be configured in `next.config.ts`:
+Remote image domains must be configured in [next.config.ts](next.config.ts):
 
 ```typescript
 images: {
@@ -755,10 +789,10 @@ Developers don't need to worry about manual deployment. Simply follow this workf
 
 **Environments:**
 
-| Environment | Branch | Port | Process Name        | Workflow File     |
-| ----------- | ------ | ---- | ------------------- | ----------------- |
-| Development | `dev`  | 3000 | `smartpath-fe-dev`  | `deploy-dev.yml`  |
-| Production  | `main` | 3001 | `smartpath-fe-prod` | `deploy-prod.yml` |
+| Environment | Branch | Port | Process Name         | Workflow File     |
+| ----------- | ------ | ---- | -------------------- | ----------------- |
+| Development | `dev`  | 3000 | `skillspace-fe-dev`  | `deploy-dev.yml`  |
+| Production  | `main` | 3001 | `skillspace-fe-prod` | `deploy-prod.yml` |
 
 **Deployment Flow:**
 
@@ -786,27 +820,13 @@ Developers don't need to worry about manual deployment. Simply follow this workf
 pm2 list
 
 # View application logs
-pm2 logs smartpath-fe-prod  # for production
-pm2 logs smartpath-fe-dev   # for development
+pm2 logs skillspace-fe-prod  # for production
+pm2 logs skillspace-fe-dev   # for development
 
 # Check application health
 curl -I http://localhost:3001  # production
 curl -I http://localhost:3000  # development
 ```
-
-#### Server Setup
-
-For detailed NGINX setup and production server configuration, see:
-
-📖 **[NGINX Setup Guide](NGINX_SETUP.md)** - Complete guide for setting up NGINX reverse proxy on Ubuntu VPS
-
-The guide covers:
-
-- NGINX installation and configuration
-- SSL/HTTPS setup with Let's Encrypt
-- Performance optimization
-- Security best practices
-- Monitoring and troubleshooting
 
 #### Troubleshooting Deployment Issues
 
@@ -855,15 +875,11 @@ NEXT_PUBLIC_API_URL=https://api.skillspace.id pnpm build
 
 **Note:** Environment variables are configured in GitHub Secrets for production deployment.
 
-**Server Setup:**
-
-For production deployment with NGINX, refer to [NGINX_SETUP.md](NGINX_SETUP.md) for complete setup instructions.
-
 ---
 
 ## Contributing
 
-Please follow these guidelines:
+We welcome contributions to improve SkillSpace! Please follow these guidelines:
 
 ### Branching Strategy
 
@@ -894,8 +910,8 @@ feature/my-feature → dev → main
 2. **Clone the repository**
 
    ```bash
-   git clone https://github.com/daniadrian/fesmartpath.git
-   cd smartpath-web
+   git clone https://github.com/daniadrian/feskillspace.git
+   cd feskillspace
    ```
 
 3. **Create a feature branch from `dev`**
@@ -985,35 +1001,38 @@ feature/my-feature → dev → main
 
 This project is proprietary and confidential.
 
-**Copyright © 2025 SmartPath. All rights reserved.**
+**Copyright © 2025 SkillSpace. All rights reserved.**
 
-Unauthorized copying, distribution, modification, or use of this software, via any medium, is strictly prohibited without explicit written permission from SmartPath.
+Unauthorized copying, distribution, modification, or use of this software, via any medium, is strictly prohibited without explicit written permission from SkillSpace.
 
 ---
 
 ## Contact
 
-### SmartPath
+### SkillSpace
 
 - **Website:** [https://skillspace.id](https://skillspace.id)
-- **Email:** admin@smartpath.id
-- **Instagram:** [@smartpath.id](https://www.instagram.com/smartpath.id/)
-- **LinkedIn:** [SmartPath](https://www.linkedin.com/company/smartpath-id)
+- **Email:** admin@skillspace.id
+- **Instagram:** [@skillspace.id](https://www.instagram.com/skillspace.id/)
+- **LinkedIn:** [SkillSpace Indonesia](https://www.linkedin.com/company/skillspace-id)
 
 ### Development Team
 
 For technical questions or bug reports:
 
-- **Technical Support:** [WA Support](https://wa.me/6282277492956)
+- **Technical Support:** [WhatsApp Support](https://wa.me/6282277492956)
 
 ---
 
 ## Acknowledgments
 
-- **SmartPath Team** - For building an impactful education platform
+- **SkillSpace Team** - For building an impactful education platform
+- **Our Mentors** - Industry experts from top companies (Shopee, Grab, Gojek, Tokopedia, Lazada, etc.)
+- **Our Partners** - CNBC Indonesia, CNN Indonesia, Kumparan, IDN Times, and more
+- **Our Alumni** - 300,000+ students who trusted SkillSpace for their career development
 
 ---
 
 <div align="center">
-  <p>Empowering Careers, Transforming Lives</p>
+  <p><strong>Empowering Careers, Transforming Lives</strong></p>
 </div>

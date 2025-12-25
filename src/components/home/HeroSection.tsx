@@ -8,7 +8,6 @@ export default function HeroSection() {
   const [isPaused, setIsPaused] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
-  // Array gambar hero untuk carousel (Mobile only) (need fix)
   const heroImages = [
     "/assets/home/hero-section/herosection3.png",
     "/assets/home/hero-section/heroe-learning.png",
@@ -19,7 +18,6 @@ export default function HeroSection() {
 
   const SLIDE_DURATION = 4000;
 
-  // Auto-carousel effect (Mobile only) (need fix)
   useEffect(() => {
     if (isPaused) return;
 
@@ -39,7 +37,6 @@ export default function HeroSection() {
 
   return (
     <section className="relative overflow-hidden bg-white">
-      {/* Inline Keyframes Animation */}
       <style jsx>{`
         @keyframes fadeInScale {
           0% {
@@ -89,7 +86,6 @@ export default function HeroSection() {
         }
       `}</style>
 
-      {/* Mobile */}
       <div className="md:hidden">
         <div className="relative bg-gradient-to-b from-[#5C89C7] to-[#86BEFF] rounded-b-[40px] overflow-hidden">
           <div className="relative z-10 w-full px-6 pb-0">
@@ -120,7 +116,6 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Desktop */}
       <div className="hidden md:block relative bg-gradient-to-b from-[#5C89C7] to-[#86BEFF] pb-8 rounded-b-[60px]">
         <div className="mx-auto max-w-[1450px] px-2 pt-4">
           <div

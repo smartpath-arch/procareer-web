@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: { default: "SkillSpace", template: "%s • SkillSpace" },
-  description: "Rebuild & Optimization",
+  description: "Bantu freshgraduate cepat berkarir di bidang Data & AI",
 };
 
 export default function PublicLayout({

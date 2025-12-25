@@ -62,23 +62,21 @@ const CATEGORY_COLORS: Record<string, string> = {
   "Product dan Project Management": "text-[#0056A3]",
 };
 
-// Type icon and color (Basic no icon) - classy colors
 const TYPE_CONFIG = {
   Exclusive: {
     icon: Crown,
-    color: "text-[#bea057]", // Gold tone
+    color: "text-[#bea057]",
   },
   Premium: {
     icon: Award,
-    color: "text-[#5e6d8b]", // Grayish blue for premium
+    color: "text-[#5e6d8b]",
   },
   Basic: {
-    icon: Circle, // Basic has icon Circle
-    color: "text-[#28508d]", // Deep blue for basic
+    icon: Circle,
+    color: "text-[#28508d]",
   },
 };
 
-// Format duration from minutes to readable format
 function formatDuration(minutes: string | number | undefined): string {
   if (!minutes) return "";
 

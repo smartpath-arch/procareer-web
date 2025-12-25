@@ -5,7 +5,7 @@ import { Poppins } from "next/font/google";
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"], // include bold
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -64,7 +64,7 @@ export default function TestimoniSection() {
     if (!scrollContainer) return;
 
     let animationId: number;
-    const speed = 0.8; // px per frame
+    const speed = 0.8;
 
     const animate = () => {
       if (!isPaused && scrollContainer) {
@@ -81,7 +81,6 @@ export default function TestimoniSection() {
     return () => cancelAnimationFrame(animationId);
   }, [isPaused]);
 
-  // Handler untuk pause/resume pada mobile touch
   const handleTouchStart = () => {
     setIsPaused(true);
   };
@@ -95,12 +94,10 @@ export default function TestimoniSection() {
       className={`${poppins.className} w-full bg-white md:py-16 lg:py-10`}
     >
       <div className="max-w-[1440px] mx-auto">
-        {/* Heading */}
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-black mb-8 md:mb-6 px-6">
           Testimoni <span className="text-[#0E5AA6]">Alumni</span>
         </h2>
 
-        {/* Carousel */}
         <div className="relative overflow-hidden">
           <div
             ref={scrollRef}
@@ -117,7 +114,6 @@ export default function TestimoniSection() {
                   className="flex-shrink-0 w-[340px] sm:w-[400px] md:w-[480px] lg:w-[569px] h-[286px] bg-[#0056A3] rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   <div className="relative h-full p-6 md:p-8 text-white flex flex-col justify-between">
-                    {/* Company Logo */}
                     <div className="absolute top-2 right-4 w-9 h-9 rounded-full overflow-hidden">
                       <img
                         src={testimonial.companyLogo}
@@ -126,14 +122,12 @@ export default function TestimoniSection() {
                       />
                     </div>
 
-                    {/* Testimonial Text */}
                     <div className="pr-10 pt-4">
                       <p className="font-bold text-[15px] leading-relaxed line-clamp-4">
                         {testimonial.text}
                       </p>
                     </div>
 
-                    {/* Profile + LinkedIn */}
                     <div className="space-y-4 pt-4">
                       <div className="flex items-center gap-3">
                         <div className="w-12 h-12 md:w-14 md:h-14 bg-white rounded-full flex items-center justify-center text-[#0056A3] font-bold text-lg">

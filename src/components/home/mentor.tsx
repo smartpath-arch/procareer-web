@@ -45,7 +45,6 @@ const delayClass = (ms: number) => {
   }
 };
 
-// Desktop mentor data
 const desktopMentorData = [
   {
     photo: "/assets/home/mentor/mentordian.png",
@@ -89,7 +88,6 @@ const desktopMentorData = [
   },
 ];
 
-// Mobile mentor data
 const mentorData: MentorData[] = [
   {
     name: "Dian Rezky Catur Pitaloka",
@@ -157,7 +155,6 @@ const mentorData: MentorData[] = [
   },
 ];
 
-// Desktop Card
 const MentorCard: React.FC<MentorCardProps> = ({
   delay = 0,
   photo,
@@ -200,7 +197,6 @@ const MentorCard: React.FC<MentorCardProps> = ({
   );
 };
 
-// Mobile Card
 const MentorCardMobile: React.FC<{ mentor: MentorData }> = ({ mentor }) => {
   return (
     <div className="flex-shrink-0 w-[280px] h-[380px] bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 ease-in-out transform hover:scale-[1.02] flex flex-col snap-center">
@@ -397,7 +393,6 @@ export default function MentorCarousel() {
           </span>
         </h2>
 
-        {/* Desktop View */}
         <div className="hidden md:block relative">
           <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-white to-transparent z-10" />
           <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-white to-transparent z-10" />
@@ -425,7 +420,6 @@ export default function MentorCarousel() {
           </div>
         </div>
 
-        {/* Mobile View */}
         <div className="md:hidden">
           <div
             ref={mobileScrollRef}
@@ -475,7 +469,6 @@ export default function MentorCarousel() {
         .snap-center {
           scroll-snap-align: center;
         }
-        /* Optimized smooth auto-scroll */
         .flex.gap-6.overflow-x-auto {
           will-change: scroll-position;
           -webkit-transform: translateZ(0);
