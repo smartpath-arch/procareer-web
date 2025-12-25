@@ -38,6 +38,9 @@ prod-down: ## Stop and remove production containers
 	docker compose down -v
 
 dev-up: ## Start development containers
+	docker compose -f docker-compose.dev.yml up -d
+
+dev-up-fg: ## Start development containers (foreground)
 	docker compose -f docker-compose.dev.yml up
 
 dev-down: ## Stop development containers
