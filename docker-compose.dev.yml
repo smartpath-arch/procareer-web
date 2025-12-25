@@ -3,25 +3,19 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.dev
-      target: deps
     container_name: feskillspace-web-dev
     restart: unless-stopped
     ports:
       - "3002:3000"
     volumes:
       - .:/app
-      # Prevent overwriting node_modules from host
       - /app/node_modules
       - /app/.next
     environment:
       - NODE_ENV=development
       - WATCHPACK_POLLING=true
-    command: sh -c "pnpm dev"
+    command: pnpm dev
     networks:
       - feskillspace-network
     stdin_open: true
     tty: true
-
-networks:
-  feskillspace-network:
-    driver: bridge
