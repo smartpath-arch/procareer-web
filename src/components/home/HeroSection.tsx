@@ -9,7 +9,7 @@ export default function HeroSection() {
   const [isVisible, setIsVisible] = useState(false);
 
   const heroImages = [
-    "/assets/home/hero-section/herosection3.png",
+    "/assets/home/hero-section/herosection5.png",
     "/assets/home/hero-section/heroe-learning.png",
     "/assets/home/hero-section/herobootcampdanwebinar.png",
     "/assets/home/hero-section/heroforcorporate.png",
@@ -36,7 +36,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-white">
+    <section className="relative overflow-hidden bg-background">
       <style jsx>{`
         @keyframes fadeInScale {
           0% {
@@ -103,7 +103,7 @@ export default function HeroSection() {
           </div>
         </div>
         <div className="relative px-4 pt-6 pb-6">
-          <div className="overflow-hidden rounded-3xl bg-white">
+          <div className="overflow-hidden rounded-3xl bg-background">
             <Image
               src="/assets/mobile/home/mobileb4.png"
               alt="Statistik SmartPath - 310k+ Pengguna, 1000+ Materi, 100+ Instansi"
@@ -116,7 +116,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="hidden md:block relative bg-gradient-to-b from-[#5C89C7] to-[#86BEFF] pb-8 rounded-b-[60px]">
+      <div className="hidden md:block relative bg-gradient-to-b from-[#CB66E8] to-[#2F184C] pb-8 rounded-b-[60px]">
         <div className="mx-auto max-w-[1450px] px-2 pt-4">
           <div
             className={`relative w-full overflow-hidden aspect-video mx-auto transition-opacity ${
@@ -124,7 +124,7 @@ export default function HeroSection() {
             }`}
           >
             <Image
-              src="/assets/home/hero-section/herosection4.png"
+              src="/assets/home/hero-section/herosection5.png"
               alt="Bantu Kamu Cepat Berkarir di Bidang Data & AI"
               width={1600}
               height={900}
@@ -141,7 +141,7 @@ export default function HeroSection() {
         >
           <div className="overflow-hidden rounded-2xl shadow-2xl">
             <Image
-              src="/assets/home/herostatistik3.png"
+              src="/assets/home/herostatistik4.png"
               alt="Statistik SmartPath"
               width={1600}
               height={600}

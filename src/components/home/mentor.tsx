@@ -387,9 +387,9 @@ export default function MentorCarousel() {
       <div className="mx-auto max-w-7xl">
         <h2 className="text-center text-3xl md:text-5xl font-bold mb-5 mt-10">
           <span className="text-gray-900">Mentor Berpengalaman dari </span>
-          <span className="text-[#19499A] relative inline-block">
+          <span className="text-[#2F184C] relative inline-block">
             Top Company
-            <span className="absolute left-0 right-0 -bottom-2 h-1 bg-[#AFC6FF] rounded-full"></span>
+            <span className="absolute left-0 right-0 -bottom-2 h-1 bg-[#2F184C] rounded-full"></span>
           </span>
         </h2>
 

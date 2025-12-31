@@ -261,12 +261,12 @@ const AlumniTestimonial = ({
   return (
     <>
       {/* Mobile */}
-      <section className="block md:hidden px-4 py-8 bg-white">
+      <section className="block md:hidden px-4 py-8 bg-[#FEFADD]">
         <h2
           className={`${plusJakartaSans.className} text-3xl font-bold text-center mb-6`}
         >
           <span className="text-[#1E1E1E]">Testimoni </span>
-          <span className="text-[#19499A]">Alumni</span>
+          <span className="text-[#2F184C]">Alumni</span>
         </h2>
 
         <div className="relative overflow-hidden">
@@ -279,7 +279,7 @@ const AlumniTestimonial = ({
           >
             {data.map((testimonial, index) => (
               <div key={index} className="w-full flex-shrink-0 px-2">
-                <div className="relative bg-gradient-to-b from-[#19499A] to-[#19499A] rounded-3xl p-6 shadow-lg flex flex-col justify-between min-h-[280px]">
+                <div className="relative bg-gradient-to-b from-[#CB66E8] to-[#2F184C] rounded-3xl p-6 shadow-lg flex flex-col justify-between min-h-[280px]">
                   <p
                     className={`${poppins.className} text-white ${getTestimonialFontSize(
                       testimonial.testimonial,
@@ -353,12 +353,12 @@ const AlumniTestimonial = ({
       </section>
 
       {/* Desktop Version */}
-      <section className="hidden md:block px-8 py-8 bg-[#F5F7FA]">
+      <section className="hidden md:block px-8 py-8 bg-[#FEFADD]">
         <h2
           className={`${plusJakartaSans.className} text-5xl font-bold text-center mb-8`}
         >
           <span className="text-[#1E1E1E]">Testimoni </span>
-          <span className="text-[#19499A]">Alumni</span>
+          <span className="text-[#2F184C]">Alumni</span>
         </h2>
 
         <div className="relative overflow-hidden max-w-7xl mx-auto">
@@ -381,7 +381,7 @@ const AlumniTestimonial = ({
                 {pair.map((testimonial, cardIndex) => (
                   <div
                     key={cardIndex}
-                    className="flex-1 relative overflow-hidden shadow-xl bg-gradient-to-b from-[#19499A] to-[#19499A]"
+                    className="flex-1 relative overflow-hidden shadow-xl bg-gradient-to-b from-[#CB66E8] to-[#2F184C]"
                     style={{
                       minHeight: "260px",
                       borderRadius: "24px 0 24px 0",

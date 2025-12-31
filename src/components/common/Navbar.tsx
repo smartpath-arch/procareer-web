@@ -8,9 +8,6 @@ import { Menu, X } from "lucide-react";
 const NAV_ITEMS = [
   { name: "Home", href: "/" },
   { name: "Event", href: "/event" },
-  { name: "E-Learning", href: "/e-learning" },
-  { name: "Bootcamp & Webinar", href: "/bootcamp-webinar" },
-  { name: "For Corporate", href: "/for-corporate" },
 ] as const;
 
 export default function Navbar() {
@@ -32,9 +29,7 @@ export default function Navbar() {
           : "shadow-[0_2px_20px_rgba(255,255,255,0.5)] py-3"
       }`}
       style={{
-        background: scrolled
-          ? "linear-gradient(to right, rgba(255, 255, 255, 0.75) 0%, rgba(245, 245, 245, 0.75) 50%, rgba(255, 255, 255, 0.75) 90%, rgba(250, 250, 250, 0.75) 100%)"
-          : "linear-gradient(to right, #FFFFFF 0%, #F5F5F5 50%, #FFFFFF 90%, #FAFAFA 100%)",
+        background: "#FEFADD",
       }}
     >
       <div className="mx-auto max-w-7xl px-6 md:px-8 transition-all duration-300">
@@ -67,7 +62,7 @@ export default function Navbar() {
 
             <Link href="/" aria-label="SmartPath Home">
               <Image
-                src="/assets/common/navbar/logoheaderskillspace.svg"
+                src="/assets/common/navbar/logonavbarprocareer.svg"
                 alt="SmartPath Mobile Logo"
                 width={120}
                 height={150}
@@ -83,21 +78,13 @@ export default function Navbar() {
               />
             </Link>
           </div>
-          <a
-            href="https://skillspace.myr.id/portal"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="relative text-[17px] font-semibold text-white bg-[#19499A] px-6 py-2 rounded-md hover:bg-[#4a72a3] transition-colors duration-300"
-          >
-            Login
-          </a>
         </div>
 
         {/* Desktop */}
         <div className="hidden md:flex items-center justify-between">
           <Link href="/" aria-label="SmartPath Home" className="group">
             <Image
-              src="/assets/common/navbar/logoheaderskillspace.svg"
+              src="/assets/common/navbar/logonavbarprocareer.svg"
               alt="SmartPath Logo"
               width={180}
               height={220}
@@ -123,14 +110,6 @@ export default function Navbar() {
                 ))}
               </ul>
             </nav>
-            <a
-              href="https://skillspace.myr.id/portal"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relative text-[18px] font-semibold text-white bg-[#19499A] px-6 py-2 rounded-md hover:bg-[#4a72a3] transition-colors duration-300"
-            >
-              Login
-            </a>
           </div>
         </div>
       </div>
@@ -139,7 +118,8 @@ export default function Navbar() {
       {isOpen && (
         <div
           id="mobile-menu"
-          className="md:hidden absolute top-full left-0 w-full bg-gradient-to-b from-[#FFFFFF] via-[#F5F5F5] to-[#FFFFFF] shadow-[0_8px_20px_rgba(255,255,255,0.4)] backdrop-blur-sm"
+          className="md:hidden absolute top-full left-0 w-full shadow-[0_8px_20px_rgba(255,255,255,0.4)] backdrop-blur-sm"
+          style={{ background: "#FEFADD" }}
           role="dialog"
           aria-modal="true"
         >

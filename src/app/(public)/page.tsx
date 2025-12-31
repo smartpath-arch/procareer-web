@@ -29,7 +29,7 @@ export default function HomePage() {
       </div>
 
       {/* Section Testimoni */}
-      <div className="py-20 bg-[#F5F7FA]">
+      <div className="py-20 bg-[#FEFADD]">
         <AlumniTestimonial />
       </div>
 

@@ -53,6 +53,10 @@ interface SectionProps {
   center?: boolean;
   customPadding?: string;
   customImageHeight?: string;
+  buttonText?: string;
+  showArrow?: boolean;
+  customButtonBg?: string;
+  customButtonText?: string;
 }
 
 const Section: React.FC<SectionProps> = ({
@@ -69,6 +73,10 @@ const Section: React.FC<SectionProps> = ({
   center = false,
   customPadding = "pt-16 pb-6 md:pt-20 md:pb-8",
   customImageHeight = "w-72 h-72 md:w-[24rem] md:h-[20rem] lg:w-[28rem] lg:h-[23.333rem]",
+  buttonText = "Selengkapnya",
+  showArrow = true,
+  customButtonBg,
+  customButtonText,
 }) => {
   const [isVisible, setIsVisible] = React.useState(false);
 
@@ -131,7 +139,13 @@ const Section: React.FC<SectionProps> = ({
           </div>
         </div>
         <div
-          className={`${bgClass === "bg-[#FAFAFA]" ? "text-[#19499A]" : "text-white"} 
+          className={`${
+            bgClass === "bg-[#FAFAFA]"
+              ? "text-[#19499A]"
+              : bgClass === "bg-[#FEFADD]"
+                ? "text-[#2F184C]"
+                : "text-white"
+          }
           ${textWrapClass} ${
             reverse ? "text-right md:text-right" : "text-left md:text-left"
           } transition-all duration-1000 delay-300 transform ${
@@ -148,21 +162,27 @@ const Section: React.FC<SectionProps> = ({
             <Link href={path}>
               <button
                 className={`
-    px-8 py-3 rounded-xl font-semibold flex items-center gap-2 
+    px-8 py-3 rounded-xl font-semibold flex items-center gap-2
     transition-all duration-300 text-lg shadow-sm hover:shadow-lg transform hover:scale-105
     ${
-      bgClass === "bg-[#FAFAFA]"
-        ? "bg-[#19499A] text-white"
-        : "bg-white text-[#19499A]"
-    }       
+      customButtonBg
+        ? ""
+        : bgClass === "bg-[#FAFAFA]"
+          ? "bg-[#19499A] text-white"
+          : "bg-white text-[#19499A]"
+    }
   `}
                 style={{
                   transition:
                     "background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease",
+                  ...(customButtonBg && { backgroundColor: customButtonBg }),
+                  ...(customButtonText && { color: customButtonText }),
                 }}
               >
-                Selengkapnya
-                <ArrowRight className="w-6 h-6 transition-transform duration-300 group-hover:translate-x-1" />
+                {buttonText}
+                {showArrow && (
+                  <ArrowRight className="w-6 h-6 transition-transform duration-300 group-hover:translate-x-1" />
+                )}
               </button>
             </Link>
           </div>
@@ -193,26 +213,6 @@ const MobileCarousel: React.FC = () => {
         "/assets/mobile/home/program-section/bootcamp-webinarmobile2.png",
       buttonText: "Lihat Bootcamp",
       path: "/bootcamp-webinar",
-    },
-    {
-      id: "corporate",
-      label: "Program Kita",
-      title: "For Corporate",
-      description:
-        "Esiensikan Operasionalmu dan Tingkatkan Omset Perusahaanmu dengan Talent Berkualitas",
-      imageSrc: "/assets/mobile/home/program-section/forcorporatemobile2.png",
-      buttonText: "Lihat Corporate",
-      path: "/for-corporate",
-    },
-    {
-      id: "event",
-      label: "Program Kita",
-      title: "Event",
-      description:
-        "Ikuti event dan program menarik lainnya untuk upgrade diri kamu",
-      imageSrc: "/assets/mobile/home/program-section/eventmobile2.png",
-      buttonText: "Lihat Event",
-      path: "/event",
     },
   ] as const;
 
@@ -400,49 +400,31 @@ const MobileCarousel: React.FC = () => {
 const LearningPlatformSections: React.FC = () => {
   const sections: SectionProps[] = [
     {
-      title: "E-Learning",
-      description: "Pelajari Ratusan Skill Bersertifikat kapanpun dimanapun",
-      imageSrc: "/assets/home/program-section/e-learning3.png",
-      imageAlt: "E-Learning",
-      bgClass: "bg-[#19499A]",
-      customPadding: "",
-      path: "/e-learning",
-    },
-    {
-      title: "Bootcamp & Webinar",
+      title: "Upgrade CV-mu",
       description:
-        "Intensive Live Class Bareng Experts hingga disalurkan kerja",
-      imageSrc: "/assets/home/program-section/bootcampdanwebinar3.png",
-      imageAlt: "Bootcamp & Webinar",
-      reverse: true,
-      bgClass: "bg-[#FAFAFA]",
+        "Dibuat khusus oleh HRD agar CV-mu lolos screening dan siap kirim ke perusahaan impian",
+      imageSrc: "/assets/home/program-section/contacthrd.png",
+      imageAlt: "Upgrade CV-mu",
+      bgClass: "bg-gradient-to-r from-[#CB66E8] to-[#2F184C]",
       customPadding: "",
-      path: "/bootcamp-webinar",
-    },
-    {
-      title: "For Corporate",
-      description:
-        "Esiensikan Operasionalmu dan Tingkatkan Omset Perusahaanmu dengan Talent Berkualitas",
-      imageSrc: "/assets/home/program-section/forcorporate3.png",
-      imageAlt: "For Corporate",
-      bgClass: "bg-[#19499A]",
-      center: true,
-      gapClass: "gap-4",
-      customImageHeight: "",
-      customPadding: "",
-      path: "/for-corporate",
+      path: "https://wa.me/6285745961430",
+      buttonText: "Contact HRD",
+      showArrow: false,
+      customButtonBg: "#FFFFFF",
+      customButtonText: "#2F184C",
     },
     {
       title: "Event",
       description:
         "Ikuti event dan program menarik lainnya untuk upgrade diri kamu",
-      imageSrc: "/assets/home/program-section/event2.png",
+      imageSrc: "/assets/home/program-section/event3.png",
       imageAlt: "Event",
       reverse: true,
-      bgClass: "bg-[#FAFAFA]",
-      gapClass: "gap-4",
+      bgClass: "bg-[#FEFADD]",
       customPadding: "",
-      path: "/event",
+      path: "/bootcamp-webinar",
+      customButtonBg: "#2F184C",
+      customButtonText: "#FFFFFF",
     },
   ];
   return (
