@@ -44,3 +44,5 @@ next-env.d.ts
 DOCKER_GUIDE.md
 NGINX_SETUP.md
 public/nul
+nginx-procareer.conf
+DEPLOYMENT.md
