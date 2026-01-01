@@ -1,5 +1,5 @@
 services:
-  web:
+  procareerweb:
     build:
       context: .
       dockerfile: Dockerfile
