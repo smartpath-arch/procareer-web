@@ -20,35 +20,20 @@ export default function HeroSection() {
 
   useEffect(() => {
     if (isPaused) return;
-
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroImages.length);
     }, SLIDE_DURATION);
-
     return () => clearInterval(interval);
   }, [heroImages.length, isPaused]);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 100);
+    const timer = setTimeout(() => setIsVisible(true), 100);
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <section className="relative overflow-hidden bg-background">
       <style jsx>{`
-        @keyframes fadeInScale {
-          0% {
-            opacity: 0;
-            transform: scale(0.9) translateY(10px);
-          }
-          100% {
-            opacity: 1;
-            transform: scale(1) translateY(0);
-          }
-        }
-
         @keyframes fadeInUp {
           0% {
             opacity: 0;
@@ -71,10 +56,6 @@ export default function HeroSection() {
           }
         }
 
-        .animate-fadeInScale {
-          animation: fadeInScale 0.6s ease-out forwards;
-        }
-
         .animate-fadeInUp {
           animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
           opacity: 0;
@@ -86,27 +67,27 @@ export default function HeroSection() {
         }
       `}</style>
 
+      {/* ================= MOBILE VIEW (IMAGE ONLY) ================= */}
       <div className="md:hidden">
-        <div className="relative bg-gradient-to-b from-[#5C89C7] to-[#86BEFF] rounded-b-[40px] overflow-hidden">
-          <div className="relative z-10 w-full px-6 pb-0">
-            <div className="w-full pb-0">
-              <Image
-                src="/assets/mobile/home/mobileheroskillspace.png"
-                alt="Hero Mobile"
-                width={800}
-                height={600}
-                sizes="100vw"
-                className="w-full h-auto object-cover"
-                priority
-              />
-            </div>
+        <div className="relative rounded-b-[40px] bg-gradient-to-b from-[#CB66E8] to-[#2F184C] overflow-hidden">
+          {/* HERO IMAGE ONLY */}
+          <div className="relative w-full h-[100px]">
+            <Image
+              src="/assets/home/hero-section/herosection5.png"
+              alt="ProCareer Hero"
+              fill
+              priority
+              className="object-cover object-top scale-115 mt-2 pl-8"
+            />
           </div>
         </div>
+
+        {/* STATISTIK MOBILE */}
         <div className="relative px-4 pt-6 pb-6">
-          <div className="overflow-hidden rounded-3xl bg-background">
+          <div className="overflow-hidden rounded-3xl bg-background shadow-lg">
             <Image
-              src="/assets/mobile/home/mobileb4.png"
-              alt="Statistik SmartPath - 310k+ Pengguna, 1000+ Materi, 100+ Instansi"
+              src="/assets/home/herostatistik4.png"
+              alt="Statistik ProCareer"
               width={450}
               height={380}
               sizes="100vw"
@@ -116,6 +97,7 @@ export default function HeroSection() {
         </div>
       </div>
 
+      {/* ================= DESKTOP VIEW (TIDAK DIUBAH) ================= */}
       <div className="hidden md:block relative bg-gradient-to-b from-[#CB66E8] to-[#2F184C] pb-8 rounded-b-[60px]">
         <div className="mx-auto max-w-[1450px] px-2 pt-4">
           <div
@@ -134,6 +116,7 @@ export default function HeroSection() {
             />
           </div>
         </div>
+
         <div
           className={`relative z-10 mx-auto -mt-[380px] w-[92%] max-w-5xl transition-opacity ${
             isVisible ? "animate-fadeInZoom" : "opacity-0"
@@ -142,7 +125,7 @@ export default function HeroSection() {
           <div className="overflow-hidden rounded-2xl shadow-2xl">
             <Image
               src="/assets/home/herostatistik4.png"
-              alt="Statistik SmartPath"
+              alt="Statistik ProCareer"
               width={1600}
               height={600}
               priority
