@@ -57,6 +57,8 @@ interface SectionProps {
   showArrow?: boolean;
   customButtonBg?: string;
   customButtonText?: string;
+  customButtonGradient?: string;
+  customButtonTextGradient?: string;
 }
 
 const Section: React.FC<SectionProps> = ({
@@ -77,6 +79,8 @@ const Section: React.FC<SectionProps> = ({
   showArrow = true,
   customButtonBg,
   customButtonText,
+  customButtonGradient,
+  customButtonTextGradient,
 }) => {
   const [isVisible, setIsVisible] = React.useState(false);
 
@@ -162,24 +166,44 @@ const Section: React.FC<SectionProps> = ({
             <Link href={path}>
               <button
                 className={`
-    px-8 py-3 rounded-xl font-semibold flex items-center gap-2
-    transition-all duration-300 text-lg shadow-sm hover:shadow-lg transform hover:scale-105
-    ${
-      customButtonBg
-        ? ""
-        : bgClass === "bg-[#FAFAFA]"
-          ? "bg-[#19499A] text-white"
-          : "bg-white text-[#19499A]"
-    }
-  `}
+      px-8 py-3 rounded-xl font-semibold flex items-center gap-2
+      transition-all duration-300 text-lg shadow-sm hover:shadow-lg transform hover:scale-105
+      ${
+        customButtonBg || customButtonGradient
+          ? ""
+          : bgClass === "bg-[#FAFAFA]"
+            ? "bg-[#19499A] text-white"
+            : "bg-white text-[#19499A]"
+      }
+    `}
                 style={{
                   transition:
                     "background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease",
-                  ...(customButtonBg && { backgroundColor: customButtonBg }),
-                  ...(customButtonText && { color: customButtonText }),
+                  ...(customButtonBg &&
+                    !customButtonGradient && {
+                      backgroundColor: customButtonBg,
+                    }),
+                  ...(customButtonGradient && {
+                    background: customButtonGradient,
+                  }),
                 }}
               >
-                {buttonText}
+                {/* ===== FIX DI SINI (TEXT SAJA) ===== */}
+                <span
+                  style={
+                    customButtonTextGradient
+                      ? {
+                          backgroundImage: customButtonTextGradient,
+                          WebkitBackgroundClip: "text",
+                          WebkitTextFillColor: "transparent",
+                          backgroundClip: "text",
+                        }
+                      : { color: customButtonText }
+                  }
+                >
+                  {buttonText}
+                </span>
+
                 {showArrow && (
                   <ArrowRight className="w-6 h-6 transition-transform duration-300 group-hover:translate-x-1" />
                 )}
@@ -410,8 +434,8 @@ const LearningPlatformSections: React.FC = () => {
       path: "https://wa.me/6285745961430",
       buttonText: "Contact HRD",
       showArrow: false,
-      customButtonBg: "#FFFFFF",
-      customButtonText: "#2F184C",
+      customButtonBg: "#fefadd",
+      customButtonTextGradient: "linear-gradient(to right, #cb66e8, #2f184c)",
     },
     {
       title: "Event",
