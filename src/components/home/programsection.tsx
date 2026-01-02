@@ -328,7 +328,7 @@ const MobileCarousel: React.FC = () => {
       className="md:hidden overflow-hidden relative w-full bg-white"
       role="region"
       aria-roledescription="carousel"
-      aria-label="Program SmartPath"
+      aria-label="Program ProCareer"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}

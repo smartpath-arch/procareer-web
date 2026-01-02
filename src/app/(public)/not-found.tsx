@@ -1,8 +1,8 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "404 Not Found • SmartPath",
-  description: "Halaman yang kamu cari tidak ditemukan di SmartPath.",
+  title: "404 Not Found • ProCareer",
+  description: "Halaman yang kamu cari tidak ditemukan di ProCareer.",
 };
 
 export default function NotFound() {

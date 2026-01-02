@@ -1,10 +1,10 @@
-# SkillSpace - Frontend Application
+# ProCareer - Frontend Application
 
 <div align="center">
-  <img src="public/assets/common/navbar/logoheaderskillspace.svg" alt="SkillSpace Logo" width="200"/>
+  <img src="public/assets/common/navbar/logonavbarprocareer.svg" alt="ProCareer Logo" width="200"/>
 
   <p align="center">
-    <strong>Bantu freshgraduate cepat berkarir di bidang Data & AI</strong>
+    <strong>CV Standar Top Company Dibuatkan Langsung oleh HRD</strong>
   </p>
 
   <p align="center">
@@ -44,7 +44,7 @@
 
 ## About The Project
 
-**SkillSpace** is a cutting-edge educational technology platform designed to bridge the gap between academic learning and professional career success. The platform serves as a comprehensive ecosystem for:
+**ProCareer** is a cutting-edge educational technology platform designed to bridge the gap between academic learning and professional career success. The platform serves as a comprehensive ecosystem for:
 
 - **Students** seeking to enhance their skills and prepare for the job market
 - **Professionals** looking to upskill or switch careers
@@ -186,8 +186,8 @@ docker compose version # Should output Docker Compose version (optional)
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/daniadrian/feskillspace.git
-cd feskillspace
+git clone https://github.com/daniadrian/procareer.git
+cd procareer
 ```
 
 2. **Install dependencies**
@@ -235,7 +235,7 @@ NEXTAUTH_SECRET=dev-secret-change-me
 
 **Production Note:**
 
-- Change `NEXT_PUBLIC_API_URL` to your production backend URL (e.g., `https://api.skillspace.id`)
+- Change `NEXT_PUBLIC_API_URL` to your production backend URL (e.g., `https://api.procareer.id`)
 - Generate a secure `NEXTAUTH_SECRET` using: `openssl rand -base64 32`
 
 ### Running The Application
@@ -320,15 +320,15 @@ The application will be available at [http://localhost:3003](http://localhost:30
 docker ps
 
 # Execute commands inside container
-docker exec -it feskillspace-web sh
-docker exec -it feskillspace-web-dev sh
+docker exec -it procareer-web sh
+docker exec -it procareer-web-dev sh
 
 # View container logs
-docker logs feskillspace-web
-docker logs -f feskillspace-web-dev  # Follow logs
+docker logs procareer-web
+docker logs -f procareer-web-dev  # Follow logs
 
 # Restart container
-docker restart feskillspace-web
+docker restart procareer-web
 
 # Remove all stopped containers
 docker compose down --volumes
@@ -352,7 +352,7 @@ npx tsc --noEmit
 ## Project Structure
 
 ```
-feskillspace/
+procareer/
 │
 ├── src/
 │   ├── app/                          # Next.js App Router
@@ -509,8 +509,8 @@ GET /api/bootcamps
     "slug": "data-science-bootcamp",
     "dateISO": "2025-12-31T23:59:59Z",
     "dateText": "Hingga 31 Desember 2025",
-    "poster": "https://api.skillspace.id/uploads/bootcamp-poster.jpg",
-    "linkMayar": "https://mayar.link/skillspace/bootcamp"
+    "poster": "https://api.procareer.id/uploads/bootcamp-poster.jpg",
+    "linkMayar": "https://mayar.link/procareer/bootcamp"
   }
 ]
 ```
@@ -552,7 +552,7 @@ GET /api/elearning
       "type": "Premium",
       "participants": "250 Peserta",
       "duration": "12 jam",
-      "href": "https://mayar.link/skillspace/data-analysis",
+      "href": "https://mayar.link/procareer/data-analysis",
       "poster": { "url": "/uploads/course-poster.jpg" }
     }
   ]
@@ -574,7 +574,7 @@ The frontend communicates with a separate backend service:
 **Base URLs:**
 
 - Development: `http://localhost:4000`
-- Production: `https://api.skillspace.id`
+- Production: `https://api.procareer.id`
 
 **Required Backend Endpoints:**
 
@@ -835,12 +835,12 @@ import { cn } from "@/lib/utils";
 2. **Check build size**
 
    ```bash
-   docker images | grep feskillspace
+   docker images | grep procareer
    ```
 
 3. **Debug inside container**
    ```bash
-   docker exec -it feskillspace-web sh
+   docker exec -it procareer-web sh
    ```
 
 ---
@@ -875,10 +875,10 @@ This project uses **Docker & Docker Compose** for deployment to VPS.
 
 **Environments:**
 
-| Environment | Host Port | Container              | Docker Compose File      |
-| ----------- | --------- | ---------------------- | ------------------------ |
-| Development | 3002      | `feskillspace-web-dev` | `docker-compose.dev.yml` |
-| Production  | 3003      | `feskillspace-web`     | `docker-compose.yml`     |
+| Environment | Host Port | Container           | Docker Compose File      |
+| ----------- | --------- | ------------------- | ------------------------ |
+| Development | 3002      | `procareer-web-dev` | `docker-compose.dev.yml` |
+| Production  | 3003      | `procareer-web`     | `docker-compose.yml`     |
 
 **Docker Configuration:**
 
@@ -907,7 +907,7 @@ If you encounter any issues during deployment or need assistance:
 **Production:**
 
 ```bash
-NEXT_PUBLIC_API_URL=https://api.skillspace.id pnpm build
+NEXT_PUBLIC_API_URL=https://api.procareer.id pnpm build
 ```
 
 **Development:**
@@ -922,7 +922,7 @@ NEXT_PUBLIC_API_URL=http://localhost:4000 pnpm build
 
 ## Contributing
 
-We welcome contributions to improve SkillSpace! Please follow these guidelines:
+We welcome contributions to improve ProCareer! Please follow these guidelines:
 
 ### Branching Strategy
 
@@ -953,8 +953,8 @@ feature/my-feature → dev → main
 2. **Clone the repository**
 
    ```bash
-   git clone https://github.com/daniadrian/feskillspace.git
-   cd feskillspace
+   git clone https://github.com/daniadrian/procareer.git
+   cd procareer
    ```
 
 3. **Create a feature branch from `dev`**
@@ -1044,20 +1044,20 @@ feature/my-feature → dev → main
 
 This project is proprietary and confidential.
 
-**Copyright © 2025 SkillSpace. All rights reserved.**
+**Copyright © 2025 ProCareer. All rights reserved.**
 
-Unauthorized copying, distribution, modification, or use of this software, via any medium, is strictly prohibited without explicit written permission from SkillSpace.
+Unauthorized copying, distribution, modification, or use of this software, via any medium, is strictly prohibited without explicit written permission from ProCareer.
 
 ---
 
 ## Contact
 
-### SkillSpace
+### ProCareer
 
-- **Website:** [https://skillspace.id](https://skillspace.id)
-- **Email:** admin@skillspace.id
-- **Instagram:** [@skillspace.id](https://www.instagram.com/skillspace.id/)
-- **LinkedIn:** [SkillSpace Indonesia](https://www.linkedin.com/company/skillspace-id)
+- **Website:** [https://procareer.id](https://procareer.id)
+- **Email:** sosmedprocareer@gmail.com
+- **Instagram:** [@skillspace_id](https://www.instagram.com/skillspace_id/)
+- **LinkedIn:** [ProCareer Indonesia](https://www.linkedin.com/company/procareer-id)
 
 ### Development Team
 
@@ -1069,10 +1069,10 @@ For technical questions or bug reports:
 
 ## Acknowledgments
 
-- **SkillSpace Team** - For building an impactful education platform
+- **ProCareer Team** - For building an impactful education platform
 - **Our Mentors** - Industry experts from top companies (Shopee, Grab, Gojek, Tokopedia, Lazada, etc.)
 - **Our Partners** - CNBC Indonesia, CNN Indonesia, Kumparan, IDN Times, and more
-- **Our Alumni** - 300,000+ students who trusted SkillSpace for their career development
+- **Our Alumni** - 300,000+ students who trusted ProCareer for their career development
 
 ---
 

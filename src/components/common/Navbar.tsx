@@ -60,10 +60,10 @@ export default function Navbar() {
               </button>
             )}
 
-            <Link href="/" aria-label="SmartPath Home">
+            <Link href="/" aria-label="ProCareer Home">
               <Image
                 src="/assets/common/navbar/logonavbarprocareer.svg"
-                alt="SmartPath Mobile Logo"
+                alt="ProCareer Mobile Logo"
                 width={120}
                 height={150}
                 unoptimized={true}
@@ -82,10 +82,10 @@ export default function Navbar() {
 
         {/* Desktop */}
         <div className="hidden md:flex items-center justify-between">
-          <Link href="/" aria-label="SmartPath Home" className="group">
+          <Link href="/" aria-label="ProCareer Home" className="group">
             <Image
               src="/assets/common/navbar/logonavbarprocareer.svg"
-              alt="SmartPath Logo"
+              alt="ProCareer Logo"
               width={180}
               height={220}
               unoptimized={true}

@@ -45,10 +45,10 @@ export default function Footer() {
         {" "}
         <div className="flex flex-col space-y-8">
           <div className="flex justify-center">
-            <Link href="/" className="inline-block" aria-label="SmartPath Home">
+            <Link href="/" className="inline-block" aria-label="ProCareer Home">
               <Image
                 src="/assets/common/footer/logofooter.svg"
-                alt="SmartPath"
+                alt="ProCareer"
                 width={550}
                 height={161}
                 sizes="(max-width: 1024px) 85vw, 380px"
@@ -207,11 +207,11 @@ export default function Footer() {
               <Link
                 href="/"
                 className="inline-block"
-                aria-label="SmartPath Home"
+                aria-label="ProCareer Home"
               >
                 <Image
                   src="/assets/common/footer/logofooter.svg"
-                  alt="SmartPath"
+                  alt="ProCareer"
                   width={300}
                   height={100}
                   className="h-auto w-[300px] object-contain"

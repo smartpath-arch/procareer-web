@@ -37,7 +37,7 @@ const AlumniTestimonial = ({
       role: "Marketing Officer",
       company: "BNI",
       testimonial:
-        "Pernah ada masa di mana aku gak yakin sama jalur karirku, tapi SmartPath ngebantu aku bikin keputusan yang tepat. Sekarang aku jadi Marketing Officer di Bank BNI, dan aku sangat menikmati setiap harinya!",
+        "Pernah ada masa di mana aku gak yakin sama jalur karirku, tapi ProCareer ngebantu aku bikin keputusan yang tepat. Sekarang aku jadi Marketing Officer di Bank BNI, dan aku sangat menikmati setiap harinya!",
       profileImage: "/assets/e-learning/cintapermatasari.webp",
       companyLogo: "/assets/mobile/home/testimonial/companies/bni.svg",
     },
@@ -46,7 +46,7 @@ const AlumniTestimonial = ({
       role: "Internal Audit",
       company: "PT Sinar Mas Agro Resources and Technology Tbk",
       testimonial:
-        "Thanks SkillSpace! Program belajarnya berguna banget. Cara pengajarannya enak banget, bikin aku gampang ngerti. Ga nyesel ikut program ini. Sekarang aku kerja di P&G sebagai Data Analyst",
+        "Thanks ProCareer! Program belajarnya berguna banget. Cara pengajarannya enak banget, bikin aku gampang ngerti. Ga nyesel ikut program ini. Sekarang aku kerja di P&G sebagai Data Analyst",
       profileImage: "/assets/e-learning/mputra.png",
       companyLogo: "/assets/mobile/home/testimonial/companies/sinarmas.png",
     },
@@ -55,7 +55,7 @@ const AlumniTestimonial = ({
       role: "O-Ranger Loket",
       company: "Pos Indonesia",
       testimonial:
-        "Aku jadi lebih tahu cara mempersiapkan diri dengan baik setelah ikut SmartPath. Banyak hal yang sebelumnya aku anggap susah jadi lebih mudah dipahami di sini. Benar-benar bermanfaat!",
+        "Aku jadi lebih tahu cara mempersiapkan diri dengan baik setelah ikut ProCareer. Banyak hal yang sebelumnya aku anggap susah jadi lebih mudah dipahami di sini. Benar-benar bermanfaat!",
       profileImage: "/assets/e-learning/rifandi.webp",
       companyLogo: "/assets/mobile/home/testimonial/companies/posind.png",
     },
@@ -64,7 +64,7 @@ const AlumniTestimonial = ({
       role: "Finance Officer",
       company: "Sari Roti",
       testimonial:
-        "Dapet ilmu baru itu pasti, tapi di SmartPath aku juga dapet jaringan yang sangat luas! Banyak teman-teman baru yang punya visi yang sama, jadi makin semangat buat terus belajar dan berkembang",
+        "Dapet ilmu baru itu pasti, tapi di ProCareer aku juga dapet jaringan yang sangat luas! Banyak teman-teman baru yang punya visi yang sama, jadi makin semangat buat terus belajar dan berkembang",
       profileImage: "/assets/e-learning/sri_intan.jpeg",
       companyLogo: "/assets/mobile/home/testimonial/companies/sari_roti.png",
     },
@@ -73,7 +73,7 @@ const AlumniTestimonial = ({
       role: " ",
       company: "PT HM Sampoerna Tbk",
       testimonial:
-        "Pengalamannya sangat luar biasa! Aku dapet banyak tips yang aplikatif dan langsung bisa dipakai di dunia nyata. SmartPath bener-bener ngajarin kita cara terbaik buat berkembang",
+        "Pengalamannya sangat luar biasa! Aku dapet banyak tips yang aplikatif dan langsung bisa dipakai di dunia nyata. ProCareer bener-bener ngajarin kita cara terbaik buat berkembang",
       profileImage: "/assets/e-learning/Naufal.jpg",
       companyLogo: "/assets/mobile/home/testimonial/companies/sampoerna.jpg",
     },
@@ -82,7 +82,7 @@ const AlumniTestimonial = ({
       role: "Finance accounting",
       company: "PT. Cargill Indonesia",
       testimonial:
-        "Sebelum ikut SmartPath, aku merasa masih kurang siap buat dunia kerja. Tapi setelah itu, aku jadi lebih ngerti banyak hal dan sekarang aku udah diterima di Cargill Indonesia di bagian Finance Accounting!",
+        "Sebelum ikut ProCareer, aku merasa masih kurang siap buat dunia kerja. Tapi setelah itu, aku jadi lebih ngerti banyak hal dan sekarang aku udah diterima di Cargill Indonesia di bagian Finance Accounting!",
       profileImage: "/assets/e-learning/Amelda.jpg",
       companyLogo: "/assets/mobile/home/testimonial/companies/cargill.jpg",
     },
@@ -91,7 +91,7 @@ const AlumniTestimonial = ({
       role: "Administration support staff ",
       company: "PT Elnusa Tbk",
       testimonial:
-        "Dari belajar di SmartPath, aku dapet banyak banget perspektif baru. Gak lama setelah itu, aku diterima di PT Elnusa dan kerja sebagai Administration support staff. Pengalaman yang bener-bener gak ternilai!",
+        "Dari belajar di ProCareer, aku dapet banyak banget perspektif baru. Gak lama setelah itu, aku diterima di PT Elnusa dan kerja sebagai Administration support staff. Pengalaman yang bener-bener gak ternilai!",
       profileImage: "/assets/bootcamp-webinar/surya_sukmana.png",
       companyLogo: "/assets/mobile/home/testimonial/companies/elnusa.png",
     },
@@ -100,7 +100,7 @@ const AlumniTestimonial = ({
       role: "Engineer Process",
       company: "PT Medco Energi Internasional Tbk ",
       testimonial:
-        "SmartPath berhasil ngubah cara pandang aku soal networking dan karir. Sekarang aku di PT Medco Energi Internasional, jadi bagian dari tim Engineer Process, dan aku ngerasa banget perbedaan cara kerja aku dari sebelumnya",
+        "ProCareer berhasil ngubah cara pandang aku soal networking dan karir. Sekarang aku di PT Medco Energi Internasional, jadi bagian dari tim Engineer Process, dan aku ngerasa banget perbedaan cara kerja aku dari sebelumnya",
       profileImage: "/assets/bootcamp-webinar/Surya Darma.png",
       companyLogo: "/assets/mobile/home/testimonial/companies/medcoenergi.png",
     },
