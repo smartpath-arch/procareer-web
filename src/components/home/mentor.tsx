@@ -47,111 +47,55 @@ const delayClass = (ms: number) => {
 
 const desktopMentorData = [
   {
-    photo: "/assets/home/mentor/mentordian.png",
-    linkedIn: "https://www.linkedin.com/in/dianpitaloka/",
+    photo: "/assets/home/mentor/mentordeva.png",
+    linkedIn: "https://www.linkedin.com/in/devafitrianti/",
   },
   {
-    photo: "/assets/home/mentor/mentorjavas.png",
-    linkedIn: "https://www.linkedin.com/in/javasalfredabyp/",
+    photo: "/assets/home/mentor/mentoranis.png",
+    linkedIn: "https://www.linkedin.com/in/anis-dewinta-6a69a3137/",
   },
   {
-    photo: "/assets/home/mentor/mentoranugrah.png",
-    linkedIn: "https://www.linkedin.com/in/anugrahakbarp/",
+    photo: "/assets/home/mentor/mentorkurniawan.png",
+    linkedIn: "https://www.linkedin.com/in/kurniawanwicaksono/",
   },
   {
-    photo: "/assets/home/mentor/mentorgerald.png",
-    linkedIn: "https://www.linkedin.com/in/gerald-plakasa/",
-  },
-  {
-    photo: "/assets/home/mentor/mentormochammad.png",
-    linkedIn: "https://www.linkedin.com/in/mochammadtriantoro/",
-  },
-  {
-    photo: "/assets/home/mentor/mentorfarrell.png",
-    linkedIn: "https://www.linkedin.com/in/farrellfachriadi/",
-  },
-  {
-    photo: "/assets/home/mentor/mentorputri.png",
-    linkedIn: "https://www.linkedin.com/in/putriintanlarasati/",
-  },
-  {
-    photo: "/assets/home/mentor/mentorputrishilla.png",
-    linkedIn: "https://www.linkedin.com/in/putri-shilla-dwisurta/",
-  },
-  {
-    photo: "/assets/home/mentor/mentorrifky.png",
-    linkedIn: "https://www.linkedin.com/in/muhammadrifky26/",
-  },
-  {
-    photo: "/assets/home/mentor/mentormande.png",
-    linkedIn: "https://www.linkedin.com/in/mande-mandiri/",
+    photo: "/assets/home/mentor/mentorfikry.png",
+    linkedIn: "https://www.linkedin.com/in/achmadfikry/",
   },
 ];
 
 const mentorData: MentorData[] = [
   {
-    name: "Dian Rezky Catur Pitaloka",
-    photo: "/assets/mobile/home/mentor/mentordianrezky.png",
-    company: "Grab",
-    companyIcon: "grab.svg",
-    position: "Territory Strategi & Planning Analyst",
-    linkedIn: "https://www.linkedin.com/in/dianpitaloka/",
+    name: "Deva Fitrianti",
+    photo: "/assets/mobile/home/mentor/mentordevafitrianti.png",
+    company: "Unilever",
+    companyIcon: "unilever.svg",
+    position: "Customer Development",
+    linkedIn: "https://www.linkedin.com/in/devafitrianti/",
   },
   {
-    name: "Javas Alfreda Belva Yoga Pratama",
-    photo: "/assets/mobile/home/mentor/mentorjavasalfreda.png",
-    company: "LinkAja",
-    companyIcon: "linkaja.svg",
-    position: "Senior Product Analytics",
-    linkedIn: "https://www.linkedin.com/in/javasalfredabyp/",
+    name: "Anis Dewinta",
+    photo: "/assets/mobile/home/mentor/mentoranisdewinta.png",
+    company: "Mayora Group",
+    companyIcon: "mayoragroup.svg",
+    position: "Recruitment & People Organization and Development",
+    linkedIn: "https://www.linkedin.com/in/anis-dewinta-6a69a3137/",
   },
   {
-    name: "Anugrah Akbar",
-    photo: "/assets/mobile/home/mentor/mentoranugrahakbar.png",
-    company: "Reckitt",
-    companyIcon: "reckitt.svg",
-    position: "IT&D Regional Data Scientist",
-    linkedIn: "https://www.linkedin.com/in/anugrahakbarp/",
-  },
-  {
-    name: "Gerald Plakasa",
-    photo: "/assets/mobile/home/mentor/mentorgeraldplaksa.png",
-    company: "Huawei",
-    companyIcon: "huawei.svg",
-    position: "Data Analyst",
-    linkedIn: "https://www.linkedin.com/in/gerald-plakasa/",
-  },
-  {
-    name: "Mochammad Tri Antoro",
-    photo: "/assets/mobile/home/mentor/mentormochammadtri.png",
-    company: "Lazada",
-    companyIcon: "lazada.svg",
-    position: "Key Account Manager",
-    linkedIn: "https://www.linkedin.com/in/mochammadtriantoro/",
-  },
-  {
-    name: "Farrell Fachriadi",
-    photo: "/assets/mobile/home/mentor/mentorfarrellfachriadi.png",
+    name: "Kurniawan Wicaksono",
+    photo: "/assets/mobile/home/mentor/mentorkurniawanwicaksono.png",
     company: "Glints",
     companyIcon: "glints.svg",
-    position: "International Business Development Associate",
-    linkedIn: "https://www.linkedin.com/in/farrellfachriadi/",
+    position: "Associate Talent Consultant",
+    linkedIn: "https://www.linkedin.com/in/kurniawanwicaksono/",
   },
   {
-    name: "Putri Larasati",
-    photo: "/assets/mobile/home/mentor/mentorputrilarasati.png",
-    company: "PwC Indonesia",
-    companyIcon: "pwcindonesia.svg",
-    position: "Human Capital Business Partner",
-    linkedIn: "https://www.linkedin.com/in/putriintanlarasati/",
-  },
-  {
-    name: "Putri Shilla Dwisurta",
-    photo: "/assets/mobile/home/mentor/mentorputrishilla.png",
-    company: "Shopee",
-    companyIcon: "shopee.svg",
-    position: "Recruitment",
-    linkedIn: "https://www.linkedin.com/in/putri-shilla-dwisurta/",
+    name: "Achmad Fikry",
+    photo: "/assets/mobile/home/mentor/mentorachmadfikry.png",
+    company: "Mayora",
+    companyIcon: "mayora.svg",
+    position: "Production & Engineering Packaging Section Head",
+    linkedIn: "https://www.linkedin.com/in/achmadfikry/",
   },
 ];
 
@@ -277,7 +221,7 @@ export default function MentorCarousel() {
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const mobileScrollRef = useRef<HTMLDivElement | null>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const totalSlides = 8;
+  const totalSlides = 4;
 
   useEffect(() => {
     const el = scrollRef.current;
