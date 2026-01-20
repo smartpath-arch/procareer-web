@@ -12,7 +12,7 @@ export default function EventHeroSection() {
     <section className="relative w-full overflow-hidden">
       {/* Mobile - Home-style banner */}
       <div className="md:hidden w-full bg-white mb-4">
-        <div className="relative overflow-hidden bg-gradient-to-b from-[#5C89C7] to-[#86BEFF] rounded-b-[40px] pt-6 pb-8">
+        <div className="relative overflow-hidden bg-gradient-to-b from-[#CB66E8] to-[#2F184C] rounded-b-[40px] pt-6 pb-8">
           <div className="w-full flex justify-center -mb-2 pb-4">
             <Image
               src="/assets/event/event-hero2.png"
@@ -37,7 +37,7 @@ export default function EventHeroSection() {
 
       {/* Desktop - Original layout (tidak diubah) */}
       <div className="hidden md:block mx-auto max-w-none bg-white mb-2">
-        <div className="relative min-h-[300px] md:h-[500px] lg:h-[550px] rounded-b-[30px] md:rounded-b-[50px] overflow-hidden bg-gradient-to-b from-[#5C89C7] to-[#86BEFF]">
+        <div className="relative min-h-[300px] md:h-[500px] lg:h-[550px] rounded-b-[30px] md:rounded-b-[50px] overflow-hidden bg-gradient-to-b from-[#CB66E8] to-[#2F184C]">
           <div className="h-full pb-[3px] px-5 sm:px-6 md:px-8 lg:pl-[120px] lg:pr-[40px]">
             <div className="h-full flex flex-col md:grid md:items-center md:grid-cols-1 lg:grid-cols-[0.75fr_auto] gap-0 py-8 md:py-0">
               <div className="z-10 text-white w-full md:max-w-[900px] lg:max-w-none lg:pr-0 lg:pl-8 order-2 md:order-1 -mt-10 lg:-mt-12 xl:-mt-20">
