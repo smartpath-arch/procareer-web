@@ -5,10 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
-const NAV_ITEMS = [
-  { name: "Home", href: "/" },
-  { name: "Event", href: "/event" },
-] as const;
+const NAV_ITEMS = [{ name: "Home", href: "/" }] as const;
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);

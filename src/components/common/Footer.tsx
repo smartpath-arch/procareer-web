@@ -7,7 +7,6 @@ type Social = { name: string; icon: string; url: string };
 export default function Footer() {
   const navigationLinks: readonly NavLink[] = [
     { name: "Home", href: "/" },
-    { name: "Event", href: "/event" },
   ] as const;
 
   const socialMedia: readonly Social[] = [

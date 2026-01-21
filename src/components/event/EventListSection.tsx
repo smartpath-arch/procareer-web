@@ -112,7 +112,7 @@ export default function EventListSection({ items, isLoading }: Props) {
 
   return (
     <section
-      className={`${plusJakarta.className} w-full bg-[#19499A] py-8 md:py-12 lg:py-16`}
+      className={`${plusJakarta.className} w-full bg-[#2F184C] py-8 md:py-12 lg:py-16`}
     >
       <div className="mx-auto max-w-[1420px] px-4 sm:px-6 md:px-8 lg:px-[64px]">
         <div className="mx-auto max-w-[980px] mb-6 md:mb-8">
