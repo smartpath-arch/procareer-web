@@ -19,10 +19,11 @@ const companies: readonly Company[] = [
 ] as const;
 
 const benefits: readonly string[] = [
-  "Disalurkan dan dibimbing sampai dapat kerja",
-  "Dibuatkan CV standar top company impianmu",
-  "Sertifikat Internasional",
-  "Program dipersonalisasi sesuai diri dan karir kamu",
+  "Dibuatkan CV standar top company impianmu oleh HRD",
+  "Sertifikat Profesional Career Preparation",
+  "Grup Info Loker/Magang & Diskusi Exclusive",
+  "50+ Materi Career Preparation & Self Development",
+  "Kelas Career Preparation (CV, Interview, hingga Offering)",
 ] as const;
 
 export default function AlumniCompaniesSection() {
@@ -73,10 +74,10 @@ export default function AlumniCompaniesSection() {
         </div>
       </div>
 
-      <div className="bg-[#F2F4F8] border border-[#E5E7EB]/50">
+      <div className="bg-[#FEFADD] border border-[#E5E7EB]/50">
         <div className="md:hidden px-5 py-8">
-          <h3 className="text-[28px] text-center font-extrabold text-[#19499A] mb-6">
-            Why SkillSpace?
+          <h3 className="text-[28px] text-center font-extrabold text-[#2F184C] mb-6">
+            Why ProCareer?
           </h3>
           <ul className="space-y-4">
             {benefits.map((b) => (
@@ -96,8 +97,8 @@ export default function AlumniCompaniesSection() {
           <div className="max-w-7xl mx-auto px-6 py-12">
             <div className="flex items-center gap-16">
               <div className="flex-1 flex justify-center">
-                <h3 className="text-5xl font-extrabold text-[#19499A] whitespace-nowrap">
-                  Why SkillSpace?
+                <h3 className="text-5xl font-extrabold text-[#2F184C] whitespace-nowrap">
+                  Why ProCareer?
                 </h3>
               </div>
               <ul className="flex-1 space-y-4 pr-20">
@@ -106,7 +107,7 @@ export default function AlumniCompaniesSection() {
                     <span className="inline-flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-transparent ring-[3px] ring-gray-900">
                       <Check className="h-6 w-6 text-gray-900 stroke-[3]" />
                     </span>
-                    <span className="text-gray-900 text-xl font-semibold">
+                    <span className="text-gray-900 text-xl font-semibold whitespace-nowrap">
                       {b}
                     </span>
                   </li>

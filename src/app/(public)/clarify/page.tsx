@@ -2,16 +2,16 @@ import Image from "next/image";
 import TestimonialsSlider from "@/components/clarify/TestimonialsSlider";
 
 export const metadata = {
-  title: "Klarifikasi Program Beasiswa SmartPath: Fakta & Penjelasan Resmi",
+  title: "Klarifikasi Program Beasiswa ProCareer: Fakta & Penjelasan Resmi",
   description:
-    "Penjelasan resmi terkait program beasiswa SmartPath. Ketahui fakta, mekanisme seleksi, dan bukti nyata bahwa program ini benar-benar membantu ribuan mahasiswa berprestasi.",
+    "Penjelasan resmi terkait program beasiswa ProCareer. Ketahui fakta, mekanisme seleksi, dan bukti nyata bahwa program ini benar-benar membantu ribuan mahasiswa berprestasi.",
   keywords: [
-    "smartpath penipuan",
-    "beasiswa smartpath resmi",
-    "klarifikasi smartpath",
-    "beasiswa smartpath terpercaya",
-    "program beasiswa smartpath",
-    "smartpath beasiswa fakta",
+    "procareer penipuan",
+    "beasiswa procareer resmi",
+    "klarifikasi procareer",
+    "beasiswa procareer terpercaya",
+    "program beasiswa procareer",
+    "procareer beasiswa fakta",
   ],
 };
 
@@ -22,7 +22,7 @@ export default function ClarifyPage() {
       <section className="bg-gradient-to-b from-[#0056A3] to-[#0B69BE] text-white py-16 md:py-20 px-6 md:px-12 rounded-b-[50px] shadow-md">
         <div className="max-w-5xl mx-auto text-center space-y-6">
           <h1 className="text-3xl md:text-5xl font-extrabold leading-tight">
-            SMARTPATH PENIPUAN ?
+            PROCAREER PENIPUAN ?
           </h1>
           <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
             Sebagai bentuk permintaan maaf kami,{" "}
@@ -35,11 +35,11 @@ export default function ClarifyPage() {
         {/* Video Klarifikasi */}
         <section className="mb-12">
           <h2 className="text-[#0056A3] font-bold text-2xl md:text-3xl mb-4 text-center">
-            Klarifikasi Resmi SmartPath
+            Klarifikasi Resmi ProCareer
           </h2>
           <p className="mb-4 text-center">
             Untuk meluruskan berbagai informasi yang beredar, berikut adalah
-            video klarifikasi resmi dari SmartPath.
+            video klarifikasi resmi dari ProCareer.
           </p>
           <div className="rounded-2xl overflow-hidden border border-[#E0E7FF] shadow-sm aspect-video">
             <iframe
@@ -60,8 +60,8 @@ export default function ClarifyPage() {
             Apa yang terjadi?
           </h2>
           <p className="mb-4">
-            Belakangan beredar isu bahwa beasiswa dan internship SmartPath
-            penipuan atau <em>SmartPath scam</em>. Setelah kami telusuri,
+            Belakangan beredar isu bahwa beasiswa dan internship ProCareer
+            penipuan atau <em>ProCareer scam</em>. Setelah kami telusuri,
             penyebab utama isu ini adalah adanya{" "}
             <strong>miskomunikasi</strong>{" "}
           </p>
@@ -76,18 +76,18 @@ export default function ClarifyPage() {
               saja berada di halaman akhir <em>guidebook</em>.
             </li>
             <li>
-              Terdapat pihak yang membuka program mirip Smartpath dengan tujuan
+              Terdapat pihak yang membuka program mirip ProCareer dengan tujuan
               penipuan, sehingga kami ikut terdampak.
             </li>
             <li>
-              Selain itu, ada info terkait sertifikat program Smartpath tidak
+              Selain itu, ada info terkait sertifikat program ProCareer tidak
               dikirim. Padahal seluruh sertifikat sudah dikirim via email dan
               kemungkinan masuk ke folder spam sehingga tidak terbaca.
             </li>
           </ol>
 
           <p className="mb-4">
-            Menanggapi hal ini, smartpath meminta maaf kepada seluruh pihak yang
+            Menanggapi hal ini, ProCareer meminta maaf kepada seluruh pihak yang
             terlibat dan merasa dirugikan
           </p>
         </section>
@@ -95,10 +95,10 @@ export default function ClarifyPage() {
         {/* Langkah Perbaikan */}
         <section className="mb-12">
           <h2 className="text-[#0056A3] font-bold text-2xl md:text-3xl mb-4">
-            Langkah Perbaikan SmartPath
+            Langkah Perbaikan ProCareer
           </h2>
           <p className="mb-3">
-            Sebagai langkah perbaikan, Smartpath telah berbenah sesuai dengan
+            Sebagai langkah perbaikan, ProCareer telah berbenah sesuai dengan
             feedback para peserta dengan cara:
           </p>
           <ol className="list-decimal pl-6 space-y-2">
@@ -121,21 +121,21 @@ export default function ClarifyPage() {
           </ol>
         </section>
 
-        {/* Apakah SmartPath Penipuan? */}
+        {/* Apakah ProCareer Penipuan? */}
         <section className="mb-12">
           <h2 className="text-[#0056A3] font-bold text-2xl md:text-3xl mb-4">
-            Jadi, Apakah SmartPath Penipuan?
+            Jadi, Apakah ProCareer Penipuan?
           </h2>
           <p className="mb-4">
-            Hingga kini, 300k+ orang telah merasakan manfaat Smartpath, 38 orang
+            Hingga kini, 300k+ orang telah merasakan manfaat ProCareer, 38 orang
             terbantu dengan beasiswa dan puluhan lapangan kerja terbuka (cek:{" "}
             <a
-              href="https://www.linkedin.com/company/smartpath-id"
+              href="https://www.linkedin.com/company/procareer-id"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#0056A3] hover:underline"
             >
-              https://www.linkedin.com/company/smartpath-id
+              https://www.linkedin.com/company/procareer-id
             </a>
             ).
           </p>
@@ -170,24 +170,24 @@ export default function ClarifyPage() {
 
         <section className="mb-12">
           <h2 className="text-[#0056A3] font-bold text-2xl md:text-3xl mb-4">
-            Dampak positif SmartPath
+            Dampak positif ProCareer
           </h2>
           <p className="mb-4">
             <strong>Testimoni Beasiswa</strong>
           </p>
           <p className="mb-4">
             Berikut adalah beberapa testimoni dari para penerima beasiswa
-            SmartPath:
+            ProCareer:
           </p>
           <div className="mt-5">
             <TestimonialsSlider />
           </div>
         </section>
 
-        {/* Aksi Berbagi SmartPath */}
+        {/* Aksi Berbagi ProCareer */}
         <section className="mb-12">
           <h2 className="text-[#0056A3] font-bold text-2xl md:text-3xl mb-4">
-            Aksi Berbagi SmartPath
+            Aksi Berbagi ProCareer
           </h2>
           <p className="mb-4">
             Kami juga <strong>aktif berbagi untuk sesama </strong>Ini bisa
@@ -199,7 +199,7 @@ export default function ClarifyPage() {
             rel="noopener noreferrer"
             className="inline-block bg-[#0056A3] text-white font-semibold px-6 py-3 rounded-xl hover:bg-[#004080] transition"
           >
-            Lihat Aksi Berbagi Smartpath
+            Lihat Aksi Berbagi ProCareer
           </a>
         </section>
 
@@ -209,7 +209,7 @@ export default function ClarifyPage() {
             Bukti Nyata dan Publikasi Media
           </h2>
           <p className="mb-4">
-            SmartPath diliput <strong>media terpercaya</strong> dan influencer
+            ProCareer diliput <strong>media terpercaya</strong> dan influencer
             yang kredibel yang tidak akan menyebar berita hoax.
           </p>
 
@@ -312,7 +312,7 @@ export default function ClarifyPage() {
             Kolaborasi dengan Influencer Kredibel
           </h2>
           <p className="mb-4">
-            Selain publikasi di media, SmartPath juga telah bekerja sama dengan
+            Selain publikasi di media, ProCareer juga telah bekerja sama dengan
             berbagai <strong>influencer karier yang kredibel</strong> seperti
             Vina Muliana, Anindhyta Arsa, Sadam Permana, dan lainnya dalam
             menyebarkan konten edukasi seputar pengembangan karier, beasiswa,
@@ -320,7 +320,7 @@ export default function ClarifyPage() {
           </p>
           <p className="mb-4">
             Dokumentasi kolaborasi tersebut dapat dilihat melalui highlight
-            Instagram resmi SmartPath.
+            Instagram resmi ProCareer.
           </p> */}
           <a
             href="https://www.instagram.com/stories/highlights/17846072658552457/"
@@ -338,12 +338,12 @@ export default function ClarifyPage() {
             Penutup
           </h2>
           <p className="mb-4">
-            Demikian isu bahwa <strong>SmartPath penipuan</strong>{" "}
+            Demikian isu bahwa <strong>ProCareer penipuan</strong>{" "}
             <strong>tidak benar</strong>.
           </p>
           <p className="mb-4">
             Terima kasih kepada seluruh pihak yang telah mendukung perjalanan
-            SmartPath hingga sejauh ini.
+            ProCareer hingga sejauh ini.
           </p>
           {/* <p>
             Semoga klarifikasi ini dapat membantu meluruskan informasi dan
@@ -379,7 +379,7 @@ export default function ClarifyPage() {
       {/* Footer Clarify Page */}
       <footer className="bg-[#F7C948] text-center py-8">
         <p className="text-gray-900 font-semibold">
-          © {new Date().getFullYear()} SmartPath — Klarifikasi Resmi Program
+          © {new Date().getFullYear()} ProCareer — Klarifikasi Resmi Program
           Beasiswa.
         </p>
       </footer>

@@ -20,7 +20,7 @@ export default function EventBenefitSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-8 md:pl-12 lg:pl-16">
           <div className="md:w-1/3 text-center md:text-left">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#19499A]">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#2F184C]">
               Benefit
             </h2>
           </div>

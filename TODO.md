@@ -1,3 +1,0 @@
-- [ ] Wrap the first testimonial image in a fixed-height container (150px) and center it vertically
-- [ ] Wrap the second testimonial image in a fixed-height container (150px) and center it vertically
-- [ ] Wrap the third testimonial image in a fixed-height container (150px) and center it vertically

@@ -29,7 +29,7 @@ export default function TestimoniSection() {
       id: 1,
       company: "BCA",
       companyLogo: "/assets/bootcamp-webinar/logo_perusahaan.png",
-      text: "Kaget banget bisa keterima di Bank BCA sebagai Business Analyst! Semua tips dan triknya dari SkillSpace emang pas banget buat persiapan aku masuk BCA",
+      text: "Kaget banget bisa keterima di Bank BCA sebagai Business Analyst! Semua tips dan triknya dari ProCareer emang pas banget buat persiapan aku masuk BCA",
       name: "Fauziyah Rahman",
       position: "Business Analyst",
       photo: "/assets/bootcamp-webinar/logo_perusahaan.png",

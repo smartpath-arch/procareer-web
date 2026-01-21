@@ -16,7 +16,7 @@ export default function HomePage() {
       <HeroSection />
 
       {/* Section Alumni Companies */}
-      <div className="py-5 bg-[#FAFAFA]">
+      <div className="bg-[#FAFAFA]">
         <AlumniCompaniesSection />
       </div>
 
@@ -24,12 +24,12 @@ export default function HomePage() {
       <ProgramSection />
 
       {/* Section Mentor */}
-      <div className="py-24 bg-white">
+      <div className="bg-white">
         <MentorCarousel />
       </div>
 
       {/* Section Testimoni */}
-      <div className="py-20 bg-[#F5F7FA]">
+      <div className="py-20 bg-[#FEFADD]">
         <AlumniTestimonial />
       </div>
 

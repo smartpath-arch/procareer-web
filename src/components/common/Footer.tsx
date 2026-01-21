@@ -7,9 +7,6 @@ type Social = { name: string; icon: string; url: string };
 export default function Footer() {
   const navigationLinks: readonly NavLink[] = [
     { name: "Home", href: "/" },
-    { name: "E-Learning", href: "/e-learning" },
-    { name: "Bootcamp & Webinar", href: "/bootcamp-webinar" },
-    { name: "Event", href: "/event" },
   ] as const;
 
   const socialMedia: readonly Social[] = [
@@ -36,10 +33,9 @@ export default function Footer() {
   ] as const;
   return (
     <footer
-      className="border-t border-gray-200"
+      className="border-t border-white/20"
       style={{
-        background:
-          "linear-gradient(to right, #FFFFFF 0%, #F5F5F5 50%, #FFFFFF 90%, #FAFAFA 100%)",
+        background: "linear-gradient(to bottom, #CB66E8 0%, #2F184C 100%)",
       }}
       role="contentinfo"
     >
@@ -48,10 +44,10 @@ export default function Footer() {
         {" "}
         <div className="flex flex-col space-y-8">
           <div className="flex justify-center">
-            <Link href="/" className="inline-block" aria-label="SmartPath Home">
+            <Link href="/" className="inline-block" aria-label="ProCareer Home">
               <Image
-                src="/assets/common/navbar/logoheaderskillspace.svg"
-                alt="SmartPath"
+                src="/assets/common/footer/logofooter.svg"
+                alt="ProCareer"
                 width={550}
                 height={161}
                 sizes="(max-width: 1024px) 85vw, 380px"
@@ -61,8 +57,8 @@ export default function Footer() {
               />
             </Link>
           </div>
-          <p className="text-gray-600 text-lg leading-relaxed text-center -mt-11">
-            Bantu cepat berkarir di bidang Data & AI
+          <p className="text-white text-lg leading-relaxed text-center -mt-11">
+            Bantu Lebih Cepat Dapat Kerja sesuai impianmu
           </p>
           <nav aria-label="Footer navigation" className="w-full">
             <ul className="flex flex-col space-y-4">
@@ -70,7 +66,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-700 font-medium hover:text-blue-600 transition-colors text-base block"
+                    className="text-white font-medium hover:text-purple-200 transition-colors text-base block"
                   >
                     {link.name}
                   </Link>
@@ -79,20 +75,20 @@ export default function Footer() {
             </ul>
           </nav>
           <div className="w-full pt-4">
-            <h3 className="text-gray-900 font-semibold text-base mb-4">
+            <h3 className="text-white font-semibold text-base mb-4">
               Location
             </h3>
-            <p className="text-gray-700 font-medium text-sm mb-3">
+            <p className="text-white font-medium text-sm mb-3">
               PT Jalur Cerdas International
             </p>
             <a
-              href="https://maps.app.goo.gl/3qbbZdabybrj8ttq5"
+              href="https://maps.app.goo.gl/QPedThRyTPuyNduWA"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-start gap-3 text-gray-600 hover:text-blue-600 transition-colors text-sm"
+              className="flex items-start gap-3 text-white hover:text-purple-200 transition-colors text-sm"
             >
               <svg
-                className="w-5 h-5 flex-shrink-0 mt-0.5 text-gray-400"
+                className="w-5 h-5 flex-shrink-0 mt-0.5 text-white"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -115,16 +111,16 @@ export default function Footer() {
             </a>
           </div>
           <div className="w-full pt-2">
-            <h3 className="text-gray-900 font-semibold text-base mb-4">
+            <h3 className="text-white font-semibold text-base mb-4">
               Contact Us
             </h3>
             <div className="space-y-3">
               <a
-                href="tel:+6285122903006"
-                className="flex items-center gap-3 text-gray-600 hover:text-blue-600 transition-colors text-sm"
+                href="tel:+62891000001"
+                className="flex items-center gap-3 text-white hover:text-purple-200 transition-colors text-sm"
               >
                 <svg
-                  className="w-5 h-5 flex-shrink-0 text-gray-400"
+                  className="w-5 h-5 flex-shrink-0 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -137,14 +133,14 @@ export default function Footer() {
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   />
                 </svg>
-                <span>+62 851-2290-3006</span>
+                <span>+62 891-000-001</span>
               </a>
               <a
-                href="mailto:admin@skillspace.id"
-                className="flex items-center gap-3 text-gray-600 hover:text-blue-600 transition-colors text-sm"
+                href="mailto:sosmedprocareer@gmail.com"
+                className="flex items-center gap-3 text-white hover:text-purple-200 transition-colors text-sm"
               >
                 <svg
-                  className="w-5 h-5 flex-shrink-0 text-gray-400"
+                  className="w-5 h-5 flex-shrink-0 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -157,13 +153,13 @@ export default function Footer() {
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                <span>admin@skillspace.id</span>
+                <span>sosmedprocareer@gmail.com</span>
               </a>
             </div>
           </div>
-          <div className="pt-6 border-t border-gray-200 w-full text-center">
-            <p className="text-gray-400 text-sm">
-              Copyright 2025© SkillSpace, All Rights Reserved
+          <div className="pt-6 border-t border-white/20 w-full text-center">
+            <p className="text-white text-sm">
+              Copyright 2025© ProCareer, All Rights Reserved
             </p>
           </div>
           <div className="flex items-center justify-center gap-8 pb-2">
@@ -174,7 +170,7 @@ export default function Footer() {
                   href={s.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-blue-600 transition-colors"
+                  className="text-white hover:text-purple-200 transition-colors"
                   aria-label={s.name}
                   title={s.name}
                 >
@@ -183,17 +179,17 @@ export default function Footer() {
                     alt={s.name}
                     width={24}
                     height={24}
-                    className="w-6 h-6 opacity-40 hover:opacity-100 transition-opacity"
+                    className="w-6 h-6 opacity-60 hover:opacity-100 transition-opacity"
                   />
                 </a>
               ) : (
-                <div key={s.name} className="text-gray-400" title={s.name}>
+                <div key={s.name} className="text-white" title={s.name}>
                   <Image
                     src={s.icon}
                     alt={s.name}
                     width={24}
                     height={24}
-                    className="w-6 h-6 opacity-40"
+                    className="w-6 h-6 opacity-60"
                   />
                 </div>
               ),
@@ -210,33 +206,27 @@ export default function Footer() {
               <Link
                 href="/"
                 className="inline-block"
-                aria-label="SmartPath Home"
+                aria-label="ProCareer Home"
               >
                 <Image
-                  src="/assets/common/navbar/logoheaderskillspace.svg"
-                  alt="SmartPath"
+                  src="/assets/common/footer/logofooter.svg"
+                  alt="ProCareer"
                   width={300}
                   height={100}
                   className="h-auto w-[300px] object-contain"
                   style={{ aspectRatio: "300 / 100" }}
                 />
               </Link>
-              <p className="text-gray-600 text-base leading-relaxed -mt-2">
-                Bantu cepat berkarir di bidang Data & AI
+              <p className="text-white text-base leading-relaxed -mt-2">
+                Bantu Lebih Cepat Dapat Kerja sesuai impianmu
               </p>
               <nav aria-label="Footer navigation">
                 <ul className="flex flex-wrap items-center gap-x-6 gap-y-2 mt-2">
-                  {[
-                    { name: "Home", href: "/" },
-                    { name: "Event", href: "/event" },
-                    { name: "E-Learning", href: "/e-learning" },
-                    { name: "Bootcamp & Webinar", href: "/bootcamp-webinar" },
-                    { name: "For Corporate", href: "/for-corporate" },
-                  ].map((link) => (
+                  {navigationLinks.map((link) => (
                     <li key={link.name}>
                       <Link
                         href={link.href}
-                        className="text-gray-800 font-semibold hover:text-blue-600 transition-colors text-base"
+                        className="text-white font-semibold hover:text-purple-200 transition-colors text-base"
                       >
                         {link.name}
                       </Link>
@@ -247,20 +237,20 @@ export default function Footer() {
             </div>
             <div className="space-y-8 pl-0 lg:pl-12 text-left">
               <div>
-                <h3 className="text-gray-900 font-semibold text-lg mb-4">
+                <h3 className="text-white font-semibold text-lg mb-4">
                   Location
                 </h3>
-                <p className="text-gray-700 font-medium text-base mb-3">
+                <p className="text-white font-medium text-base mb-3">
                   PT Jalur Cerdas International
                 </p>
                 <a
-                  href="https://maps.app.goo.gl/3qbbZdabybrj8ttq5"
+                  href="https://maps.app.goo.gl/QPedThRyTPuyNduWA"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-start gap-2 text-gray-600 hover:text-blue-600 transition-colors text-base group"
+                  className="flex items-start gap-2 text-white hover:text-purple-200 transition-colors text-base group"
                 >
                   <svg
-                    className="w-5 h-5 flex-shrink-0 mt-0.5 text-gray-400 group-hover:text-blue-600"
+                    className="w-5 h-5 flex-shrink-0 mt-0.5 text-white group-hover:text-purple-200"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -283,16 +273,16 @@ export default function Footer() {
                 </a>
               </div>
               <div>
-                <h3 className="text-gray-900 font-semibold text-lg mb-4">
+                <h3 className="text-white font-semibold text-lg mb-4">
                   Contact Us
                 </h3>
                 <div className="space-y-3">
                   <a
-                    href="tel:+6285122903006"
-                    className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors text-base"
+                    href="tel:+62891000001"
+                    className="flex items-center gap-2 text-white hover:text-purple-200 transition-colors text-base"
                   >
                     <svg
-                      className="w-5 h-5 flex-shrink-0 text-gray-400"
+                      className="w-5 h-5 flex-shrink-0 text-white"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -305,14 +295,14 @@ export default function Footer() {
                         d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                       />
                     </svg>
-                    <span>+62 851-2290-3006</span>
+                    <span>+62 891-000-001</span>
                   </a>
                   <a
-                    href="mailto:admin@skillspace.id"
-                    className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors text-base"
+                    href="mailto:sosmedprocareer@gmail.com"
+                    className="flex items-center gap-2 text-white hover:text-purple-200 transition-colors text-base"
                   >
                     <svg
-                      className="w-5 h-5 flex-shrink-0 text-gray-400"
+                      className="w-5 h-5 flex-shrink-0 text-white"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -325,15 +315,15 @@ export default function Footer() {
                         d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                       />
                     </svg>
-                    <span>admin@skillspace.id</span>
+                    <span>sosmedprocareer@gmail.com</span>
                   </a>
                 </div>
               </div>
             </div>
           </div>
-          <div className="mt-12 pt-8 border-t border-gray-200 flex justify-between items-center">
-            <p className="text-gray-400 text-sm">
-              Copyright 2025© SkillSpace, All Rights Reserved
+          <div className="mt-12 pt-8 border-t border-white/20 flex justify-between items-center">
+            <p className="text-white text-sm">
+              Copyright 2025© ProCareer, All Rights Reserved
             </p>
             <div className="flex gap-4">
               {socialMedia.map((s) =>
@@ -343,7 +333,7 @@ export default function Footer() {
                     href={s.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-blue-600 transition-colors"
+                    className="text-white hover:text-purple-200 transition-colors"
                     aria-label={s.name}
                     title={s.name}
                   >
@@ -352,17 +342,17 @@ export default function Footer() {
                       alt={s.name}
                       width={24}
                       height={24}
-                      className="w-6 h-6 opacity-40 hover:opacity-100 transition-opacity"
+                      className="w-6 h-6 opacity-60 hover:opacity-100 transition-opacity"
                     />
                   </a>
                 ) : (
-                  <div key={s.name} className="text-gray-400" title={s.name}>
+                  <div key={s.name} className="text-white" title={s.name}>
                     <Image
                       src={s.icon}
                       alt={s.name}
                       width={24}
                       height={24}
-                      className="w-6 h-6 opacity-40"
+                      className="w-6 h-6 opacity-60"
                     />
                   </div>
                 ),

@@ -1,16 +1,16 @@
 services:
-  web:
+  procareerweb:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: feskillspace-web
+    container_name: feprocareer-web
     restart: unless-stopped
     ports:
-      - "3003:3000"
+      - "3005:3000"
     env_file:
       - .env
     networks:
-      - feskillspace-network
+      - feprocareer-network
     healthcheck:
       test:
         [
@@ -25,5 +25,5 @@ services:
       start_period: 40s
 
 networks:
-  feskillspace-network:
+  feprocareer-network:
     driver: bridge

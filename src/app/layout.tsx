@@ -11,13 +11,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SkillSpace",
-  description: "SkillSpace - Bantu Kamu Cepat Berkarir di Bidang Data & AI",
-  applicationName: "SkillSpace",
+  title: "ProCareer",
+  description: "ProCareer - CV Standar Top Company Dibuatkan Langsung oleh HRD",
+  applicationName: "ProCareer",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "SkillSpace",
+    title: "ProCareer",
   },
   icons: {
     icon: [
@@ -38,7 +38,7 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 5,
   userScalable: true,
-  themeColor: "#FFFFFF",
+  themeColor: "#FEFADD",
 };
 
 export default function RootLayout({

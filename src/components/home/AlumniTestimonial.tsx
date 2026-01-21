@@ -33,76 +33,76 @@ const AlumniTestimonial = ({
 }) => {
   const defaultTestimonialData: TestimonialData[] = [
     {
-      name: "Fauziyah Rahman",
-      role: "Business Analyst",
-      company: "BCA",
-      testimonial:
-        "Kaget banget bisa keterima di Bank BCA sebagai Business Analyst! Semua tips dan triknya dari SkillSpace emang pas banget buat persiapan aku masuk BCA",
-      profileImage: "/assets/e-learning/fauziyahrahman.svg",
-      companyLogo: "/assets/mobile/home/testimonial/companies/bca.svg",
-    },
-    {
-      name: "Aditya Saputra",
-      role: "Data Analyst",
-      company: "P&G",
-      testimonial:
-        "Thanks SkillSpace! Program belajarnya berguna banget. Cara pengajarannya enak banget, bikin aku gampang ngerti. Ga nyesel ikut program ini. Sekarang aku kerja di P&G sebagai Data Analyst",
-      profileImage: "/assets/e-learning/adityasaputra.svg",
-      companyLogo: "/assets/mobile/home/testimonial/companies/pg.svg",
-    },
-    {
-      name: "Siti Nurlaela P.",
-      role: "PPIC Staff",
-      company: "Indofood",
-      testimonial:
-        "Pengalaman belajar di SkillSpace luar biasa! Setelah ikut kelasnya, saya terapin ilmunya dan keterima di Indofood sebagai PPIC Staff. Kelasnya gak cuma ngajarin teori tapi juga praktek langsung yang bikin aku lebih siap masuk dunia kerja.",
-      profileImage: "/assets/e-learning/sitinurlaelah.svg",
-      companyLogo: "/assets/mobile/home/testimonial/companies/indofood.svg",
-    },
-    {
-      name: "Laila Fitri",
-      role: "Research Analyst Intern",
-      company: "Pertamina",
-      testimonial:
-        "Belajarnya sangat oke di SkillSpace. Sekarang saya udah kerja di pertamina sebagai Research Analyst Intern. Ilmu yang diajarkan bener-bener kepake di dunia kerja. Cara penyampaiannya juga jelas dan gampang dimengerti, ga nyesel ikut program ini!",
-      profileImage: "/assets/e-learning/lailafitri.svg",
-      companyLogo: "/assets/mobile/home/testimonial/companies/pertamina.svg",
-    },
-    {
-      name: "Fikry Nugroho P.",
-      role: "Operations Associate",
-      company: "Ruang Guru",
-      testimonial:
-        "Awalnya aku cuma coba-coba ikut di SkillSpace, gak terlalu yakin bisa berhasil. Tapi ternyata, ilmunya beneran berguna dan bikin aku paham gimana cara lewatin proses rekrutmen. Sekarang aku di Ruang Guru, kerja sebagai Operations Associate, dan rasanya happy banget bisa sampai sini",
-      profileImage: "/assets/e-learning/fikrynugroho.svg",
-      companyLogo: "/assets/mobile/home/testimonial/companies/ruangguru.svg",
-    },
-    {
-      name: "Agung Prasetya",
-      role: "Software Engineer",
-      company: "Shopee",
-      testimonial:
-        "SkillSpace tuh bikin belajar jadi fun! Sekarang nih aku jadi Software Engineer di Shopee, dan semua yang aku pelajari di sini bener-bener relevan sama dunia kerja",
-      profileImage: "/assets/bootcamp-webinar/agungprasetiya.svg",
-      companyLogo: "/assets/mobile/home/testimonial/companies/shopee.svg",
-    },
-    {
-      name: "Indah Wulandari",
-      role: "Retail Operation",
-      company: "Trans Retail Indonesia",
-      testimonial:
-        "Dulu aku gak tau harus mulai dari mana buat ngejar karir, tapi SkillSpace bener-bener jadi titik awal buat aku. Kelasnya bagus banget sumpah! Akhirnya sekarang aku bisa kerja di Trans Retail Indonesia posisi Retail Operation",
-      profileImage: "/assets/bootcamp-webinar/indahwulandari.svg",
-      companyLogo: "/assets/mobile/home/testimonial/companies/transretail.svg",
-    },
-    {
-      name: "Rahmat Hidayat",
-      role: "Software Engineer Intern",
+      name: "Citra Permatasari",
+      role: "Marketing Officer",
       company: "BNI",
       testimonial:
-        "Banyak banget ilmu yang aku dapet selama belajar di SkillSpace. Dari materi yang aplikatif, hingga studi kasus nyata, semuanya bikin aku makin siap buat masuk ke dunia kerja. Sekarang aku udah kerja di Bank BNI sebagai Software Engineer intern, dan gak nyesel sama sekali ikut program ini.",
-      profileImage: "/assets/e-learning/rahmathidayat.svg",
+        "Pernah ada masa di mana aku gak yakin sama jalur karirku, tapi ProCareer ngebantu aku bikin keputusan yang tepat. Sekarang aku jadi Marketing Officer di Bank BNI, dan aku sangat menikmati setiap harinya!",
+      profileImage: "/assets/e-learning/cintapermatasari.webp",
       companyLogo: "/assets/mobile/home/testimonial/companies/bni.svg",
+    },
+    {
+      name: "M. Putra",
+      role: "Internal Audit",
+      company: "PT Sinar Mas Agro Resources and Technology Tbk",
+      testimonial:
+        "Thanks ProCareer! Program belajarnya berguna banget. Cara pengajarannya enak banget, bikin aku gampang ngerti. Ga nyesel ikut program ini. Sekarang aku kerja di P&G sebagai Data Analyst",
+      profileImage: "/assets/e-learning/mputra.png",
+      companyLogo: "/assets/mobile/home/testimonial/companies/sinarmas.png",
+    },
+    {
+      name: "Rifandi R.",
+      role: "O-Ranger Loket",
+      company: "Pos Indonesia",
+      testimonial:
+        "Aku jadi lebih tahu cara mempersiapkan diri dengan baik setelah ikut ProCareer. Banyak hal yang sebelumnya aku anggap susah jadi lebih mudah dipahami di sini. Benar-benar bermanfaat!",
+      profileImage: "/assets/e-learning/rifandi.webp",
+      companyLogo: "/assets/mobile/home/testimonial/companies/posind.png",
+    },
+    {
+      name: "Sri Intan",
+      role: "Finance Officer",
+      company: "Sari Roti",
+      testimonial:
+        "Dapet ilmu baru itu pasti, tapi di ProCareer aku juga dapet jaringan yang sangat luas! Banyak teman-teman baru yang punya visi yang sama, jadi makin semangat buat terus belajar dan berkembang",
+      profileImage: "/assets/e-learning/sri_intan.jpeg",
+      companyLogo: "/assets/mobile/home/testimonial/companies/sari_roti.png",
+    },
+    {
+      name: "Naufal Alif",
+      role: " ",
+      company: "PT HM Sampoerna Tbk",
+      testimonial:
+        "Pengalamannya sangat luar biasa! Aku dapet banyak tips yang aplikatif dan langsung bisa dipakai di dunia nyata. ProCareer bener-bener ngajarin kita cara terbaik buat berkembang",
+      profileImage: "/assets/e-learning/Naufal.jpg",
+      companyLogo: "/assets/mobile/home/testimonial/companies/sampoerna.jpg",
+    },
+    {
+      name: "Amelda Syakira",
+      role: "Finance accounting",
+      company: "PT. Cargill Indonesia",
+      testimonial:
+        "Sebelum ikut ProCareer, aku merasa masih kurang siap buat dunia kerja. Tapi setelah itu, aku jadi lebih ngerti banyak hal dan sekarang aku udah diterima di Cargill Indonesia di bagian Finance Accounting!",
+      profileImage: "/assets/e-learning/Amelda.jpg",
+      companyLogo: "/assets/mobile/home/testimonial/companies/cargill.jpg",
+    },
+    {
+      name: "Surya Sukmana",
+      role: "Administration support staff ",
+      company: "PT Elnusa Tbk",
+      testimonial:
+        "Dari belajar di ProCareer, aku dapet banyak banget perspektif baru. Gak lama setelah itu, aku diterima di PT Elnusa dan kerja sebagai Administration support staff. Pengalaman yang bener-bener gak ternilai!",
+      profileImage: "/assets/bootcamp-webinar/surya_sukmana.png",
+      companyLogo: "/assets/mobile/home/testimonial/companies/elnusa.png",
+    },
+    {
+      name: "Fandi Muhamad",
+      role: "Engineer Process",
+      company: "PT Medco Energi Internasional Tbk ",
+      testimonial:
+        "ProCareer berhasil ngubah cara pandang aku soal networking dan karir. Sekarang aku di PT Medco Energi Internasional, jadi bagian dari tim Engineer Process, dan aku ngerasa banget perbedaan cara kerja aku dari sebelumnya",
+      profileImage: "/assets/bootcamp-webinar/Surya Darma.png",
+      companyLogo: "/assets/mobile/home/testimonial/companies/medcoenergi.png",
     },
   ];
 
@@ -261,12 +261,12 @@ const AlumniTestimonial = ({
   return (
     <>
       {/* Mobile */}
-      <section className="block md:hidden px-4 py-8 bg-white">
+      <section className="block md:hidden px-4 py-8 bg-[#FEFADD]">
         <h2
           className={`${plusJakartaSans.className} text-3xl font-bold text-center mb-6`}
         >
           <span className="text-[#1E1E1E]">Testimoni </span>
-          <span className="text-[#19499A]">Alumni</span>
+          <span className="text-[#2F184C]">Alumni</span>
         </h2>
 
         <div className="relative overflow-hidden">
@@ -279,7 +279,7 @@ const AlumniTestimonial = ({
           >
             {data.map((testimonial, index) => (
               <div key={index} className="w-full flex-shrink-0 px-2">
-                <div className="relative bg-gradient-to-b from-[#19499A] to-[#19499A] rounded-3xl p-6 shadow-lg flex flex-col justify-between min-h-[280px]">
+                <div className="relative bg-gradient-to-b from-[#CB66E8] to-[#2F184C] rounded-3xl p-6 shadow-lg flex flex-col justify-between min-h-[280px]">
                   <p
                     className={`${poppins.className} text-white ${getTestimonialFontSize(
                       testimonial.testimonial,
@@ -353,12 +353,12 @@ const AlumniTestimonial = ({
       </section>
 
       {/* Desktop Version */}
-      <section className="hidden md:block px-8 py-8 bg-[#F5F7FA]">
+      <section className="hidden md:block px-8 py-8 bg-[#FEFADD]">
         <h2
           className={`${plusJakartaSans.className} text-5xl font-bold text-center mb-8`}
         >
           <span className="text-[#1E1E1E]">Testimoni </span>
-          <span className="text-[#19499A]">Alumni</span>
+          <span className="text-[#2F184C]">Alumni</span>
         </h2>
 
         <div className="relative overflow-hidden max-w-7xl mx-auto">
@@ -381,7 +381,7 @@ const AlumniTestimonial = ({
                 {pair.map((testimonial, cardIndex) => (
                   <div
                     key={cardIndex}
-                    className="flex-1 relative overflow-hidden shadow-xl bg-gradient-to-b from-[#19499A] to-[#19499A]"
+                    className="flex-1 relative overflow-hidden shadow-xl bg-gradient-to-b from-[#CB66E8] to-[#2F184C]"
                     style={{
                       minHeight: "260px",
                       borderRadius: "24px 0 24px 0",
