@@ -228,10 +228,10 @@ const PublishedAndPartnership: React.FC = () => {
       <div className="hidden md:block">
         <div className="space-y-3">
           <div className="flex flex-col items-center">
-            <h2 className="text-3xl md:text-4xl font-semibold text-[#1E5BA8] font-['Poppins']">
+            <h2 className="text-3xl md:text-4xl font-semibold text-[#262626] font-['Poppins']">
               Partnership With
             </h2>
-            <div className="w-72 h-1 bg-[#AFC6FF] rounded-full mt-2.5"></div>
+            <div className="w-72 h-1 bg-[#474d5d] rounded-full mt-2.5"></div>
           </div>
           <div className="relative overflow-hidden">
             <div className="carousel-container">
@@ -255,10 +255,10 @@ const PublishedAndPartnership: React.FC = () => {
         {false && (
           <div className="space-y-3">
             <div className="flex flex-col items-center">
-              <h2 className="text-3xl font-semibold text-[#1E5BA8] font-['Poppins']">
+              <h2 className="text-3xl font-semibold text-[#262626] font-['Poppins']">
                 Published By
               </h2>
-              <div className="w-52 h-1 bg-[#AFC6FF] rounded-full mt-2.5"></div>
+              <div className="w-52 h-1 bg-[#474d5d] rounded-full mt-2.5"></div>
             </div>
 
             <div className="relative overflow-hidden">
@@ -280,10 +280,10 @@ const PublishedAndPartnership: React.FC = () => {
         {/* Partnership With */}
         <div className="space-y-3">
           <div className="flex flex-col items-center">
-            <h2 className="text-3xl font-semibold text-[#1E5BA8] font-['Poppins']">
+            <h2 className="text-3xl font-semibold text-[#262626] font-['Poppins']">
               Partnership With
             </h2>
-            <div className="w-72 h-1 bg-[#AFC6FF] rounded-full mt-2.5"></div>
+            <div className="w-72 h-1 bg-[#474d5d] rounded-full mt-2.5"></div>
           </div>
           <div className="relative overflow-hidden">
             <div className="carousel-container">

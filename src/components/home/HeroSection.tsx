@@ -20,14 +20,18 @@ export default function HeroSection() {
 
   useEffect(() => {
     if (isPaused) return;
+
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroImages.length);
     }, SLIDE_DURATION);
+
     return () => clearInterval(interval);
   }, [heroImages.length, isPaused]);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 100);
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 100);
     return () => clearTimeout(timer);
   }, []);
 
@@ -70,14 +74,13 @@ export default function HeroSection() {
       {/* ================= MOBILE VIEW (IMAGE ONLY) ================= */}
       <div className="md:hidden">
         <div className="relative rounded-b-[40px] bg-gradient-to-b from-[#CB66E8] to-[#2F184C] overflow-hidden">
-          {/* HERO IMAGE ONLY */}
-          <div className="relative w-full h-[100px]">
+          <div className="relative w-full h-[150px]">
             <Image
               src="/assets/home/hero-section/herosection5.png"
               alt="ProCareer Hero"
               fill
               priority
-              className="object-cover object-top scale-115 mt-2 pl-8"
+              className="object-cover object-top mt-2 pl-8"
             />
           </div>
         </div>
@@ -106,7 +109,7 @@ export default function HeroSection() {
             }`}
           >
             <Image
-              src="/assets/home/hero-section/herosection5.png"
+              src={heroImages[currentSlide]} // Dynamically change image
               alt="Bantu Kamu Cepat Berkarir di Bidang Data & AI"
               width={1600}
               height={900}
