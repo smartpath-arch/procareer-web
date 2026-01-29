@@ -67,7 +67,7 @@ const desktopMentorData = [
 const mentorData: MentorData[] = [
   {
     name: "Deva Fitrianti",
-    photo: "/assets/mobile/home/mentor/mentordevafitrianti.png",
+    photo: "/assets/mobile/home/mentor/mentordevaFitrianti.png",
     company: "Unilever",
     companyIcon: "unilever.svg",
     position: "Customer Development",
@@ -75,7 +75,7 @@ const mentorData: MentorData[] = [
   },
   {
     name: "Anis Dewinta",
-    photo: "/assets/mobile/home/mentor/mentoranisdewinta.png",
+    photo: "/assets/mobile/home/mentor/mentoranisDewinta.png",
     company: "Mayora Group",
     companyIcon: "mayoragroup.svg",
     position: "Recruitment & People Organization and Development",
@@ -384,7 +384,7 @@ export default function MentorCarousel() {
               <div
                 key={i}
                 className={`h-2 rounded-full transition-all duration-500 ease-in-out ${
-                  i === currentSlide ? "w-8 bg-[#19499A]" : "w-2 bg-gray-300"
+                  i === currentSlide ? "w-8 bg-[#262626]" : "w-2 bg-gray-300"
                 }`}
               />
             ))}
