@@ -36,7 +36,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-background">
+    <section className="relative overflow-hidden bg-[#FFF7D6]">
       <style jsx>{`
         @keyframes fadeInUp {
           0% {
@@ -86,8 +86,8 @@ export default function HeroSection() {
         </div>
 
         {/* STATISTIK MOBILE */}
-        <div className="relative px-4 pt-6 pb-6">
-          <div className="overflow-hidden rounded-3xl bg-background shadow-lg">
+        <div className="relative px-4 pt-6 pb-6 bg-[#FFF7D6]">
+          <div className="overflow-hidden rounded-3xl bg-[#FFF7D6] shadow-lg">
             <Image
               src="/assets/home/herostatistik4.png"
               alt="Statistik ProCareer"
