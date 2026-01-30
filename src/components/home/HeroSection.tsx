@@ -73,14 +73,14 @@ export default function HeroSection() {
 
       {/* ================= MOBILE VIEW (IMAGE ONLY) ================= */}
       <div className="md:hidden">
-        <div className="relative rounded-b-[40px] bg-gradient-to-b from-[#CB66E8] to-[#2F184C] overflow-hidden">
+        <div className="relative rounded-b-[30px] bg-gradient-to-b from-[#CB66E8] to-[#2F184C] overflow-hidden">
           <div className="relative w-full h-[150px]">
             <Image
-              src="/assets/home/hero-section/herosection5.png"
+              src="/assets/mobile/home/herosectionMobile.png"
               alt="ProCareer Hero"
               fill
               priority
-              className="object-cover object-top mt-2 pl-8"
+              className="object-cover object-top mt-3 pl-8"
             />
           </div>
         </div>
@@ -89,7 +89,7 @@ export default function HeroSection() {
         <div className="relative px-4 pt-6 pb-6 bg-[#FFF7D6]">
           <div className="overflow-hidden rounded-3xl bg-[#FFF7D6] shadow-lg">
             <Image
-              src="/assets/home/herostatistik4.png"
+              src="/assets/mobile/home/MobilePCStatistik.png"
               alt="Statistik ProCareer"
               width={450}
               height={380}
