@@ -28,7 +28,7 @@ export default function PosterDownloadCard({
         </span>
 
         <h3 className="mt-3 font-semibold text-gray-800">{title}</h3>
-        <p className="text-sm text-gray-800">{description}</p>
+        {/* <p className="text-sm text-gray-800">{description}</p> */}
       </div>
       <div className="flex justify-center">
         <div className="relative w-full max-w-xs aspect-[2/3] bg-gray-200 rounded-xl shadow-inner overflow-hidden">
