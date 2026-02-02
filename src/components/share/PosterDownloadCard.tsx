@@ -23,7 +23,7 @@ export default function PosterDownloadCard({
   return (
     <section className="bg-white rounded-2xl shadow-md p-6 space-y-5">
       <div>
-        <span className="inline-flex items-center gap-2 bg-blue-100 text-blue-600  text-sm font-semibold px-3 py-1 rounded-full">
+        <span className="inline-flex items-center gap-2 bg-[#2F184C]/10 text-[#2F184C] text-sm font-semibold px-3 py-1 rounded-full">
           📄 Poster {number}
         </span>
 
@@ -44,7 +44,7 @@ export default function PosterDownloadCard({
         href={filePath}
         download
         onClick={() => setDownloaded(true)}
-        className="block text-center w-full rounded-lg bg-blue-100 hover:bg-blue-200 text-blue-600  font-semibold py-3 transition"
+        className="block text-center w-full rounded-lg bg-[#2F184C] hover:bg-[#24123a] text-white font-semibold py-3 transition"
       >
         Download Poster {number}
       </a>

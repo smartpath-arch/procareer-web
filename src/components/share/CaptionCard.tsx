@@ -5,33 +5,25 @@ import { useEffect, useState } from "react";
 type CaptionCardProps = {
   title: string;
   description: string;
-  filePath: string;
+  caption: string;
 };
 
 export default function CaptionCard({
   title,
   description,
-  filePath,
+  caption,
 }: CaptionCardProps) {
-  const [caption, setCaption] = useState("");
   const [copied, setCopied] = useState(false);
-
-  useEffect(() => {
-    fetch(filePath)
-      .then((res) => res.text())
-      .then(setCaption);
-  }, [filePath]);
 
   async function handleCopy() {
     await navigator.clipboard.writeText(caption);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
   }
 
   return (
     <section className="bg-white rounded-2xl shadow-md p-6 space-y-5">
       <div>
-        <span className="inline-flex items-center gap-2 bg-blue-100 text-blue-600 text-sm font-semibold px-3 py-1 rounded-full">
+        <span className="inline-flex items-center gap-2 bg-[#2F184C]/10 text-[#2F184C] text-sm font-semibold px-3 py-1 rounded-full">
           📝 Caption
         </span>
 
@@ -44,7 +36,7 @@ export default function CaptionCard({
       </div>
       <button
         onClick={handleCopy}
-        className="w-full rounded-lg bg-blue-100 hover:bg-blue-200 text-blue-600 font-semibold py-3 transition"
+        className="w-full rounded-lg bg-[#2F184C] hover:bg-[#24123a] text-white font-semibold py-3 transition"
       >
         Copy Caption
       </button>
