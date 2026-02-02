@@ -36,7 +36,8 @@ export default function ShareHeader({
       </div>
 
       <p className="mt-4 text-gray-700">
-        <b>Instruksi misi:</b> sebar poster resmi + caption ke{" "}
+        <b>Instruksi misi:</b> Share 2 poster ini + caption ke 5 grup WhatsApp
+        (20+ anggota) atau 10 grup WhatsApp (5+ anggota).{" "}
       </p>
     </header>
   );

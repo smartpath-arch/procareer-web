@@ -33,19 +33,55 @@ const HARDCODE_MISSIONS: Record<string, MissionResponse> = {
         id: "p1",
         title: "Poster 1",
         description: "Deskripsi poster 1",
-        imageUrl: "/posters/procareer/poster-1.jpg",
+        imageUrl: "/assets/poster-1.png",
         order: 1,
       },
       {
         id: "p2",
         title: "Poster 2",
         description: "Deskripsi poster 2",
-        imageUrl: "/posters/procareer/poster-2.jpg",
+        imageUrl: "/assets/poster-2.png",
         order: 2,
       },
     ],
     caption: {
-      content: "Caption hardcode untuk Procareer.",
+      content: `    *📢Magang Resmi SkillSpace – DIBUKA!*
+
+    🎯 Link Testimoni &  Daftar: https://s.id/InternSS1
+    Internship hanya dibuka setahun sekali,
+    Persiapkan dirimu sebaik mungkin!
+
+    ___________
+    📢About Us!
+    SkillSpace (by PT Jalur Cerdas Internasional)
+    adalah edutech yang membantu gen Z cepat berkarier di bidang
+    data dan AI.
+    Kami telah berpartner dengan instansi besar seperti Reddoorz,
+    Glints, Dana, dan lainnya.
+
+    *💰BENEFIT:*
+    1. Peluang menjadi Parttime & Fulltime (Gaji 3-9 jt/bulan)
+    2. Peluang rekomendasi kerja di Top Company
+    3. Konversi Magang Kampus
+    4. WFH 3 bulan, dan Waktu kerja fleksibel
+
+    *💼Posisi:*
+    1. Administration & Finance
+    2. Human Resource
+    3. Public Relation
+    4. Social Media Specialist
+    5. Social Media Specialist
+    6. IT Developer
+    Dan 9 posisi lainnya...
+
+    🔒Deadline: 14 Februari 2026
+    *⚠️ Kuota terbatas, ditutup lebih awal jika penuh!*
+
+    ⚠️Waspada atas Hoax Penipuan mengatasnamakan lembaga resmi SkillSpace
+    ___
+    📱Instagram: https://www.instagram.com/skillspace.id/
+    Website: https://skillspace.id/
+    ✉️Email: admin@skillspace.id`,
     },
   },
 };

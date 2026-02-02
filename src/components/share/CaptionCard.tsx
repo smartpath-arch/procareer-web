@@ -31,7 +31,7 @@ export default function CaptionCard({
         <p className="text-sm text-gray-500">{description}</p>
       </div>
 
-      <div className="bg-gray-200 rounded-xl p-4 text-sm text-gray-800 whitespace-pre-wrap">
+      <div className="bg-gray-200 rounded-xl p-3 text-sm text-gray-800 whitespace-pre-wrap max-h-36 overflow-y-auto">
         {caption || "Loading caption..."}
       </div>
       <button
