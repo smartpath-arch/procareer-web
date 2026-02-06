@@ -93,7 +93,30 @@ export default function AlumniCompaniesSection() {
           </ul>
         </div>
 
-        <div className="hidden md:block">
+        <div className="hidden md:block lg:hidden">
+          <div className="max-w-7xl mx-auto px-6 py-10">
+            <div className="grid grid-cols-1 gap-8">
+              <h3 className="text-4xl font-extrabold text-[#2F184C] text-center">
+                Why ProCareer?
+              </h3>
+
+              <ul className="space-y-3">
+                {benefits.map((b) => (
+                  <li key={b} className="flex items-start gap-4">
+                    <span className="mt-1 inline-flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-transparent ring-[3px] ring-gray-900">
+                      <Check className="h-5 w-5 text-gray-900 stroke-[3]" />
+                    </span>
+                    <span className="text-gray-900 text-lg leading-8 font-semibold">
+                      {b}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className="hidden lg:block">
           <div className="max-w-7xl mx-auto px-6 py-12">
             <div className="flex items-center gap-16">
               <div className="flex-1 flex justify-center">
