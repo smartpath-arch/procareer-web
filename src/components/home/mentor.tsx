@@ -18,12 +18,40 @@ const topCompanies: CompanyLogo[] = [
   { name: "DANA", src: "/assets/home/companies/dana.png" },
 ];
 
-const topCompaniesDup = [
-  ...topCompanies,
-  ...topCompanies,
-  ...topCompanies,
-  ...topCompanies,
-] as const;
+const mentorData: MentorData[] = [
+  {
+    name: "Deva Fitrianti",
+    photo: "/assets/mobile/home/mentor/mentordevaFitrianti.png",
+    company: "Unilever",
+    companyIcon: "unilever.svg",
+    position: "Customer Development",
+    linkedIn: "https://www.linkedin.com/in/devafitrianti/",
+  },
+  {
+    name: "Anis Dewinta",
+    photo: "/assets/mobile/home/mentor/mentoranisDewinta.png",
+    company: "Mayora Group",
+    companyIcon: "mayoragroup.svg",
+    position: "Recruitment & People Organization and Development",
+    linkedIn: "https://www.linkedin.com/in/anis-dewinta-6a69a3137/",
+  },
+  {
+    name: "Kurniawan Wicaksono",
+    photo: "/assets/mobile/home/mentor/mentorkurniawanwicaksono.png",
+    company: "Glints",
+    companyIcon: "glints.svg",
+    position: "Associate Talent Consultant",
+    linkedIn: "https://www.linkedin.com/in/kurniawanwicaksono/",
+  },
+  {
+    name: "Achmad Fikry",
+    photo: "/assets/mobile/home/mentor/mentorachmadfikry.png",
+    company: "Mayora",
+    companyIcon: "mayora.svg",
+    position: "Production & Engineering Packaging Section Head",
+    linkedIn: "https://www.linkedin.com/in/achmadfikry/",
+  },
+];
 
 function LogoItem({ logo }: { logo: CompanyLogo }) {
   return (
@@ -57,12 +85,53 @@ export default function MentorCarousel() {
           <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-10 bg-gradient-to-r from-white to-transparent z-10" />
           <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-10 bg-gradient-to-l from-white to-transparent z-10" />
 
-          <div className="overflow-hidden py-4 rounded-xl bg-[#FCFCFC]">
-            <div className="logo-track">
-              {topCompaniesDup.map((logo, i) => (
-                <LogoItem key={`${logo.name}-${i}`} logo={logo} />
-              ))}
-            </div>
+          <div
+            ref={scrollRef}
+            className="flex gap-5 overflow-x-hidden py-1 no-scrollbar"
+          >
+            {desktopMentorData.map((mentor, i) => (
+              <MentorCard
+                key={`m1-${i}`}
+                photo={mentor.photo}
+                linkedIn={mentor.linkedIn}
+                delay={i * 80}
+              />
+            ))}
+            {desktopMentorData.map((mentor, i) => (
+              <MentorCard
+                key={`m2-${i}`}
+                photo={mentor.photo}
+                linkedIn={mentor.linkedIn}
+                delay={i * 80}
+              />
+            ))}
+          </div>
+        </div>
+
+        <div className="md:hidden">
+          <div
+            ref={mobileScrollRef}
+            className="flex gap-6 overflow-x-auto py-1 px-[calc(50vw-140px)] no-scrollbar"
+            style={{
+              scrollBehavior: "auto",
+            }}
+          >
+            {mentorData.map((mentor, i) => (
+              <MentorCardMobile key={`mobile1-${i}`} mentor={mentor} />
+            ))}
+            {mentorData.map((mentor, i) => (
+              <MentorCardMobile key={`mobile2-${i}`} mentor={mentor} />
+            ))}
+          </div>
+          <div className="flex justify-center gap-2 mt-4">
+            {[...Array(totalSlides)].map((_, i) => (
+              <div
+                key={i}
+                className={`h-2 rounded-full transition-all duration-500 ease-in-out ${
+                  i === currentSlide ? "w-8 bg-[#262626]" : "w-2 bg-gray-300"
+                }`}
+              />
+            ))}
           </div>
         </div>
       </div>

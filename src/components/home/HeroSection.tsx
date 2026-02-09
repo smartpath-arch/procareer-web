@@ -73,14 +73,14 @@ export default function HeroSection() {
 
       {/* ================= MOBILE VIEW (IMAGE ONLY) ================= */}
       <div className="md:hidden">
-        <div className="relative rounded-b-[30px] bg-gradient-to-b from-[#CB66E8] to-[#2F184C] overflow-hidden">
+        <div className="relative rounded-b-[40px] bg-gradient-to-b from-[#CB66E8] to-[#2F184C] overflow-hidden">
           <div className="relative w-full h-[150px]">
             <Image
               src="/assets/mobile/home/herosectionMobile.png"
               alt="ProCareer Hero"
               fill
               priority
-              className="object-cover object-top mt-3 pl-8"
+              className="object-cover object-top mt-2 pl-8"
             />
           </div>
         </div>
