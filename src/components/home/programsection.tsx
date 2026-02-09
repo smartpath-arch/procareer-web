@@ -431,7 +431,7 @@ const LearningPlatformSections: React.FC = () => {
       imageAlt: "Upgrade CV-mu",
       bgClass: "bg-gradient-to-r from-[#CB66E8] to-[#2F184C]",
       customPadding: "",
-      path: "https://wa.me/6285122903009",
+      path: "https://wa.me/6285745961430",
       buttonText: "Contact HRD",
       showArrow: false,
       customButtonBg: "#fefadd",

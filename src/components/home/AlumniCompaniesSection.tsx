@@ -76,16 +76,16 @@ export default function AlumniCompaniesSection() {
 
       <div className="bg-[#FEFADD] border border-[#E5E7EB]/50">
         <div className="md:hidden px-5 py-8">
-          <h5 className="text-[24px] text-center font-extrabold text-[#2F184C] mb-6">
+          <h3 className="text-[28px] text-center font-extrabold text-[#2F184C] mb-6">
             Why ProCareer?
-          </h5>
-          <ul className="space-y-1">
+          </h3>
+          <ul className="space-y-4">
             {benefits.map((b) => (
               <li key={b} className="flex gap-3">
-                <span className="mt-[6.5px] grid place-items-center h-4 w-4 shrink-0 rounded-full bg-transparent ring-[3px] ring-gray-900">
+                <span className="mt-[2px] grid place-items-center h-7 w-7 shrink-0 rounded-full bg-transparent ring-[3px] ring-gray-900">
                   <Check className="h-4 w-4 text-gray-900 stroke-[3]" />
                 </span>
-                <span className="text-gray-900 text-[15px] leading-7 font-semibold">
+                <span className="text-gray-900 text-[18px] leading-7 font-semibold">
                   {b}
                 </span>
               </li>
@@ -93,30 +93,7 @@ export default function AlumniCompaniesSection() {
           </ul>
         </div>
 
-        <div className="hidden md:block lg:hidden">
-          <div className="max-w-7xl mx-auto px-6 py-10">
-            <div className="grid grid-cols-1 gap-8">
-              <h3 className="text-4xl font-extrabold text-[#2F184C] text-center">
-                Why ProCareer?
-              </h3>
-
-              <ul className="space-y-3">
-                {benefits.map((b) => (
-                  <li key={b} className="flex items-start gap-4">
-                    <span className="mt-1 inline-flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-transparent ring-[3px] ring-gray-900">
-                      <Check className="h-5 w-5 text-gray-900 stroke-[3]" />
-                    </span>
-                    <span className="text-gray-900 text-lg leading-8 font-semibold">
-                      {b}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div className="hidden lg:block">
+        <div className="hidden md:block">
           <div className="max-w-7xl mx-auto px-6 py-12">
             <div className="flex items-center gap-16">
               <div className="flex-1 flex justify-center">
