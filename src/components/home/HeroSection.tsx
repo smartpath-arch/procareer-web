@@ -36,7 +36,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-[#FFF7D6]">
+    <section className="relative overflow-hidden bg-background">
       <style jsx>{`
         @keyframes fadeInUp {
           0% {
@@ -76,7 +76,7 @@ export default function HeroSection() {
         <div className="relative rounded-b-[40px] bg-gradient-to-b from-[#CB66E8] to-[#2F184C] overflow-hidden">
           <div className="relative w-full h-[150px]">
             <Image
-              src="/assets/mobile/home/herosectionMobile.png"
+              src="/assets/home/hero-section/herosection5.png"
               alt="ProCareer Hero"
               fill
               priority
@@ -86,10 +86,10 @@ export default function HeroSection() {
         </div>
 
         {/* STATISTIK MOBILE */}
-        <div className="relative px-4 pt-6 pb-6 bg-[#FFF7D6]">
-          <div className="overflow-hidden rounded-3xl bg-[#FFF7D6] shadow-lg">
+        <div className="relative px-4 pt-6 pb-6">
+          <div className="overflow-hidden rounded-3xl bg-background shadow-lg">
             <Image
-              src="/assets/mobile/home/MobilePCStatistik.png"
+              src="/assets/home/herostatistik4.png"
               alt="Statistik ProCareer"
               width={450}
               height={380}
@@ -100,36 +100,8 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Tablet View */}
-      <div className="hidden md:block lg:hidden">
-        <div className="relative rounded-b-[40px] bg-gradient-to-b from-[#CB66E8] to-[#2F184C] overflow-hidden">
-          <div className="relative w-full h-[240px]">
-            <Image
-              src="/assets/mobile/home/herosectionMobile.png"
-              alt="ProCareer Hero Tablet"
-              fill
-              priority
-              className="object-cover object-top mt-4 pl-10"
-            />
-          </div>
-        </div>
-
-        <div className="relative px-8 pt-8 pb-8 bg-[#FFF7D6]">
-          <div className="overflow-hidden rounded-3xl bg-[#FFF7D6] shadow-lg">
-            <Image
-              src="/assets/mobile/home/MobilePCStatistik.png"
-              alt="Statistik ProCareer Tablet"
-              width={900}
-              height={500}
-              sizes="100vw"
-              className="block w-full h-auto"
-            />
-          </div>
-        </div>
-      </div>
-
       {/* ================= DESKTOP VIEW (TIDAK DIUBAH) ================= */}
-      <div className="hidden lg:block relative bg-gradient-to-b from-[#CB66E8] to-[#2F184C] pb-8 rounded-b-[60px]">
+      <div className="hidden md:block relative bg-gradient-to-b from-[#CB66E8] to-[#2F184C] pb-8 rounded-b-[60px]">
         <div className="mx-auto max-w-[1450px] px-2 pt-4">
           <div
             className={`relative w-full overflow-hidden aspect-video mx-auto transition-opacity ${
