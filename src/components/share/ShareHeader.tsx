@@ -23,22 +23,14 @@ export default function ShareHeader({
         />
         <div>
           <p className="text-sm text-gray-600 tracking-wide">
-            Procareer INTERNSHIP MISSION
+            PROCAREER POSTER MISSION
           </p>
-          <h1 className="text-2xl text-gray-600 font-bold mt-1">
-            Poster Internship Procareer
-          </h1>
-          <p className="mt-3 text-gray-600">
-            Tempat khusus untuk download <b>Poster</b>, dan <b>copy caption</b>{" "}
-            yang dipakai untuk misi dari Procareer
-          </p>
+          <h1 className="text-2xl text-gray-600 font-bold mt-1">{title}</h1>
+          <p className="mt-3 text-gray-600">{description}</p>
         </div>
       </div>
 
-      <p className="mt-4 text-gray-700">
-        <b>Instruksi misi:</b> Share 2 poster ini + caption ke 5 grup WhatsApp
-        (20+ anggota) atau 10 grup WhatsApp (5+ anggota).{" "}
-      </p>
+      <p className="mt-4 text-gray-700">{instruction}</p>
     </header>
   );
 }
