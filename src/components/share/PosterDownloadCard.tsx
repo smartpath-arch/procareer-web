@@ -32,7 +32,7 @@ export default function PosterDownloadCard({
       </div>
       <div className="flex justify-center">
         <div className="relative w-full max-w-xs aspect-[2/3] bg-gray-200 rounded-xl shadow-inner overflow-hidden">
-          <Image
+          <img
             src={imageSrc}
             alt={`Poster ${number}`}
             fill
