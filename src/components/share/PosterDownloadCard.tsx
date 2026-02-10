@@ -31,11 +31,10 @@ export default function PosterDownloadCard({
         {/* <p className="text-sm text-gray-800">{description}</p> */}
       </div>
       <div className="flex justify-center">
-        <div className="relative w-full max-w-xs aspect-[2/3] bg-gray-200 rounded-xl shadow-inner overflow-hidden">
+        <div className="relative w-full max-w-xs  bg-gray-200 rounded-xl shadow-inner overflow-hidden">
           <img
             src={imageSrc}
             alt={`Poster ${number}`}
-            fill
             className="object-cover"
           />
         </div>

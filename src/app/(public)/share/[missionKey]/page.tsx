@@ -24,9 +24,10 @@ type MissionResponse = {
 const HARDCODE_MISSIONS: Record<string, MissionResponse> = {
   procareer: {
     missionKey: "procareer",
-    title: "Procareer Mission",
-    description: "Deskripsi mission procareer (hardcode local)",
-    instruction: "Instruksi mission (hardcode local)",
+    title: "Intern Procareer",
+    description: "",
+    instruction:
+      "Share poster 1 dan 2 + caption ke 5 grup WhatsApp (20+ anggota) atau 10 grup WhatsApp (5+ anggota).",
     isActive: true,
     posters: [
       {
@@ -36,52 +37,42 @@ const HARDCODE_MISSIONS: Record<string, MissionResponse> = {
         imageUrl: "/assets/poster-1.png",
         order: 1,
       },
-      {
-        id: "p2",
-        title: "Poster 2",
-        description: "Deskripsi poster 2",
-        imageUrl: "/assets/poster-2.png",
-        order: 2,
-      },
     ],
     caption: {
-      content: `    *📢Magang Resmi SkillSpace – DIBUKA!*
+      content: `*📢Magang Resmi ProCareer – DIBUKA!*
 
-    🎯 Link Testimoni &  Daftar: https://s.id/InternSS1
-    Internship hanya dibuka setahun sekali,
-    Persiapkan dirimu sebaik mungkin!
+🎯 Link Testimoni &  Daftar: https://s.id/InternPC1 
+Internship hanya dibuka setahun sekali,
+Persiapkan dirimu sebaik mungkin!
 
-    ___________
-    📢About Us!
-    SkillSpace (by PT Jalur Cerdas Internasional)
-    adalah edutech yang membantu gen Z cepat berkarier di bidang
-    data dan AI.
-    Kami telah berpartner dengan instansi besar seperti Reddoorz,
-    Glints, Dana, dan lainnya.
+___________
+📢About Us!
+ProCareer adalah Professional Career Service yang membantu Early Career Talent membangun CV standar Top Company yang dirancang langsung oleh HRD berpengalaman. 
 
-    *💰BENEFIT:*
-    1. Peluang menjadi Parttime & Fulltime (Gaji 3-9 jt/bulan)
-    2. Peluang rekomendasi kerja di Top Company
-    3. Konversi Magang Kampus
-    4. WFH 3 bulan, dan Waktu kerja fleksibel
+Kami telah berpartner dengan instansi besar seperti Reddoorz, Glints, Dana, dan lainnya.
 
-    *💼Posisi:*
-    1. Administration & Finance
-    2. Human Resource
-    3. Public Relation
-    4. Social Media Specialist
-    5. Social Media Specialist
-    6. IT Developer
-    Dan 9 posisi lainnya...
+*💰BENEFIT:*
+1. Peluang menjadi Parttime & Fulltime (Gaji 3-9 jt/bulan)
+2. Peluang rekomendasi kerja di Top Company
+3. Konversi Magang Kampus
+4. WFH 3 bulan, dan Waktu kerja fleksibel
 
-    🔒Deadline: 14 Februari 2026
-    *⚠️ Kuota terbatas, ditutup lebih awal jika penuh!*
+*💼Posisi:*
+1. Administration & Finance
+2. Human Resource
+3. Public Relation
+4. Social Media Specialist
+5. IT Developer
+Dan 9 posisi lainnya...
 
-    ⚠️Waspada atas Hoax Penipuan mengatasnamakan lembaga resmi SkillSpace
-    ___
-    📱Instagram: https://www.instagram.com/skillspace.id/
-    Website: https://skillspace.id/
-    ✉️Email: admin@skillspace.id`,
+🔒 Prioritas screening bagi pendaftar tercepat
+*⚠️ Kuota terbatas, ditutup lebih awal jika penuh!*
+
+⚠️Waspada atas Hoax Penipuan mengatasnamakan lembaga resmi ProCareer
+___
+📱Instagram: https://www.instagram.com/procareer.official/ 
+Website: https://procareer.id/  
+✉️Email: official.procareer@gmail.com`,
     },
   },
 };
