@@ -30,7 +30,7 @@ export default function ShareHeader({
           </h1>
           <p className="mt-3 text-gray-600">
             Tempat khusus untuk download <b>Poster</b>, dan <b>copy caption</b>{" "}
-            yang dipakai untuk misi dari SkillSpace
+            yang dipakai untuk misi dari Procareer
           </p>
         </div>
       </div>
