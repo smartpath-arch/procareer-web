@@ -15,8 +15,8 @@ export default function ShareHeader({
     <header className="bg-white rounded-2xl shadow-md p-6">
       <div className="inline-flex gap-4">
         <Image
-          src="/assets/icon/procareericon/apple-touch-icon.png"
-          alt="SmartPath Logo"
+          src="/assets/icon/iconprocareer.svg"
+          alt="Procareer Logo"
           width={100}
           height={100}
           className="mx-auto mb-4"
