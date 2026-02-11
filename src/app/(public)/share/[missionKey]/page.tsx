@@ -21,75 +21,75 @@ type MissionResponse = {
   };
 };
 
-const HARDCODE_MISSIONS: Record<string, MissionResponse> = {
-  procareer: {
-    missionKey: "procareer",
-    title: "Intern Procareer",
-    description: "",
-    instruction:
-      "Share poster 1 dan 2 + caption ke 5 grup WhatsApp (20+ anggota) atau 10 grup WhatsApp (5+ anggota).",
-    isActive: true,
-    posters: [
-      {
-        id: "p1",
-        title: "Poster 1",
-        description: "Deskripsi poster 1",
-        imageUrl: "/assets/poster-1.png",
-        order: 1,
-      },
-    ],
-    caption: {
-      content: `*📢Magang Resmi ProCareer – DIBUKA!*
+// const HARDCODE_MISSIONS: Record<string, MissionResponse> = {
+//   procareer: {
+//     missionKey: "procareer",
+//     title: "Intern Procareer",
+//     description: "",
+//     instruction:
+//       "Share poster 1 dan 2 + caption ke 5 grup WhatsApp (20+ anggota) atau 10 grup WhatsApp (5+ anggota).",
+//     isActive: true,
+//     posters: [
+//       {
+//         id: "p1",
+//         title: "Poster 1",
+//         description: "Deskripsi poster 1",
+//         imageUrl: "/assets/poster-1.png",
+//         order: 1,
+//       },
+//     ],
+//     caption: {
+//       content: `*📢Magang Resmi ProCareer – DIBUKA!*
 
-🎯 Link Testimoni &  Daftar: https://s.id/InternPC1 
-Internship hanya dibuka setahun sekali,
-Persiapkan dirimu sebaik mungkin!
+// 🎯 Link Testimoni &  Daftar: https://s.id/InternPC1
+// Internship hanya dibuka setahun sekali,
+// Persiapkan dirimu sebaik mungkin!
 
-___________
-📢About Us!
-ProCareer adalah Professional Career Service yang membantu Early Career Talent membangun CV standar Top Company yang dirancang langsung oleh HRD berpengalaman. 
+// ___________
+// 📢About Us!
+// ProCareer adalah Professional Career Service yang membantu Early Career Talent membangun CV standar Top Company yang dirancang langsung oleh HRD berpengalaman.
 
-Kami telah berpartner dengan instansi besar seperti Reddoorz, Glints, Dana, dan lainnya.
+// Kami telah berpartner dengan instansi besar seperti Reddoorz, Glints, Dana, dan lainnya.
 
-*💰BENEFIT:*
-1. Peluang menjadi Parttime & Fulltime (Gaji 3-9 jt/bulan)
-2. Peluang rekomendasi kerja di Top Company
-3. Konversi Magang Kampus
-4. WFH 3 bulan, dan Waktu kerja fleksibel
+// *💰BENEFIT:*
+// 1. Peluang menjadi Parttime & Fulltime (Gaji 3-9 jt/bulan)
+// 2. Peluang rekomendasi kerja di Top Company
+// 3. Konversi Magang Kampus
+// 4. WFH 3 bulan, dan Waktu kerja fleksibel
 
-*💼Posisi:*
-1. Administration & Finance
-2. Human Resource
-3. Public Relation
-4. Social Media Specialist
-5. IT Developer
-Dan 9 posisi lainnya...
+// *💼Posisi:*
+// 1. Administration & Finance
+// 2. Human Resource
+// 3. Public Relation
+// 4. Social Media Specialist
+// 5. IT Developer
+// Dan 9 posisi lainnya...
 
-🔒 Prioritas screening bagi pendaftar tercepat
-*⚠️ Kuota terbatas, ditutup lebih awal jika penuh!*
+// 🔒 Prioritas screening bagi pendaftar tercepat
+// *⚠️ Kuota terbatas, ditutup lebih awal jika penuh!*
 
-⚠️Waspada atas Hoax Penipuan mengatasnamakan lembaga resmi ProCareer
-___
-📱Instagram: https://www.instagram.com/procareer.official/ 
-Website: https://procareer.id/  
-✉️Email: official.procareer@gmail.com`,
-    },
-  },
-};
+// ⚠️Waspada atas Hoax Penipuan mengatasnamakan lembaga resmi ProCareer
+// ___
+// 📱Instagram: https://www.instagram.com/procareer.official/
+// Website: https://procareer.id/
+// ✉️Email: official.procareer@gmail.com`,
+//     },
+//   },
+// };
 
 async function getMission(missionKey: string): Promise<MissionResponse | null> {
-  // const res = await fetch(
-  //   `${process.env.NEXT_PUBLIC_API_URL}/api/poster-mission/${missionKey}`,
-  //   { cache: "no-store" },
-  // );
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/poster-mission/${missionKey}`,
+    { cache: "no-store" },
+  );
 
-  // if (!res.ok) {
-  //   return null;
-  // }
+  if (!res.ok) {
+    return null;
+  }
 
-  // const json = await res.json();
-  // return json.data;
-  return HARDCODE_MISSIONS[missionKey] || null;
+  const json = await res.json();
+  return json.data;
+  // return HARDCODE_MISSIONS[missionKey] || null;
 }
 
 export default async function SharePage({
@@ -159,10 +159,10 @@ export default async function SharePage({
             number={index + 1}
             title={poster.title}
             description={poster.description}
-            imageSrc={poster.imageUrl}
-            filePath={poster.imageUrl}
-            // imageSrc={`${process.env.NEXT_PUBLIC_API_URL}${poster.imageUrl}`}
-            // filePath={`${process.env.NEXT_PUBLIC_API_URL}${poster.imageUrl}`}
+            // imageSrc={poster.imageUrl}
+            // filePath={poster.imageUrl}
+            imageSrc={`${process.env.NEXT_PUBLIC_API_URL}${poster.imageUrl}`}
+            filePath={`${process.env.NEXT_PUBLIC_API_URL}${poster.imageUrl}`}
           />
         ))}
 
