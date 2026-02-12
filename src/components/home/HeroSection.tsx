@@ -89,7 +89,7 @@ export default function HeroSection() {
         <div className="relative px-4 pt-6 pb-6 bg-[#FFF7D6]">
           <div className="overflow-hidden rounded-3xl bg-[#FFF7D6] shadow-lg">
             <Image
-              src="/assets/mobile/home/MobilePCStatistik.png"
+              src="/assets/mobile/home/MobilePCStatistik1.png"
               alt="Statistik ProCareer"
               width={450}
               height={380}
@@ -117,7 +117,7 @@ export default function HeroSection() {
         <div className="relative px-8 pt-8 pb-8 bg-[#FFF7D6]">
           <div className="overflow-hidden rounded-3xl bg-[#FFF7D6] shadow-lg">
             <Image
-              src="/assets/mobile/home/MobilePCStatistik.png"
+              src="/assets/mobile/home/MobilePCStatistik1.png"
               alt="Statistik ProCareer Tablet"
               width={900}
               height={500}

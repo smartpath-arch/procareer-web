@@ -156,26 +156,28 @@ const Section: React.FC<SectionProps> = ({
             isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           }`}
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-3 leading-tight">
+          <h2 className="text-4xl md:text-4xl lg:text-6xl font-extrabold mb-3 md:mb-2 leading-tight md:leading-snug">
             {title}
           </h2>
-          <p className="text-lg md:text-xl lg:text-2xl mb-5 opacity-95 leading-relaxed">
+          <p className="text-lg md:text-base lg:text-2xl mb-5 md:mb-4 opacity-95 leading-relaxed md:leading-normal">
             {description}
           </p>
           <div className={`flex ${reverse ? "justify-end" : "justify-start"}`}>
             <Link href={path}>
               <button
                 className={`
-      px-8 py-3 rounded-xl font-semibold flex items-center gap-2
-      transition-all duration-300 text-lg shadow-sm hover:shadow-lg transform hover:scale-105
-      ${
-        customButtonBg || customButtonGradient
-          ? ""
-          : bgClass === "bg-[#FAFAFA]"
-            ? "bg-[#262626] text-white"
-            : "bg-white text-[#262626]"
-      }
-    `}
+                  px-8 py-3 md:px-6 md:py-2.5 lg:px-8 lg:py-3
+                  rounded-xl font-semibold flex items-center justify-center gap-2
+                  transition-all duration-300 text-lg md:text-base lg:text-lg
+                  shadow-sm hover:shadow-lg transform hover:scale-105
+                  ${
+                    customButtonBg || customButtonGradient
+                      ? ""
+                      : bgClass === "bg-[#FAFAFA]"
+                        ? "bg-[#262626] text-white"
+                        : "bg-white text-[#262626]"
+                  }
+                `}
                 style={{
                   transition:
                     "background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease",
@@ -190,6 +192,7 @@ const Section: React.FC<SectionProps> = ({
               >
                 {/* ===== FIX DI SINI (TEXT SAJA) ===== */}
                 <span
+                  className="text-center justify-center whitespace-nowrap"
                   style={
                     customButtonTextGradient
                       ? {
@@ -205,7 +208,10 @@ const Section: React.FC<SectionProps> = ({
                 </span>
 
                 {showArrow && (
-                  <ArrowRight className="w-6 h-6 transition-transform duration-300 group-hover:translate-x-1" />
+                  <ArrowRight
+                    className="w-6 h-6 md:w-5 md:h-5 lg:w-6 lg:h-6 transition-transform duration-300 group-hover:translate-x-1"
+                    style={{ color: "#ffffff" }}
+                  />
                 )}
               </button>
             </Link>
@@ -218,6 +224,16 @@ const Section: React.FC<SectionProps> = ({
 
 const MobileCarousel: React.FC = () => {
   const slides = [
+    {
+      id: "upgrade-cv",
+      label: "Program Kita",
+      title: "Upgrade CV-mu",
+      description:
+        "Dibuat khusus oleh HRD agar CV-mu lolos screening dan siap kirim",
+      imageSrc: "/assets/mobile/home/program-section/contacthrd.png",
+      buttonText: "Contact HRD",
+      path: "https://wa.me/6285122903009",
+    },
     {
       id: "e-learning",
       label: "Program Kita",
@@ -251,7 +267,7 @@ const MobileCarousel: React.FC = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
-    }, 4000);
+    }, 5000);
     return () => clearInterval(timer);
   }, [slides.length, autoplayKey]);
 
@@ -383,14 +399,25 @@ const MobileCarousel: React.FC = () => {
               <p className="text-black text-lg leading-relaxed mb-6 animate-slide-up-delay">
                 {slide.description}
               </p>
-              <Link href={slide.path}>
-                <button
-                  className="text-white px-8 py-3.5 rounded-lg font-semibold transition-all duration-300 text-base w-fit transform hover:scale-105 active:scale-95 hover:shadow-lg"
-                  style={{ backgroundColor: "#262626" }}
-                >
-                  {slide.buttonText}
-                </button>
-              </Link>
+              {slide.path.startsWith("http") ? (
+                <a href={slide.path} target="_blank" rel="noopener noreferrer">
+                  <button
+                    className="text-white px-8 py-3.5 rounded-lg font-semibold transition-all duration-300 text-base w-fit transform hover:scale-105 active:scale-95 hover:shadow-lg"
+                    style={{ backgroundColor: "#262626" }}
+                  >
+                    {slide.buttonText}
+                  </button>
+                </a>
+              ) : (
+                <Link href={slide.path}>
+                  <button
+                    className="text-white px-8 py-3.5 rounded-lg font-semibold transition-all duration-300 text-base w-fit transform hover:scale-105 active:scale-95 hover:shadow-lg"
+                    style={{ backgroundColor: "#262626" }}
+                  >
+                    {slide.buttonText}
+                  </button>
+                </Link>
+              )}
             </div>
           </div>
         ))}
