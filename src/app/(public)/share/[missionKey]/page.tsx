@@ -27,7 +27,7 @@ const HARDCODE_MISSIONS: Record<string, MissionResponse> = {
     title: "Intern Procareer",
     description: "",
     instruction:
-      "Share poster 1 dan 2 + caption ke 5 grup WhatsApp (20+ anggota) atau 10 grup WhatsApp (5+ anggota).",
+      "Share poster 1 + caption ke 5 grup WhatsApp (20+ anggota) atau 10 grup WhatsApp (5+ anggota).",
     isActive: true,
     posters: [
       {
