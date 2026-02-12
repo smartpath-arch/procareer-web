@@ -58,7 +58,7 @@ export default function Footer() {
             </Link>
           </div>
           <p className="text-white text-lg leading-relaxed text-center mt-1">
-            One stop solution bimbingan sukses kuliah dan karir
+            Bantu kamu lebih cepat meraih kerja impian.
           </p>
           <nav aria-label="Footer navigation" className="w-full">
             <ul className="flex flex-col space-y-4">
