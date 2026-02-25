@@ -34,7 +34,7 @@ const HARDCODE_MISSIONS: Record<string, MissionResponse> = {
         id: "p1",
         title: "Poster 1",
         description: "Deskripsi poster 1",
-        imageUrl: "/assets/poster-1.png",
+        imageUrl: "/assets/poster-new.png",
         order: 1,
       },
     ],
