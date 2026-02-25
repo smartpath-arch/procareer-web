@@ -2,6 +2,7 @@ import PosterDownloadCard from "@/components/share/PosterDownloadCard";
 import CaptionCard from "@/components/share/CaptionCard";
 import ShareHeader from "@/components/share/ShareHeader";
 import { Lock } from "lucide-react";
+import poster from "@/assets/poster-new.png";
 
 type MissionResponse = {
   missionKey: string;
