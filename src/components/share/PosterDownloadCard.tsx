@@ -18,6 +18,27 @@ export default function PosterDownloadCard({
 
   const posterPath = "/assets/poster-new.png";
 
+  const handleDownload = async () => {
+    try {
+      const response = await fetch(posterPath);
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "poster-procareer.png";
+      document.body.appendChild(link);
+      link.click();
+
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+
+      setDownloaded(true);
+    } catch (error) {
+      console.error("Download failed:", error);
+    }
+  };
+
   return (
     <section className="bg-white rounded-2xl shadow-md p-6 space-y-5">
       <div>
@@ -40,14 +61,12 @@ export default function PosterDownloadCard({
         </div>
       </div>
 
-      <a
-        href={posterPath}
-        download="poster-new.png"
-        onClick={() => setDownloaded(true)}
+      <button
+        onClick={handleDownload}
         className="block text-center w-full rounded-lg bg-[#2F184C] hover:bg-[#24123a] text-white font-semibold py-3 transition"
       >
         Download Poster {number}
-      </a>
+      </button>
 
       <p className="text-xs text-gray-500">
         Format: PNG — siap dikirim ke grup WhatsApp untuk misi penyebaran
