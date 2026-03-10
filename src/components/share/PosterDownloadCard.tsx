@@ -7,6 +7,8 @@ type PosterDownloadCardProps = {
   number: number;
   title: string;
   description: string;
+  imageSrc: string;
+  filePath: string;
 };
 
 export default function PosterDownloadCard({
