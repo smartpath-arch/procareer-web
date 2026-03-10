@@ -53,7 +53,7 @@ export default function MentorCarousel() {
           </span>
         </h2>
 
-        <div className="relative">
+        <div className="relative logo-marquee-wrapper">
           <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-10 bg-gradient-to-r from-white to-transparent z-10" />
           <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-10 bg-gradient-to-l from-white to-transparent z-10" />
 
@@ -76,6 +76,10 @@ export default function MentorCarousel() {
           animation: logo-marquee 35s linear infinite;
           transform: translateZ(0);
           backface-visibility: hidden;
+        }
+
+        .logo-marquee-wrapper:hover .logo-track {
+          animation-play-state: paused;
         }
 
         /* optional: kalau mau pause pas hover, uncomment */
