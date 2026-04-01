@@ -35,30 +35,32 @@ const HARDCODE_MISSIONS: Record<string, MissionResponse> = {
         id: "p1",
         title: "Poster 1",
         description: "Deskripsi poster 1",
-        imageUrl: "/assets/poster-new.png",
+        imageUrl: "/assets/InternshipPC.png",
         order: 1,
       },
     ],
     caption: {
-      content: `*📢Magang Resmi ProCareer – DIBUKA!*
+      content: `📢*Magang Resmi ProCareer – DIBUKA!*
 
 🎯 Link Testimoni &  Daftar: https://s.id/InternPC1 
 Internship hanya dibuka setahun sekali,
 Persiapkan dirimu sebaik mungkin!
 
-___________
+_____
 📢About Us!
-ProCareer adalah Professional Career Service yang membantu Early Career Talent membangun CV standar Top Company yang dirancang langsung oleh HRD berpengalaman. 
+ProCareer (by PT Akselerator Karir Nasional)
+adalah Professional Career Service yang membangun CV standar Top Company, 
+dirancang langsung oleh HRD berpengalaman. 
 
 Kami telah berpartner dengan instansi besar seperti Reddoorz, Glints, Dana, dan lainnya.
 
-*💰BENEFIT:*
+💰BENEFIT:
 1. Peluang menjadi Parttime & Fulltime (Gaji 3-9 jt/bulan)
 2. Peluang rekomendasi kerja di Top Company
 3. Konversi Magang Kampus
 4. WFH 3 bulan, dan Waktu kerja fleksibel
 
-*💼Posisi:*
+💼Posisi:
 1. Administration & Finance
 2. Human Resource
 3. Public Relation
@@ -67,10 +69,10 @@ Kami telah berpartner dengan instansi besar seperti Reddoorz, Glints, Dana, dan 
 Dan 9 posisi lainnya...
 
 🔒 Prioritas screening bagi pendaftar tercepat
-*⚠️ Kuota terbatas, ditutup lebih awal jika penuh!*
+⚠️ Kuota terbatas, ditutup lebih awal jika penuh!
 
 ⚠️Waspada atas Hoax Penipuan mengatasnamakan lembaga resmi ProCareer
-___
+_
 📱Instagram: https://www.instagram.com/procareer.official/ 
 Website: https://procareer.id/  
 ✉️Email: official.procareer@gmail.com`,
