@@ -18,7 +18,7 @@ export default function PosterDownloadCard({
 }: PosterDownloadCardProps) {
   const [downloaded, setDownloaded] = useState(false);
 
-  const posterPath = "/assets/poster-new.png";
+  const posterPath = "/assets/InternshipPC.png";
 
   const handleDownload = async () => {
     try {
@@ -28,7 +28,7 @@ export default function PosterDownloadCard({
 
       const link = document.createElement("a");
       link.href = url;
-      link.download = "poster-procareer.png";
+      link.download = "internship-procareer.png";
       document.body.appendChild(link);
       link.click();
 
