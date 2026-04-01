@@ -40,7 +40,7 @@ const HARDCODE_MISSIONS: Record<string, MissionResponse> = {
       },
     ],
     caption: {
-      content: `📢*Magang Resmi ProCareer – DIBUKA!*
+      content: `*📢Magang Resmi ProCareer – DIBUKA!*
 
 🎯 Link Testimoni &  Daftar: https://s.id/InternPC1 
 Internship hanya dibuka setahun sekali,
@@ -54,13 +54,13 @@ dirancang langsung oleh HRD berpengalaman.
 
 Kami telah berpartner dengan instansi besar seperti Reddoorz, Glints, Dana, dan lainnya.
 
-💰BENEFIT:
+*💰BENEFIT:*
 1. Peluang menjadi Parttime & Fulltime (Gaji 3-9 jt/bulan)
 2. Peluang rekomendasi kerja di Top Company
 3. Konversi Magang Kampus
 4. WFH 3 bulan, dan Waktu kerja fleksibel
 
-💼Posisi:
+*💼Posisi:*
 1. Administration & Finance
 2. Human Resource
 3. Public Relation
@@ -69,7 +69,7 @@ Kami telah berpartner dengan instansi besar seperti Reddoorz, Glints, Dana, dan 
 Dan 9 posisi lainnya...
 
 🔒 Prioritas screening bagi pendaftar tercepat
-⚠️ Kuota terbatas, ditutup lebih awal jika penuh!
+*⚠️ Kuota terbatas, ditutup lebih awal jika penuh!*
 
 ⚠️Waspada atas Hoax Penipuan mengatasnamakan lembaga resmi ProCareer
 _
