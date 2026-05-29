@@ -2,7 +2,6 @@ import PosterDownloadCard from "@/components/share/PosterDownloadCard";
 import CaptionCard from "@/components/share/CaptionCard";
 import ShareHeader from "@/components/share/ShareHeader";
 import { Lock } from "lucide-react";
-import poster from "@/assets/poster-new.png";
 
 type MissionResponse = {
   missionKey: string;
@@ -78,6 +77,52 @@ Website: https://procareer.id/
 ✉️Email: official.procareer@gmail.com`,
     },
   },
+
+  cv: {
+    missionKey: "CV",
+    title: "CV ProCareer",
+    description: "",
+    instruction:
+      "Share poster CV + caption ke grup WhatsApp sesuai instruksi misi.",
+    isActive: true,
+    posters: [
+      {
+        id: "cv1",
+        title: "Poster CV",
+        description: "Poster CV ProCareer",
+        imageUrl: "/assets/poster_cv.png",
+        order: 1,
+      },
+    ],
+    caption: {
+      content: `*📢CV Kamu Dibuatkan oleh HRD Agar Lolos Top Company *
+
+🎯Daftar di:
+https://s.id/CVProCareer
+
+Cocok untuk kamu yang ingin cepat dapat kerja di Top Company!
+
+*💡BENEFIT:*
+💠Sertifikat Internasional
+💠Peluang Disalurkan Kerja Sesuai Bidangmu
+💠1 on 1 Consultation & Grup Info Loker/Magang
+
+*Mentors from:*
+Glints, Pertamina, Unilever, dll.
+
+⚠️Kuota terbatas!
+*Gratis untuk 25 orang terpilih!*
+ditutup lebih awal jika penuh
+
+👉 Daftar sekarang:
+https://s.id/CVProCareer
+
+📱 WhatsApp: +62 851-2290-3009
+💻Instagram: https://www.instagram.com/procareer/official/
+🌐Website: https://procareer.id/
+✉️Email: admin@procareer.id`,
+    },
+  },
 };
 
 async function getMission(missionKey: string): Promise<MissionResponse | null> {
@@ -92,7 +137,10 @@ async function getMission(missionKey: string): Promise<MissionResponse | null> {
 
   // const json = await res.json();
   // return json.data;
-  return HARDCODE_MISSIONS[missionKey] || null;
+
+  const normalizedKey = missionKey.toLowerCase();
+
+  return HARDCODE_MISSIONS[normalizedKey] || null;
 }
 
 export default async function SharePage({
@@ -102,6 +150,7 @@ export default async function SharePage({
 }) {
   const { missionKey } = await params;
   const mission = await getMission(missionKey);
+
   if (!mission) {
     return (
       <main className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
@@ -123,6 +172,7 @@ export default async function SharePage({
       </main>
     );
   }
+
   if (!mission.isActive) {
     return (
       <main className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
@@ -147,6 +197,7 @@ export default async function SharePage({
       </main>
     );
   }
+
   return (
     <main className="min-h-screen bg-gray-100 py-10">
       <div className="mx-auto px-4 space-y-10 max-w-4xl">
@@ -164,8 +215,6 @@ export default async function SharePage({
             description={poster.description}
             imageSrc={poster.imageUrl}
             filePath={poster.imageUrl}
-            // imageSrc={`${process.env.NEXT_PUBLIC_API_URL}${poster.imageUrl}`}
-            // filePath={`${process.env.NEXT_PUBLIC_API_URL}${poster.imageUrl}`}
           />
         ))}
 

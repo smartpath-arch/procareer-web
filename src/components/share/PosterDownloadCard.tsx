@@ -15,20 +15,27 @@ export default function PosterDownloadCard({
   number,
   title,
   description,
+  imageSrc,
+  filePath,
 }: PosterDownloadCardProps) {
   const [downloaded, setDownloaded] = useState(false);
 
-  const posterPath = "/assets/InternshipPC.png";
-
   const handleDownload = async () => {
     try {
-      const response = await fetch(posterPath);
+      const response = await fetch(filePath);
+
+      if (!response.ok) {
+        throw new Error("Failed to fetch poster file");
+      }
+
       const blob = await response.blob();
       const url = window.URL.createObjectURL(blob);
 
+      const fileName = filePath.split("/").pop() || `poster-${number}.png`;
+
       const link = document.createElement("a");
       link.href = url;
-      link.download = "internship-procareer.png";
+      link.download = fileName;
       document.body.appendChild(link);
       link.click();
 
@@ -49,6 +56,10 @@ export default function PosterDownloadCard({
         </span>
 
         <h3 className="mt-3 font-semibold text-gray-800">{title}</h3>
+
+        {description && (
+          <p className="text-sm text-gray-500 mt-1">{description}</p>
+        )}
       </div>
 
       <div className="flex justify-center">
@@ -56,9 +67,9 @@ export default function PosterDownloadCard({
           <Image
             width={500}
             height={500}
-            src={posterPath}
+            src={imageSrc}
             alt={`Poster ${number}`}
-            className="object-cover"
+            className="object-cover w-full h-auto"
           />
         </div>
       </div>
@@ -77,8 +88,8 @@ export default function PosterDownloadCard({
 
       {downloaded && (
         <div className="bg-yellow-100 text-yellow-800 text-sm px-4 py-2 rounded-lg">
-          Poster {number} berhasil di-download. Kirim bareng Poster lainnya ke
-          grup WhatsApp 💛
+          Poster {number} berhasil di-download. Kirim bareng caption ke grup
+          WhatsApp 💛
         </div>
       )}
     </section>
