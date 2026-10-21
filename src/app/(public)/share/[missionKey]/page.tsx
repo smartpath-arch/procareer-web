@@ -39,42 +39,45 @@ const HARDCODE_MISSIONS: Record<string, MissionResponse> = {
       },
     ],
     caption: {
-      content: `*📢Magang Resmi ProCareer – DIBUKA!*
+      content: `*💰TOTAL BEASISWA/SEMESTER: RP 12.000.000
+📢Beasiswa Resmi ProCareer – DIBUKA!*
 
-🎯 Link Testimoni &  Daftar: https://s.id/InternPC1 
-Internship hanya dibuka setahun sekali,
-Persiapkan dirimu sebaik mungkin!
+🎯 35 Pendaftar Pertama mendapat jalur prioritas!
+https://s.id/BeasiswaPC26
 
-_____
+Beasiswa hanya dibuka setahun sekali
+
+⚠️ Kuota terbatas! Ditutup lebih awal jika penuh!
+
+—-----
 📢About Us!
-ProCareer (by PT Akselerator Karir Nasional)
-adalah Professional Career Service yang membangun CV standar Top Company, 
-dirancang langsung oleh HRD berpengalaman. 
+ProCareer
+membantu membangun CV standar Top Company & Career Preparation yang dirancang langsung oleh HRD berpengalaman.
 
-Kami telah berpartner dengan instansi besar seperti Reddoorz, Glints, Dana, dan lainnya.
+🎁BENEFIT LAINNYA:
+⭐Peluang rekomendasi kerja di Top Company (Diakui HRD)
+⭐Sertifikat Nasional
+⭐Peluang Paid Internship di ProCareer & Konversi SKS
 
-*💰BENEFIT:*
-1. Peluang menjadi Parttime & Fulltime (Gaji 3-9 jt/bulan)
-2. Peluang rekomendasi kerja di Top Company
-3. Konversi Magang Kampus
-4. WFH 3 bulan, dan Waktu kerja fleksibel
+📌PERSYARATAN:
+- Wajib lolos seleksi (online)
+- Tidak ada syarat IPK, prestasi, dan Motivation Letter
 
-*💼Posisi:*
-1. Administration & Finance
-2. Human Resource
-3. Public Relation
-4. Social Media Specialist
-5. IT Developer
-Dan 9 posisi lainnya...
+👥KATEGORI:
+- Mahasiswa
+- Umum
+- Siswa SMA/K
+Daftar di:
+https://s.id/BeasiswaPC26
 
-🔒 Prioritas screening bagi pendaftar tercepat
-*⚠️ Kuota terbatas, ditutup lebih awal jika penuh!*
+Cek guidebook di: https://s.id/guidebookPCbeasiswa1
+.
+⚠️Waspada atas penipuan yang mengatasnamakan lembaga resmi ProCareer
 
-⚠️Waspada atas Hoax Penipuan mengatasnamakan lembaga resmi ProCareer
-_
-📱Instagram: https://www.instagram.com/procareer.official/ 
-Website: https://procareer.id/  
-✉️Email: official.procareer@gmail.com`,
+📱Instagram: https://www.instagram.com/procareer.official/
+Website: https://procareer.id/
+✉️Email: admin@procareer.id
+📞WhatsApp: +62 851-2290-3009`,
     },
   },
 
