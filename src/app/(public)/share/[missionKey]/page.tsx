@@ -24,7 +24,7 @@ type MissionResponse = {
 const HARDCODE_MISSIONS: Record<string, MissionResponse> = {
   procareer: {
     missionKey: "procareer",
-    title: "Intern Procareer",
+    title: "Beasiswa Procareer",
     description: "",
     instruction:
       "Share poster 1 + caption ke 5 grup WhatsApp (20+ anggota) atau 10 grup WhatsApp (5+ anggota).",
@@ -32,9 +32,9 @@ const HARDCODE_MISSIONS: Record<string, MissionResponse> = {
     posters: [
       {
         id: "p1",
-        title: "Poster 1",
-        description: "Deskripsi poster 1",
-        imageUrl: "/assets/Poster_PC.png",
+        title: "Beasiswa Procareer",
+        description: "Beasiswa Procareer",
+        imageUrl: "/assets/beasiswa.png",
         order: 1,
       },
     ],

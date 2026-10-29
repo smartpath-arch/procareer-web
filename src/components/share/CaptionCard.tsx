@@ -36,7 +36,7 @@ export default function CaptionCard({
       </div>
       <button
         onClick={handleCopy}
-        className="w-full rounded-lg bg-[#2F184C] hover:bg-[#24123a] text-white font-semibold py-3 transition"
+        className="w-full rounded-lg bg-[#431f70] hover:bg-[#24123a] text-white font-semibold py-3 transition"
       >
         Copy Caption
       </button>
