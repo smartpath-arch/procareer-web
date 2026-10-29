@@ -34,7 +34,7 @@ const HARDCODE_MISSIONS: Record<string, MissionResponse> = {
         id: "p1",
         title: "Beasiswa Procareer",
         description: "Beasiswa Procareer",
-        imageUrl: "/assets/beasiswa.png",
+        imageUrl: "/assets/beasiswa-procareer-2026.png",
         order: 1,
       },
     ],
