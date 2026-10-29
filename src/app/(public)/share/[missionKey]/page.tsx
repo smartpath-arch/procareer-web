@@ -39,8 +39,8 @@ const HARDCODE_MISSIONS: Record<string, MissionResponse> = {
       },
     ],
     caption: {
-      content: `*💰TOTAL BEASISWA/SEMESTER: RP 12.000.000
-📢Beasiswa Resmi ProCareer – DIBUKA!*
+      content: `*💰TOTAL BEASISWA/SEMESTER: RP 12.000.000*
+*📢Beasiswa Resmi ProCareer – DIBUKA!*
 
 🎯 35 Pendaftar Pertama mendapat jalur prioritas!
 https://s.id/BeasiswaPC26
@@ -98,7 +98,7 @@ Website: https://procareer.id/
       },
     ],
     caption: {
-      content: `*📢CV Kamu Dibuatkan oleh HRD Agar Lolos Top Company *
+      content: `*📢CV Kamu Dibuatkan oleh HRD Agar Lolos Top Company*
 
 🎯Daftar di:
 https://s.id/CVProCareer
