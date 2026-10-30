@@ -34,13 +34,13 @@ const HARDCODE_MISSIONS: Record<string, MissionResponse> = {
         id: "p1",
         title: "Beasiswa Procareer",
         description: "Beasiswa Procareer",
-        imageUrl: "/assets/beasiswa.png",
+        imageUrl: "/assets/beasiswa-procareer-2026.png",
         order: 1,
       },
     ],
     caption: {
-      content: `*💰TOTAL BEASISWA/SEMESTER: RP 12.000.000
-📢Beasiswa Resmi ProCareer – DIBUKA!*
+      content: `*💰TOTAL BEASISWA/SEMESTER: RP 12.000.000*
+*📢Beasiswa Resmi ProCareer – DIBUKA!*
 
 🎯 35 Pendaftar Pertama mendapat jalur prioritas!
 https://s.id/BeasiswaPC26
@@ -98,7 +98,7 @@ Website: https://procareer.id/
       },
     ],
     caption: {
-      content: `*📢CV Kamu Dibuatkan oleh HRD Agar Lolos Top Company *
+      content: `*📢CV Kamu Dibuatkan oleh HRD Agar Lolos Top Company*
 
 🎯Daftar di:
 https://s.id/CVProCareer
