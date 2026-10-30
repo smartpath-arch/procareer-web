@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="id" data-program="<?= program.id ?>">
+<head>
+  <base target="_top">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Daftar kontak resmi Human Resources <?= program.name ?>.">
+  <title>List HRD Resmi <?= program.name ?></title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <noscript><style>#hr-loading, #hr-status { display: none !important; }</style></noscript>
+  <style>
+    /* =====================================================================
+     * PROGRAM THEMES — one color block per program.
+     * The page picks a block from the ?program= value in the URL
+     * (see PROGRAMS in Code.gs). Edit the colors here; nothing else changes.
+     * ===================================================================== */
+
+    /* SmartPath — dark blue + yellow (smartpath.id) */
+    :root,
+    [data-program="smartpath"] {
+      --page-bg: #FFFFFF;
+      --border: #E5E8EF;
+      --brand-dark: #0E1F4F;
+      --primary: #2563EB;
+      --accent: #F9A51B;
+
+      --header-bg: linear-gradient(90deg, #F7C948 0%, #F7C948 50%, #FFE699 90%, #FFED9E 100%);
+      --header-border: transparent;
+      --badge-bg: #0E1F4F;
+      --badge-text: #FFFFFF;
+      --badge-dot: #F7C948;
+
+      --hero-bg: linear-gradient(180deg, #0E1F4F 0%, #132A66 45%, #1F4A9E 78%, #5B9BEF 100%);
+      --hero-text: #FFFFFF;
+      --hero-sub: rgba(255, 255, 255, 0.88);
+      --hero-accent: #F9A51B;
+      --hero-line: #F9A51B;
+
+      --heading: #0E1F4F;
+      --card-tint: #EEF4FF;
+      --card-hover-border: #C7D6F5;
+      --phone-bg: #F5F8FE;
+      --phone-border: #E1E8F5;
+      --phone-text: #0E1F4F;
+
+      --footer-bg: #0E1F4F;
+      --footer-text: #C9D3EE;
+      --footer-accent: #F7C948;
+
+      --focus: #2563EB;
+      --focus-ring: #F7C948;
+    }
+
+    /* SkillSpace — light blue + white (skillspace.id) */
+    [data-program="skillspace"] {
+      --page-bg: #F7F8FA;
+      --border: #E3E8F0;
+      --brand-dark: #19499A;
+      --primary: #19499A;
+      --accent: #8DBDF7;
+
+      --header-bg: linear-gradient(90deg, #FFFFFF 0%, #F5F5F5 50%, #FFFFFF 90%, #FAFAFA 100%);
+      --header-border: #E8ECF2;
+      --badge-bg: #19499A;
+      --badge-text: #FFFFFF;
+      --badge-dot: #8DBDF7;
+
+      --hero-bg: linear-gradient(180deg, #4570BC 0%, #5482CA 55%, #7DAEEB 100%);
+      --hero-text: #FFFFFF;
+      --hero-sub: rgba(255, 255, 255, 0.92);
+      --hero-accent: #FFFFFF;
+      --hero-line: #C9DDFF;
+
+      --heading: #19499A;
+      --card-tint: #EAF2FE;
+      --card-hover-border: #C3D7F5;
+      --phone-bg: #F3F7FD;
+      --phone-border: #DCE6F5;
+      --phone-text: #19499A;
+
+      --footer-bg: #19499A;
+      --footer-text: #DCE8FB;
+      --footer-accent: #A9CCFA;
+
+      --focus: #19499A;
+      --focus-ring: #8DBDF7;
+    }
+
+    /* ProCareer — purple + soft yellow (procareer.id) */
+    [data-program="procareer"] {
+      --page-bg: #FFFBEA;
+      --border: #EFE5C6;
+      --brand-dark: #2B0F4C;
+      --primary: #7E35A8;
+      --accent: #F5C93A;
+
+      --header-bg: #FEFADD;
+      --header-border: #F1E8B8;
+      --badge-bg: #2B0F4C;
+      --badge-text: #FFFFFF;
+      --badge-dot: #F5C93A;
+
+      --hero-bg: linear-gradient(180deg, #C25FE3 0%, #9A45C7 40%, #6A2A96 75%, #46196A 100%);
+      --hero-text: #FFFFFF;
+      --hero-sub: rgba(255, 255, 255, 0.9);
+      --hero-accent: #FFE27A;
+      --hero-line: #FFE27A;
+
+      --heading: #2B0F4C;
+      --card-tint: #F6ECFC;
+      --card-hover-border: #E0C9EF;
+      --phone-bg: #FFFDF3;
+      --phone-border: #EFE5C6;
+      --phone-text: #2B0F4C;
+
+      --footer-bg: #2B0F4C;
+      --footer-text: #E5D6F2;
+      --footer-accent: #FFE27A;
+
+      --focus: #7E35A8;
+      --focus-ring: #F5C93A;
+    }
+
+    /* ---------- Shared tokens ---------- */
+    :root {
+      --text-900: #111827;
+      --text-700: #374151;
+      --text-500: #5B6475;
+      --bg-soft:  #F6F7FA;
+      --danger-700: #9F1D1D;
+      --danger-50:  #FEF2F2;
+
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.05);
+      --shadow-md: 0 10px 28px -12px rgba(16, 24, 40, 0.18);
+      --container: 1120px;
+      --gutter: 20px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      margin: 0;
+      font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text-900);
+      background: var(--page-bg);
+      overflow-x: hidden;
+    }
+
+    img { max-width: 100%; display: block; }
+    [hidden] { display: none !important; }
+
+    a:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 3px;
+      box-shadow: 0 0 0 7px var(--focus-ring);
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 var(--gutter);
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 12px;
+      top: -48px;
+      z-index: 10;
+      padding: 10px 16px;
+      border-radius: 10px;
+      background: var(--brand-dark);
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .skip-link:focus { top: 12px; }
+
+    /* ---------- Header ---------- */
+    .site-header {
+      background: var(--header-bg);
+      border-bottom: 1px solid var(--header-border);
+      box-shadow: 0 2px 10px -6px rgba(16, 24, 40, 0.25);
+      position: relative;
+      z-index: 1;
+    }
+    .site-header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      min-height: 72px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+    .brand-logo {
+      height: 52px;
+      width: auto;
+      max-width: 200px;
+      flex: 0 0 auto;
+      object-fit: contain;
+    }
+    /* Shown only when a program has no logo URL in Code.gs */
+    .logo-placeholder {
+      display: grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      flex: 0 0 auto;
+      border: 2px dashed rgba(0, 0, 0, 0.35);
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.6);
+      color: #4A5677;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+    }
+    .brand-name {
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--brand-dark);
+    }
+    .header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 14px;
+      border-radius: 10px;
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      font-size: 13px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .header-badge::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--badge-dot);
+    }
+
+    /* ---------- Title ---------- */
+    .hero {
+      background: var(--hero-bg);
+      color: var(--hero-text);
+      border-radius: 0 0 48px 48px;
+    }
+    .hero .container {
+      padding-top: clamp(40px, 7vw, 72px);
+      padding-bottom: clamp(44px, 7vw, 80px);
+    }
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(30px, 5.2vw, 48px);
+      line-height: 1.15;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--hero-text);
+    }
+    .hero-accent { color: var(--hero-accent); }
+    .hero h1::after {
+      content: "";
+      display: block;
+      width: min(100%, 360px);
+      height: 3px;
+      margin-top: 18px;
+      border-radius: 999px;
+      background: var(--hero-line);
+    }
+    .hero p {
+      margin: 16px 0 0;
+      font-size: clamp(16px, 2vw, 19px);
+      font-weight: 500;
+      color: var(--hero-sub);
+    }
+
+    /* ---------- Directory ---------- */
+    .directory {
+      padding: clamp(32px, 6vw, 56px) 0 clamp(40px, 7vw, 72px);
+    }
+    .section-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 4px 16px;
+      margin-bottom: 24px;
+    }
+    .section-head h2 {
+      margin: 0;
+      font-size: clamp(20px, 3vw, 24px);
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+      color: var(--heading);
+    }
+    .status {
+      margin: 0;
+      font-size: 13px;
+      color: var(--text-500);
+    }
+    .status.is-warning { color: var(--danger-700); }
+
+    .hr-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+    }
+    .hr-card {
+      flex: 0 1 calc((100% - 48px) / 3);
+      min-width: 0;
+      min-height: 166px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      text-align: left;
+      padding: 28px 24px 24px;
+      background: linear-gradient(145deg, #fff 52%, var(--card-tint));
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+    .hr-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 5px;
+      background: linear-gradient(90deg, var(--primary) 0 72%, var(--accent) 72% 100%);
+    }
+    .hr-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--card-hover-border);
+    }
+    .hr-name {
+      margin: 0 0 20px;
+      max-width: 100%;
+      font-size: 19px;
+      line-height: 1.35;
+      font-weight: 700;
+      color: var(--heading);
+      overflow-wrap: anywhere;
+    }
+    .hr-phone {
+      margin: 0;
+      max-width: 100%;
+      padding: 9px 14px;
+      border-radius: 11px;
+      background: var(--phone-bg);
+      border: 1px solid var(--phone-border);
+      color: var(--phone-text);
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: 0.025em;
+      font-variant-numeric: tabular-nums;
+      overflow-wrap: anywhere;
+    }
+
+    /* Text-only loading cards */
+    .hr-card.is-skeleton { pointer-events: none; }
+    .hr-card.is-skeleton:hover { transform: none; box-shadow: var(--shadow-sm); border-color: var(--border); }
+    .skeleton-block {
+      position: relative;
+      border-radius: 8px;
+      background: #E9ECF2;
+      overflow: hidden;
+    }
+    .skeleton-block::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      transform: translateX(-100%);
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.7), transparent);
+      animation: shimmer 1.3s infinite;
+    }
+    .skeleton-name { width: 68%; height: 21px; margin: 0 0 22px; }
+    .skeleton-phone { width: 58%; height: 42px; border-radius: 11px; }
+    @keyframes shimmer { to { transform: translateX(100%); } }
+
+    /* Empty / error message */
+    .message {
+      display: flex;
+      gap: 14px;
+      max-width: 620px;
+      margin: 8px auto 0;
+      padding: 22px 24px;
+      border-radius: var(--radius-lg);
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+    }
+    .message.is-error {
+      background: var(--danger-50);
+      border-color: #F5C2C2;
+    }
+    .message-icon {
+      flex: 0 0 auto;
+      width: 24px;
+      height: 24px;
+      margin-top: 2px;
+      color: var(--text-500);
+    }
+    .message.is-error .message-icon { color: var(--danger-700); }
+    .message h3 {
+      margin: 0 0 4px;
+      font-size: 17px;
+      line-height: 1.4;
+      color: var(--text-900);
+    }
+    .message p {
+      margin: 0;
+      font-size: 15px;
+      color: var(--text-700);
+    }
+
+    /* ---------- Footer ---------- */
+    .site-footer {
+      background: var(--footer-bg);
+      color: var(--footer-text);
+      font-size: 14px;
+    }
+    .site-footer .container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px 24px;
+      padding-top: 28px;
+      padding-bottom: 28px;
+    }
+    .footer-brand {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 4px 10px;
+    }
+    .footer-brand strong {
+      color: #fff;
+      font-size: 17px;
+      font-weight: 800;
+    }
+    .footer-brand span {
+      color: var(--footer-accent);
+      font-weight: 600;
+    }
+    .footer-meta p { margin: 0; }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 960px) {
+      .hr-card { flex-basis: calc((100% - 24px) / 2); }
+    }
+    @media (max-width: 600px) {
+      :root { --gutter: 16px; }
+      .hr-list { gap: 16px; }
+      .hr-card { flex-basis: 100%; }
+      .site-header .container { min-height: 62px; }
+      .brand-logo { height: 42px; max-width: 150px; }
+      .brand-name { font-size: 18px; }
+      .header-badge { padding: 5px 10px; font-size: 12px; }
+      .hero { border-radius: 0 0 28px 28px; }
+      .message { padding: 18px; }
+      .site-footer .container { flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 360px) {
+      .header-badge::before { display: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition: none !important; animation: none !important; }
+      .hr-card:hover { transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#daftar-hr" target="_self">Lewati ke daftar HR</a>
+
+  <!-- ========== Header ========== -->
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <? if (program.logoUrl) { ?>
+          <img class="brand-logo" src="<?= program.logoUrl ?>" alt="<?= program.name ?>"
+               onerror="this.hidden = true; this.nextElementSibling.hidden = false;">
+          <span class="brand-name" hidden><?= program.name ?></span>
+        <? } else { ?>
+          <!-- LOGO PLACEHOLDER: set logoUrl for this program in PROGRAMS (Code.gs) -->
+          <div class="logo-placeholder" title="Tempat logo <?= program.name ?>" aria-hidden="true">LOGO</div>
+          <span class="brand-name"><?= program.name ?></span>
+        <? } ?>
+      </div>
+      <span class="header-badge">Official HR Directory</span>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========== Title ========== -->
+    <section class="hero" aria-labelledby="judul-halaman">
+      <div class="container">
+        <h1 id="judul-halaman">List HRD Resmi <span class="hero-accent"><?= program.name ?></span></h1>
+        <p>Daftar kontak resmi Human Resources <?= program.name ?>.</p>
+      </div>
+    </section>
+
+    <!-- ========== HR Directory (filled from Google Sheets) ========== -->
+    <section class="directory" id="daftar-hr" aria-labelledby="judul-daftar" tabindex="-1">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="judul-daftar">Daftar HR Resmi</h2>
+          <p class="status" id="hr-status" role="status" aria-live="polite">Memuat daftar HR…</p>
+        </div>
+
+        <!-- Loading skeleton, shown until the first response arrives -->
+        <ul class="hr-list" id="hr-loading" aria-hidden="true">
+          <li class="hr-card is-skeleton"><div class="skeleton-block skeleton-name"></div><div class="skeleton-block skeleton-phone"></div></li>
+          <li class="hr-card is-skeleton"><div class="skeleton-block skeleton-name"></div><div class="skeleton-block skeleton-phone"></div></li>
+          <li class="hr-card is-skeleton"><div class="skeleton-block skeleton-name"></div><div class="skeleton-block skeleton-phone"></div></li>
+        </ul>
+
+        <ul class="hr-list" id="hr-list" aria-label="Daftar HR resmi <?= program.name ?>" hidden></ul>
+
+        <div class="message" id="hr-message" hidden>
+          <svg class="message-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+          <div>
+            <h3 id="hr-message-title"></h3>
+            <p id="hr-message-text"></p>
+          </div>
+        </div>
+
+        <noscript>
+          <div class="message is-error">
+            <div>
+              <h3>JavaScript diperlukan</h3>
+              <p>Aktifkan JavaScript di browser Anda untuk melihat daftar HR resmi.</p>
+            </div>
+          </div>
+        </noscript>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== Footer ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-brand">
+        <strong><?= program.name ?></strong>
+        <span>Official HR Directory</span>
+      </div>
+      <div class="footer-meta">
+        <p>Informasi kontak dapat diperbarui sewaktu-waktu.</p>
+        <p>&copy; <?= year ?> <?= program.name ?></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      // How often open pages re-check the sheet. Edits show up within about
+      // this interval plus the server cache time (CONFIG.CACHE_SECONDS).
+      var REFRESH_MS = window.HR_REFRESH_MS || 60000;
+      // Faster retry while nothing has loaded yet.
+      var FIRST_LOAD_RETRY_MS = 15000;
+
+      var els = {
+        status: document.getElementById('hr-status'),
+        loading: document.getElementById('hr-loading'),
+        list: document.getElementById('hr-list'),
+        message: document.getElementById('hr-message'),
+        messageTitle: document.getElementById('hr-message-title'),
+        messageText: document.getElementById('hr-message-text')
+      };
+
+      var lastSignature = null;  // skips re-rendering when nothing changed
+      var hasLoaded = false;     // true after the first successful response
+      var inFlight = false;      // prevents overlapping requests
+      var timer = null;
+      var dueWhileHidden = false;
+
+      function fetchDirectory() {
+        if (inFlight) return;
+        if (!window.google || !google.script || !google.script.run) {
+          onFailure(new Error('google.script.run is not available'));
+          return;
+        }
+        inFlight = true;
+        google.script.run
+          .withSuccessHandler(onSuccess)
+          .withFailureHandler(onFailure)
+          .getHRDirectory();
+      }
+
+      function onSuccess(data) {
+        inFlight = false;
+        var contacts = normalize(data);
+        var signature = JSON.stringify(contacts);
+        if (signature !== lastSignature) {
+          render(contacts);
+          lastSignature = signature;
+        }
+        hasLoaded = true;
+        setStatus('Diperbarui otomatis setiap menit · terakhir dicek ' + timeNow(), false);
+        schedule(REFRESH_MS);
+      }
+
+      function onFailure(error) {
+        inFlight = false;
+        if (window.console) console.warn('HR directory could not be loaded:', error);
+        if (hasLoaded) {
+          // Keep the last good list on screen; just note the failed refresh.
+          setStatus('Gagal memperbarui data. Menampilkan data terakhir yang berhasil dimuat.', true);
+          schedule(REFRESH_MS);
+        } else {
+          els.loading.hidden = true;
+          showMessage('error', 'Daftar HR belum dapat dimuat',
+            'Silakan coba beberapa saat lagi. Halaman ini akan mencoba memuat ulang secara otomatis.');
+          setStatus('', false);
+          schedule(FIRST_LOAD_RETRY_MS);
+        }
+      }
+
+      /* Keeps only well-formed records, whatever the server returned. */
+      function normalize(data) {
+        if (!Array.isArray(data)) return [];
+        var out = [];
+        for (var i = 0; i < data.length; i++) {
+          var item = data[i] || {};
+          var name = typeof item.name === 'string' ? item.name.trim() : '';
+          var phone = typeof item.phone === 'string' ? item.phone.trim() : '';
+          if (name && phone) out.push({ name: name, phone: formatPhone(phone) });
+        }
+        return out;
+      }
+
+      function render(contacts) {
+        els.loading.hidden = true;
+
+        if (contacts.length === 0) {
+          els.list.hidden = true;
+          els.list.textContent = '';
+          showMessage('empty', 'Belum ada kontak HR yang ditampilkan',
+            'Daftar HR resmi sedang diperbarui. Silakan kembali lagi nanti.');
+          return;
+        }
+
+        hideMessage();
+        var fragment = document.createDocumentFragment();
+        for (var i = 0; i < contacts.length; i++) fragment.appendChild(buildCard(contacts[i]));
+        els.list.textContent = '';          // replace, never append: no duplicate cards
+        els.list.appendChild(fragment);
+        els.list.hidden = false;
+      }
+
+      function buildCard(contact) {
+        var card = el('li', 'hr-card');
+        card.appendChild(el('h3', 'hr-name', contact.name));
+
+        var phone = el('p', 'hr-phone');
+        phone.appendChild(el('span', 'sr-only', 'Nomor telepon: '));
+        phone.appendChild(document.createTextNode(contact.phone));
+        card.appendChild(phone);
+        return card;
+      }
+
+      /* Add readable Indonesian separators when the sheet stores only digits. */
+      function formatPhone(phone) {
+        var digits = phone.replace(/\D/g, '');
+        if (/^0\d{11}$/.test(digits)) {
+          return digits.slice(0, 4) + '-' + digits.slice(4, 8) + '-' + digits.slice(8);
+        }
+        return phone;
+      }
+
+      function el(tag, className, text) {
+        var node = document.createElement(tag);
+        if (className) node.className = className;
+        if (text) node.textContent = text;
+        return node;
+      }
+
+
+      function showMessage(kind, title, text) {
+        els.message.classList.toggle('is-error', kind === 'error');
+        els.message.setAttribute('role', kind === 'error' ? 'alert' : 'status');
+        els.messageTitle.textContent = title;
+        els.messageText.textContent = text;
+        els.message.hidden = false;
+      }
+
+      function hideMessage() {
+        els.message.hidden = true;
+      }
+
+      function setStatus(text, isWarning) {
+        els.status.textContent = text;
+        els.status.classList.toggle('is-warning', !!isWarning);
+      }
+
+      function timeNow() {
+        try {
+          return new Date().toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' });
+        } catch (e) {
+          return new Date().toTimeString().slice(0, 5);
+        }
+      }
+
+      /* Refresh timer. While the tab is hidden, the check waits until the
+         visitor comes back, so background tabs don't keep hitting the sheet. */
+      function schedule(ms) {
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+          if (document.hidden) {
+            dueWhileHidden = true;
+          } else {
+            fetchDirectory();
+          }
+        }, ms);
+      }
+
+      document.addEventListener('visibilitychange', function () {
+        if (!document.hidden && dueWhileHidden) {
+          dueWhileHidden = false;
+          fetchDirectory();
+        }
+      });
+
+      fetchDirectory();
+    })();
+  </script>
+</body>
+</html>
