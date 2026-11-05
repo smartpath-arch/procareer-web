@@ -8,18 +8,42 @@ It does not depend on any program's backend.
 
 One deployment serves a separate page for each program. The content, wording and layout are identical. Only the name, logo and colors change, matching each program's website:
 
-| Program    | Page address                       | Colors                              |
-| ---------- | ---------------------------------- | ----------------------------------- |
-| SmartPath  | `<web app URL>?program=smartpath`  | Dark blue + yellow (smartpath.id)   |
-| SkillSpace | `<web app URL>?program=skillspace` | Light blue + white (skillspace.id)  |
-| ProCareer  | `<web app URL>?program=procareer`  | Purple + soft yellow (procareer.id) |
+| Program    | Page address               | Colors                              |
+| ---------- | -------------------------- | ----------------------------------- |
+| SmartPath  | `<web app URL>/smartpath`  | Dark blue + yellow (smartpath.id)   |
+| SkillSpace | `<web app URL>/skillspace` | Light blue + white (skillspace.id)  |
+| ProCareer  | `<web app URL>/procareer`  | Purple + soft yellow (procareer.id) |
 
-Link each program's website to its own address.
-A URL without `?program=`, or with an unknown value, shows the SmartPath page (`CONFIG.DEFAULT_PROGRAM`).
+`?program=procareer` works too, but the path form is more reliable for people signed in to several Google accounts.
+A URL without a program, or with an unknown one, shows the SmartPath page (`CONFIG.DEFAULT_PROGRAM`).
 All three read the **same `HR_Directory` sheet**, so one edit updates all three pages.
 
 - **Names and logos:** `PROGRAMS` in `Code.gs`. The logos load from each program's own website. If one fails to load, the name appears as text instead.
 - **Colors:** the _PROGRAM THEMES_ block at the top of `Index.html`'s `<style>`, one block per program.
+
+### Used by the program websites (JSON)
+
+Each website shows the directory on its own `/hr-verification` page. The website's **server** reads
+`<web app URL>?program=procareer&format=json` (likewise `smartpath`, `skillspace`), which returns only:
+
+```json
+{
+  "ok": true,
+  "program": "procareer",
+  "records": [{ "name": "…", "phone": "…" }]
+}
+```
+
+or `{ "ok": false, "error": "Directory is temporarily unavailable." }`. The website then draws the cards itself
+and re-reads the data at most once a minute.
+
+Visitors' browsers never connect to Google, so it works on Samsung Internet and on Safari with tracking
+protection (both block the Google cookies an iframe of this page needs), and the Apps Script address stays hidden.
+It needs **Who has access: Anyone**. The URL is set in each website's `getHrDirectory.ts`, or in the server-only
+`HR_DIRECTORY_URL` environment variable.
+
+The older iframe version (`&embed=1`: no header/footer, reports its height with `postMessage`, needs
+`setXFrameOptionsMode(ALLOWALL)`) still works but is no longer used by the websites.
 
 ## Files
 
@@ -112,11 +136,12 @@ If `SPREADSHEET_ID` is empty and the script isn't attached to a sheet, setup cre
    - **Execute as: Me (owner account)**
    - **Who has access: Anyone**
 3. Click **Deploy** and copy the **Web app URL** (ending in `/exec`).
-4. Add the program to the end of the URL for each website:
-   - SmartPath → `…/exec?program=smartpath`
-   - SkillSpace → `…/exec?program=skillspace`
-   - ProCareer → `…/exec?program=procareer`
+4. Add the program to the end of the URL:
+   - SmartPath → `…/exec/smartpath`
+   - SkillSpace → `…/exec/skillspace`
+   - ProCareer → `…/exec/procareer`
 5. Open each address in an **incognito window**. Each should load without a sign-in, in its own colors.
+   Then try `…/exec/procareer/embed`: the same page without its header and footer.
 
 ### 6. Updating the code later
 
@@ -200,9 +225,10 @@ The preview uses **fake sample data**, not your Google Sheet. It reads `PROGRAMS
 
 | Address                                     | Shows                                                            |
 | ------------------------------------------- | ---------------------------------------------------------------- |
-| `/?program=smartpath`                       | SmartPath page                                                   |
-| `/?program=skillspace`                      | SkillSpace page                                                  |
-| `/?program=procareer`                       | ProCareer page                                                   |
+| `/smartpath`                                | SmartPath page                                                   |
+| `/skillspace`                               | SkillSpace page                                                  |
+| `/procareer`                                | ProCareer page                                                   |
+| `/procareer/embed`                          | ProCareer embed version (no header/footer, reports its height)   |
 | `/?program=procareer&state=empty`           | No active records                                                |
 | `/?program=procareer&state=error`           | Sheet unreachable on first load                                  |
 | `/?program=procareer&state=flaky&refresh=3` | First load works, later refreshes fail (last data stays visible) |
@@ -210,22 +236,24 @@ The preview uses **fake sample data**, not your Google Sheet. It reads `PROGRAMS
 
 ## Testing checklist (on the deployed `/exec` URL)
 
-- [ ] Each of the three `?program=` addresses opens in incognito with no sign-in, with the right logo, colors and tab title (_List HRD Resmi SmartPath / SkillSpace / ProCareer_).
+- [ ] Each of the three program addresses opens in incognito with no sign-in, with the right logo, colors and tab title (_List HRD Resmi SmartPath / SkillSpace / ProCareer_).
+- [ ] Each website's `/hr-verification` page shows its directory inside the page, with no second header/footer and no scrollbar inside the frame.
 - [ ] All active records show with correct name and phone on all three pages. No WhatsApp buttons, search or forms.
 - [ ] Untick **Active** for one person in the sheet. Within about 1–1.5 minutes they disappear from an open page, without refreshing.
 - [ ] Tick it again and they reappear. Edit a name and the change appears.
 - [ ] Untick everyone: an empty message shows. Re-tick them afterwards.
 - [ ] On a phone: one card per row, no sideways scrolling, numbers readable.
-- [ ] Each program's website links to its own `?program=` address.
+- [ ] Each program's website footer has a **Verifikasi HR** link to `/hr-verification`.
 - [ ] **Apps Script → Executions** shows no repeated errors.
 
 ## Troubleshooting
 
-| Symptom                                    | Likely cause                                                                                                         |
-| ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------- |
-| "Daftar HR belum dapat dimuat"             | Wrong `SPREADSHEET_ID`, tab not named `HR_Directory`, or a missing header. Check **Executions** for the exact error. |
-| Visitors asked to sign in                  | Deployment access isn't **Anyone**, or Workspace policy blocks it.                                                   |
-| Phone missing its leading 0                | Column C isn't Plain text. Format it and retype the number.                                                          |
-| Wrong colors / always SmartPath            | The link is missing `?program=…` or has a typo. Check the link on that program's website.                            |
-| Program name shows as text instead of logo | The logo URL in `PROGRAMS` (Code.gs) moved or is blocked. Update it to the current logo address.                     |
-| Code change not visible                    | You saved but didn't deploy a **new version** of the existing deployment.                                            |
+| Symptom                                                  | Likely cause                                                                                                         |
+| -------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| "Daftar HR belum dapat dimuat"                           | Wrong `SPREADSHEET_ID`, tab not named `HR_Directory`, or a missing header. Check **Executions** for the exact error. |
+| Visitors asked to sign in                                | Deployment access isn't **Anyone**, or Workspace policy blocks it.                                                   |
+| Phone missing its leading 0                              | Column C isn't Plain text. Format it and retype the number.                                                          |
+| Wrong colors / always SmartPath                          | The address is missing the program (`/procareer`) or has a typo.                                                     |
+| Website shows "Daftar HR resmi belum dapat ditampilkan…" | The embed was blocked: access isn't **Anyone**, or the deployed version lacks `setXFrameOptionsMode(ALLOWALL)`.      |
+| Program name shows as text instead of logo               | The logo URL in `PROGRAMS` (Code.gs) moved or is blocked. Update it to the current logo address.                     |
+| Code change not visible                                  | You saved but didn't deploy a **new version** of the existing deployment.                                            |
