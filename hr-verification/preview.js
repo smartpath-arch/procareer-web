@@ -9,8 +9,10 @@
  *
  * Usage:  node preview.js      then open the address it prints
  *
- * Pick the program with ?program=smartpath | skillspace | procareer
- * (same as on the real web app; no value = SmartPath).
+ * Pick the program with /procareer (or ?program=procareer), and add /embed
+ * for the iframe version: /procareer/embed. Same as on the real web app.
+ * ?program=procareer&format=json returns the JSON the program websites fetch
+ * (state=empty / error / slow work there too).
  *
  * Add &state=... to the address to try other situations:
  *   ?state=photos   two records have photo URLs (one working, one broken)
@@ -143,13 +145,24 @@ function render(templateValues) {
 
 var server = http.createServer(function (req, res) {
   var url = new URL(req.url, "http://localhost");
-  if (url.pathname !== "/" && url.pathname !== "/index.html") {
+  // Same addresses as the web app: ?program=procareer&embed=1, /procareer/embed
+  var pathParts = url.pathname.toLowerCase().split("/").filter(String);
+  if (pathParts[0] === "index.html") pathParts.shift();
+  if (pathParts.length > 2 || (pathParts[1] && pathParts[1] !== "embed")) {
     res.writeHead(404);
     return res.end("Not found");
   }
+  if ((url.searchParams.get("format") || "").toLowerCase() === "json") {
+    return sendJson(res, url);
+  }
   try {
     var html = render({
-      program: getProgram(url.searchParams.get("program")),
+      program: getProgram(
+        url.searchParams.get("program") || pathParts[0] || "",
+      ),
+      embed:
+        /^(1|true)$/i.test(url.searchParams.get("embed") || "") ||
+        pathParts.indexOf("embed") !== -1,
       year: new Date().getFullYear(),
     });
     res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
@@ -160,6 +173,31 @@ var server = http.createServer(function (req, res) {
     console.error(err.message);
   }
 });
+
+/* Same shape as directoryJson_() in Code.gs. */
+function sendJson(res, url) {
+  var state = url.searchParams.get("state") || "ok";
+  var body =
+    state === "error"
+      ? { ok: false, error: "Directory is temporarily unavailable." }
+      : {
+          ok: true,
+          program: getProgram(url.searchParams.get("program") || "").id,
+          records:
+            state === "empty"
+              ? []
+              : SAMPLE.map(function (r) {
+                  return { name: r.name, phone: r.phone };
+                }),
+        };
+  setTimeout(
+    function () {
+      res.writeHead(200, { "Content-Type": "application/json; charset=utf-8" });
+      res.end(JSON.stringify(body));
+    },
+    state === "slow" ? 4000 : 0,
+  );
+}
 
 server.on("listening", function () {
   console.log(

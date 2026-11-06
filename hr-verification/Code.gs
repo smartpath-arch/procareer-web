@@ -6,6 +6,9 @@
  *   <web app URL>?program=smartpath
  *   <web app URL>?program=skillspace
  *   <web app URL>?program=procareer
+ * Add &format=json for the data only, as JSON (what the program websites use:
+ * they fetch it on their own server and draw the cards themselves).
+ * Add &embed=1 for the older iframe version.
  * All three show the same HR list from the same sheet; only the name, logo
  * and colors differ (colors are in Index.html, "PROGRAM THEMES").
  *
@@ -80,15 +83,27 @@ const SPREADSHEET_ID_PROPERTY = 'HR_DIRECTORY_SPREADSHEET_ID';
 /* ============================== WEB APP ================================= */
 
 function doGet(e) {
-  // Accepts both  …/exec?program=skillspace  and  …/exec/skillspace
-  const requested = (e && e.parameter && e.parameter.program) || (e && e.pathInfo) || '';
+  // Accepts  …/exec?program=skillspace  (works for signed-out visitors) and
+  // …/exec/skillspace  (path form: Google asks signed-out visitors to log in).
+  // Adding  &embed=1  gives the version shown inside the program websites'
+  // iframe: no header/footer of its own, and it reports its height so the host
+  // page can size the iframe without inner scrolling.
+  const params = (e && e.parameter) || {};
+  const pathParts = String((e && e.pathInfo) || '').toLowerCase().split('/').filter(String);
+  const requested = params.program || pathParts[0] || '';
   const program = getProgram_(requested);
+  if (String(params.format || '').toLowerCase() === 'json') return directoryJson_(program);
+
   const template = HtmlService.createTemplateFromFile('Index');
   template.program = program;
+  template.embed = /^(1|true)$/i.test(String(params.embed || '')) || pathParts.indexOf('embed') !== -1;
   template.year = new Date().getFullYear();
   return template.evaluate()
     .setTitle('List HRD Resmi ' + program.name)
-    .addMetaTag('viewport', 'width=device-width, initial-scale=1');
+    .addMetaTag('viewport', 'width=device-width, initial-scale=1')
+    // Lets smartpath.id / skillspace.id / procareer.id show this page in an
+    // iframe. The page only displays the public directory and has no actions.
+    .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
 }
 
 /**
@@ -110,6 +125,23 @@ function getHRDirectory() {
     console.error('getHRDirectory failed: ' + (err && err.stack ? err.stack : err));
     throw new Error('Directory is temporarily unavailable.');
   }
+}
+
+/**
+ * Data-only answer for the program websites (…/exec?program=procareer&format=json):
+ *   { "ok": true,  "program": "procareer", "records": [{ "name": "...", "phone": "..." }] }
+ *   { "ok": false, "error": "Directory is temporarily unavailable." }
+ * Same records and cache as getHRDirectory(); nothing else from the sheet.
+ */
+function directoryJson_(program) {
+  let body;
+  try {
+    body = { ok: true, program: program.id, records: getHRDirectory() };
+  } catch (err) {
+    body = { ok: false, error: err.message };
+  }
+  return ContentService.createTextOutput(JSON.stringify(body))
+    .setMimeType(ContentService.MimeType.JSON);
 }
 
 /* ============================ ADMIN SETUP =============================== */

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="id" data-program="<?= program.id ?>">
+<? var isEmbed = typeof embed !== 'undefined' && embed === true; ?>
+<html lang="id" data-program="<?= program.id ?>"<? if (isEmbed) { ?> data-embed="true"<? } ?>>
 <head>
   <base target="_top">
   <meta charset="utf-8">
@@ -507,7 +508,8 @@
 <body>
   <a class="skip-link" href="#daftar-hr" target="_self">Lewati ke daftar HR</a>
 
-  <!-- ========== Header ========== -->
+  <!-- ========== Header (not shown when embedded: the host site has its own navbar) ========== -->
+  <? if (!isEmbed) { ?>
   <header class="site-header">
     <div class="container">
       <div class="brand">
@@ -524,6 +526,7 @@
       <span class="header-badge">Official HR Directory</span>
     </div>
   </header>
+  <? } ?>
 
   <main>
     <!-- ========== Title ========== -->
@@ -571,7 +574,8 @@
     </section>
   </main>
 
-  <!-- ========== Footer ========== -->
+  <!-- ========== Footer (not shown when embedded: the host site has its own footer) ========== -->
+  <? if (!isEmbed) { ?>
   <footer class="site-footer">
     <div class="container">
       <div class="footer-brand">
@@ -584,6 +588,7 @@
       </div>
     </div>
   </footer>
+  <? } ?>
 
   <script>
     (function () {
@@ -756,6 +761,24 @@
           fetchDirectory();
         }
       });
+
+      /* Embedded in a program website (…/embed): tell the host page how tall
+         this page is, so its iframe can grow instead of scrolling inside.
+         Only the height number is sent. */
+      if (document.documentElement.getAttribute('data-embed') === 'true') {
+        var reportHeight = function () {
+          var height = Math.ceil(document.documentElement.getBoundingClientRect().height);
+          try {
+            window.top.postMessage({ type: 'hr-directory:height', height: height }, '*');
+          } catch (e) { /* not embedded */ }
+        };
+        if ('ResizeObserver' in window) new ResizeObserver(reportHeight).observe(document.documentElement);
+        window.addEventListener('load', reportHeight);
+        // The host page may only start listening after the first reports
+        // (e.g. while it is still loading), so keep re-sending the height.
+        setInterval(reportHeight, 1500);
+        reportHeight();
+      }
 
       fetchDirectory();
     })();

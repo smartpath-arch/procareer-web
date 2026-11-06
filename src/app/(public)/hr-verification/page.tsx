@@ -1,15 +1,35 @@
 import type { Metadata } from "next";
 import Footer from "@/components/common/Footer";
-import HrDirectoryEmbed from "@/components/hr-verification/HrDirectoryEmbed";
+import HrDirectory, {
+  type HrDirectoryTheme,
+} from "@/components/hr-verification/HrDirectory";
+import { getHrDirectory } from "@/components/hr-verification/getHrDirectory";
 
-// Official HR directory: shared Google Apps Script web app reading the HR
-// Google Sheet. NEXT_PUBLIC_HR_DIRECTORY_URL overrides the /exec URL (e.g. for
-// testing). The query-string form is used because Apps Script asks signed-out
-// visitors to log in on path-style URLs.
-const HR_DIRECTORY_URL =
-  process.env.NEXT_PUBLIC_HR_DIRECTORY_URL ||
-  "https://script.google.com/macros/s/AKfycbxtFl48gDZfkVpiFXcqeoPYxLHPrXs6p1lJMgNIaOOhLdW2qxyLEkCyQMhKvPqhqCVlOg/exec";
+// Official HR directory, read on the server from the shared Google Apps Script
+// web app (see getHrDirectory) and rendered here, without an iframe. The page
+// is regenerated at most once a minute.
+export const revalidate = 60;
+
 const PROGRAM = "procareer";
+const PROGRAM_NAME = "ProCareer";
+
+// ProCareer: purple + soft yellow
+const THEME: HrDirectoryTheme = {
+  pageBg: "#FFFBEA",
+  heroBg:
+    "linear-gradient(180deg, #C25FE3 0%, #9A45C7 40%, #6A2A96 75%, #46196A 100%)",
+  heroAccent: "#FFE27A",
+  heroLine: "#FFE27A",
+  heading: "#2B0F4C",
+  primary: "#7E35A8",
+  accent: "#F5C93A",
+  border: "#EFE5C6",
+  cardTint: "#F6ECFC",
+  cardHoverBorder: "#E0C9EF",
+  phoneBg: "#FFFDF3",
+  phoneBorder: "#EFE5C6",
+  phoneText: "#2B0F4C",
+};
 
 export const metadata: Metadata = {
   title: "Verifikasi HR Resmi",
@@ -17,13 +37,15 @@ export const metadata: Metadata = {
     "Daftar kontak resmi Human Resources ProCareer. Pastikan kontak yang menghubungi Anda tercantum di halaman ini.",
 };
 
-export default function HrVerificationPage() {
+export default async function HrVerificationPage() {
+  const contacts = await getHrDirectory(PROGRAM);
+
   return (
-    <div className="flex min-h-dvh w-full flex-col overflow-x-hidden bg-white">
-      <HrDirectoryEmbed
-        src={`${HR_DIRECTORY_URL}?program=${PROGRAM}&embed=1`}
-        fallbackHref={`${HR_DIRECTORY_URL}?program=${PROGRAM}`}
-        title="Daftar HR Resmi ProCareer"
+    <div className="flex min-h-dvh w-full flex-col overflow-x-hidden">
+      <HrDirectory
+        programName={PROGRAM_NAME}
+        contacts={contacts}
+        theme={THEME}
       />
       <Footer />
     </div>
