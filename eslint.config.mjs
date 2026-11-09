@@ -30,6 +30,12 @@ const eslintConfig = [
       "prefer-const": "warn",
     },
   },
+  {
+    files: ["hr-verification/preview.js"],
+    rules: {
+      "@typescript-eslint/no-require-imports": "off",
+    },
+  },
 ];
 
 export default eslintConfig;
