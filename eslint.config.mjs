@@ -10,7 +10,6 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript", "prettier"),
   {
     ignores: [
       "node_modules/**",
@@ -20,12 +19,21 @@ const eslintConfig = [
       "next-env.d.ts",
       "eslint.config.mjs",
     ],
+  },
+  ...compat.extends("next/core-web-vitals", "next/typescript", "prettier"),
+  {
     rules: {
       "@typescript-eslint/no-explicit-any": "off",
       "react/jsx-no-target-blank": "error",
       "react/self-closing-comp": "warn",
       "no-console": ["warn", { allow: ["warn", "error"] }],
       "prefer-const": "warn",
+    },
+  },
+  {
+    files: ["hr-verification/preview.js"],
+    rules: {
+      "@typescript-eslint/no-require-imports": "off",
     },
   },
 ];
