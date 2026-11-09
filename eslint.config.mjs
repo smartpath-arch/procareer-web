@@ -10,7 +10,6 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript", "prettier"),
   {
     ignores: [
       "node_modules/**",
@@ -20,6 +19,9 @@ const eslintConfig = [
       "next-env.d.ts",
       "eslint.config.mjs",
     ],
+  },
+  ...compat.extends("next/core-web-vitals", "next/typescript", "prettier"),
+  {
     rules: {
       "@typescript-eslint/no-explicit-any": "off",
       "react/jsx-no-target-blank": "error",
