@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import {
   useEffect,
   useRef,
@@ -472,9 +473,15 @@ export default function BenefitClaimForm() {
         }}
       >
         <header className="text-center">
-          <p className="text-lg font-semibold tracking-wide text-[#fffbe0]">
-            ProCareer
-          </p>
+          <div className="mx-auto flex w-fit max-w-[90%] items-center justify-center overflow-hidden rounded-[14px] bg-[#fffbe0] px-2 py-1 sm:rounded-2xl sm:px-[10px] sm:py-[5px]">
+            <Image
+              src="/assets/common/navbar/logonavbarprocareer.svg"
+              alt="ProCareer"
+              width={272}
+              height={74}
+              className="block h-auto w-[170px] max-w-full sm:w-[190px]"
+            />
+          </div>
 
           <h1 className="mt-6 text-3xl leading-tight font-semibold tracking-tight text-[#fffbe0] sm:text-5xl">
             Klaim Benefit
