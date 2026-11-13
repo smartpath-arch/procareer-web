@@ -10,6 +10,7 @@ export function middleware(request: NextRequest) {
     "/share",
     "/announcement",
     "/hr-verification",
+    "/benefit",
   ];
 
   if (
