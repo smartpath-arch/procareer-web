@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import {
   useEffect,
   useRef,
@@ -472,9 +473,15 @@ export default function BenefitClaimForm() {
         }}
       >
         <header className="text-center">
-          <p className="text-lg font-semibold tracking-wide text-[#fffbe0]">
-            ProCareer
-          </p>
+          <div className="mx-auto flex w-fit max-w-[90%] items-center justify-center overflow-hidden rounded-[14px] bg-[#fffbe0] px-2 py-1 sm:rounded-2xl sm:px-[10px] sm:py-[5px]">
+            <Image
+              src="/assets/common/navbar/logonavbarprocareer.svg"
+              alt="ProCareer"
+              width={272}
+              height={74}
+              className="block h-auto w-[170px] max-w-full sm:w-[190px]"
+            />
+          </div>
 
           <h1 className="mt-6 text-3xl leading-tight font-semibold tracking-tight text-[#fffbe0] sm:text-5xl">
             Klaim Benefit
@@ -543,3 +550,167 @@ export default function BenefitClaimForm() {
               </label>
 
               <input
+                id="benefit-email"
+                name="email"
+                type="email"
+                autoComplete="email"
+                maxLength={254}
+                placeholder="Contoh: email@domain.com"
+                required
+                className={inputClassName}
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="benefit-program"
+                className="mb-2 block font-medium text-[#fffbe0]"
+              >
+                Program :
+              </label>
+
+              <select
+                id="benefit-program"
+                name="program"
+                defaultValue=""
+                required
+                className={inputClassName}
+              >
+                <option value="" disabled>
+                  Pilih program
+                </option>
+
+                <option value="karier">
+                  Karir/intern/webinar/bootcamp
+                </option>
+
+                <option value="beasiswa">
+                  Beasiswa
+                </option>
+              </select>
+            </div>
+
+            <button
+              type="submit"
+              disabled={busy}
+              className="mt-2 block min-h-[58px] w-full rounded-2xl border border-[#b68bcd] bg-[#321451] px-6 py-4 text-lg font-semibold text-white hover:bg-[#462063] focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[#e5b6ff] disabled:cursor-wait disabled:opacity-65"
+            >
+              {busy ? "mohon tunggu 1-3 menit" : "Klaim Benefit"}
+            </button>
+          </fieldset>
+
+          <div className="mt-6 flex flex-wrap items-center justify-between gap-3 text-sm sm:text-base">
+            <span className="text-[#eadcf5]">
+              Ada kendala?
+            </span>
+
+            <a
+              href="https://s.id/FormAduanProCareer"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="py-2 text-[#fffbe0] underline underline-offset-4 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e5b6ff]"
+            >
+              Klik Bantuan
+            </a>
+          </div>
+        </form>
+
+        <p
+          role="status"
+          aria-live="polite"
+          aria-atomic="true"
+          className="mx-auto mt-5 max-w-[850px] text-[#fffbe0] [overflow-wrap:anywhere] empty:hidden"
+        >
+          {status}
+        </p>
+
+        {announcement && (
+          <section
+            ref={resultRef}
+            aria-label="Hasil pengecekan benefit ProCareer"
+            aria-live="polite"
+            className="mx-auto mt-8 max-w-[850px] scroll-mt-6 rounded-2xl bg-[#fffbe0] p-5 text-[#30243d] [overflow-wrap:anywhere] sm:p-7"
+          >
+            {!hasCustomMessage && (
+              <h2 className="mb-4 text-xl font-semibold text-[#321451] sm:text-2xl">
+                {announcement.greeting}
+              </h2>
+            )}
+
+            <p className="mb-4 inline-block rounded-full bg-[#eadcf5] px-4 py-1.5 text-sm font-medium text-[#321451]">
+              {announcement.programName} — Paket{" "}
+              {announcement.packageName}
+            </p>
+
+            {hasCustomMessage ? (
+              <div className="whitespace-pre-wrap">
+                {renderTemplate(
+                  announcement.displayTemplate,
+                  announcement,
+                )}
+              </div>
+            ) : (
+              <div className="space-y-3">
+                <p>{announcement.message}</p>
+
+                {announcement.note && (
+                  <p className="text-[#675a73]">
+                    {announcement.note}
+                  </p>
+                )}
+              </div>
+            )}
+
+            {announcement.packageName === "VIP" &&
+              announcement.cvMessage && (
+                <p className="mt-6 rounded-xl border border-[#dfccec] bg-[#f1e9f9] p-5 whitespace-pre-wrap text-[#321451]">
+                  {announcement.cvMessage}
+                </p>
+              )}
+
+            {isPaidPackage && (
+              <div className="mt-5 flex flex-wrap gap-3">
+                {benefitUrl && (
+                  <a
+                    href={benefitUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`${actionClassName} bg-[#321451] text-white hover:bg-[#51246f]`}
+                  >
+                    Klaim Benefit
+                  </a>
+                )}
+
+                {announcement.packageName === "VIP" &&
+                  (cvUrl ? (
+                    <a
+                      href={cvUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`${actionClassName} bg-[#eadcf5] text-[#321451] hover:bg-[#dfc9ee]`}
+                    >
+                      Ambil Hasil CV
+                    </a>
+                  ) : (
+                    <span
+                      aria-disabled="true"
+                      className="inline-flex min-h-12 w-full items-center justify-center rounded-xl bg-[#e9e4ed] px-5 py-3 text-center text-sm font-semibold text-[#655b6e] sm:w-auto"
+                    >
+                      CV sedang direview &amp; dibuatkan
+                    </span>
+                  ))}
+              </div>
+            )}
+
+            {isPaidPackage && !benefitUrl && (
+              <p className="mt-4 rounded-xl border border-[#e2c88c] bg-[#fff2cf] p-4 text-sm text-[#655125]">
+                Tautan klaim benefit belum tersedia.
+                Silakan hubungi tim ProCareer.
+              </p>
+            )}
+          </section>
+        )}
+      </main>
+    </div>
+  );
+}
