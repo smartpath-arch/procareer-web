@@ -477,4 +477,11 @@ export async function POST(request: Request) {
       timedOut
         ? "Pengecekan membutuhkan waktu lebih lama. " +
             "Silakan coba kembali."
-        : "Terjadi gangguan saat memeriksa data.
+        : "Terjadi gangguan saat memeriksa data. " +
+            "Silakan coba kembali atau hubungi tim ProCareer.",
+      timedOut ? 504 : 502,
+    );
+  } finally {
+    clearTimeout(timeout);
+  }
+}
