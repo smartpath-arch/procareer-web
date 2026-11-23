@@ -595,7 +595,7 @@ export default function BenefitClaimForm() {
               disabled={busy}
               className="mt-2 block min-h-[58px] w-full rounded-2xl border border-[#b68bcd] bg-[#321451] px-6 py-4 text-lg font-semibold text-white hover:bg-[#462063] focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[#e5b6ff] disabled:cursor-wait disabled:opacity-65"
             >
-              {busy ? "Memeriksa..." : "Klaim Benefit"}
+              {busy ? "mohon tunggu 1-3 menit" : "Klaim Benefit"}
             </button>
           </fieldset>
 
